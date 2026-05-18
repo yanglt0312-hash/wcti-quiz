@@ -1,0 +1,91 @@
+{
+  "calibration_nodes": [
+    {
+      "id": "cal_01",
+      "text": "[Beacon Scan 1/2] In your limited free time, where do you usually hang out in the digital battlefield?",
+      "options": [
+        { "text": "MOBA games (League, Dota, etc.)", "assign_tag": "moba", "value": 0 },
+        { "text": "FPS games (CS:GO, Valorant, PUBG)", "assign_tag": "fps", "value": 0 },
+        { "text": "I don't really game, prefer real life/work/TV shows", "assign_tag": "life", "value": 0 }
+      ]
+    },
+    {
+      "id": "cal_02",
+      "text": "[Beacon Scan 2/2] If you were thrown into a 10-person team to complete a major project, what role do you usually play?",
+      "options": [
+        { "text": "The architect/captain who calls the shots", "assign_tag": "leader", "value": 0 },
+        { "text": "The vanguard/executor who charges ahead", "assign_tag": "striker", "value": 0 },
+        { "text": "The support who covers the rear and clears mines", "assign_tag": "support", "value": 0 }
+      ]
+    }
+  ],
+  "question_pool": [
+    {
+      "id": "q_moba_01", "tags": ["moba"], "dimension": "heroism",
+      "text": "[MOBA Scenario] In team fights, I prefer picking assassins/ADCs who can 1v5 rather than pure tank supports who initiate and absorb damage.",
+      "options": [
+        { "text": "Strongly agree (I am the absolute core)", "weight": 10 },
+        { "text": "Somewhat agree", "weight": 5 },
+        { "text": "Depends on team comp", "weight": 0 },
+        { "text": "Somewhat disagree", "weight": -5 },
+        { "text": "Strongly disagree (I like sacrificing for the team)", "weight": -10 }
+      ]
+    },
+    {
+      "id": "q_fps_01", "tags": ["fps"], "dimension": "heroism",
+      "text": "[Clutch Scenario] In a 1v3 clutch, I trust my own aim to actively seek opportunities rather than hiding in a corner waiting for teammate callouts.",
+      "options": [
+        { "text": "Strongly agree", "weight": 10 }, { "text": "Somewhat agree", "weight": 5 }, { "text": "Neutral", "weight": 0 }, { "text": "Somewhat disagree", "weight": -5 }, { "text": "Strongly disagree", "weight": -10 }
+      ]
+    },
+    {
+      "id": "q_life_01", "tags": ["life", "leader"], "dimension": "tradition",
+      "text": "[Business Scenario] When investing in a restaurant, I prefer a 50-year-old traditional brand with strict rules over a newly established, aggressively styled pop-up.",
+      "options": [
+        { "text": "Strongly agree (heritage above all)", "weight": 10 }, { "text": "Somewhat agree", "weight": 5 }, { "text": "Neutral", "weight": 0 }, { "text": "Somewhat disagree", "weight": -5 }, { "text": "Strongly disagree (crave disruption)", "weight": -10 }
+      ]
+    },
+    {
+      "id": "q_univ_01", "tags": ["universal"], "dimension": "proactive",
+      "text": "[Social Scenario] At a party with strangers, I'm usually the one who actively seeks topics and controls the conversation rhythm.",
+      "options": [
+        { "text": "Strongly agree (extremely proactive)", "weight": 10 }, { "text": "Somewhat agree", "weight": 5 }, { "text": "Neutral", "weight": 0 }, { "text": "Somewhat disagree", "weight": -5 }, { "text": "Strongly disagree (used to passive counter)", "weight": -10 }
+      ]
+    },
+    {
+      "id": "q_univ_02", "tags": ["universal"], "dimension": "pragmatism",
+      "text": "[Life Philosophy] As long as the goal is achieved, using some less dignified or opportunistic methods (as long as not illegal) is acceptable.",
+      "options": [
+        { "text": "Strongly agree (extremely pragmatic)", "weight": 10 }, { "text": "Somewhat agree", "weight": 5 }, { "text": "Neutral", "weight": 0 }, { "text": "Somewhat disagree", "weight": -5 }, { "text": "Strongly disagree (process must be elegant)", "weight": -10 }
+      ]
+    },
+    {
+      "id": "q_univ_03", "tags": ["universal"], "dimension": "control",
+      "text": "[Travel Scenario] When traveling, I plan every day's itinerary down to the hour. I don't like spontaneous 'go-with-the-flow' trips full of unknowns.",
+      "options": [
+        { "text": "Strongly agree (extreme control)", "weight": 10 }, { "text": "Somewhat agree", "weight": 5 }, { "text": "Neutral", "weight": 0 }, { "text": "Somewhat disagree", "weight": -5 }, { "text": "Strongly disagree (embrace chaos and opportunity)", "weight": -10 }
+      ]
+    },
+    {
+      "id": "q_moba_02", "tags": ["moba", "fps"], "dimension": "resilience",
+      "text": "[Comeback Scenario] When the game is heavily behind and teammates start surrender votes, I not only don't agree but get more motivated to play harder.",
+      "options": [
+        { "text": "Strongly agree (king of adversity)", "weight": 10 }, { "text": "Somewhat agree", "weight": 5 }, { "text": "Neutral", "weight": 0 }, { "text": "Somewhat disagree", "weight": -5 }, { "text": "Strongly disagree (next game please)", "weight": -10 }
+      ]
+    },
+    {
+      "id": "q_univ_04", "tags": ["universal"], "dimension": "physicality",
+      "text": "[Sports Preference] If I must choose a PE class, I'd pick boxing/weightlifting emphasizing absolute strength and power over fencing/gymnastics emphasizing flexibility and technique.",
+      "options": [
+        { "text": "Strongly agree (muscle confrontation)", "weight": 10 }, { "text": "Somewhat agree", "weight": 5 }, { "text": "Neutral", "weight": 0 }, { "text": "Somewhat disagree", "weight": -5 }, { "text": "Strongly disagree (technique above all)", "weight": -10 }
+      ]
+    },
+    {
+      "id": "q_univ_05", "tags": ["universal"], "dimension": "adaptability",
+      "text": "[Workplace Pressure] When the boss suddenly scraps half-executed plans and demands a complete redo with new ideas, I can immediately stop complaining and quickly switch gears.",
+      "options": [
+        { "text": "Strongly agree (tactical chameleon)", "weight": 10 }, { "text": "Somewhat agree", "weight": 5 }, { "text": "Neutral", "weight": 0 }, { "text": "Somewhat disagree", "weight": -5 }, { "text": "Strongly disagree (stubborn consistency)", "weight": -10 }
+      ]
+    }
+  ]
+}

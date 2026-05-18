@@ -1,0 +1,91 @@
+{
+  "calibration_nodes": [
+    {
+      "id": "cal_01",
+      "text": "【信标扫描 1/2】在你为数不多的空闲时间里，你最常出没的数字战场是？",
+      "options": [
+        { "text": "峡谷与战场 (LOL, 王者, DOTA)", "assign_tag": "moba", "value": 0 },
+        { "text": "枪林弹雨 (CS:GO, 瓦罗兰特, PUBG)", "assign_tag": "fps", "value": 0 },
+        { "text": "我不怎么打电竞，我更喜欢现充/职场/追剧", "assign_tag": "life", "value": 0 }
+      ]
+    },
+    {
+      "id": "cal_02",
+      "text": "【信标扫描 2/2】如果把你扔进一个 10 人团队完成一项大工程，你通常的角色是？",
+      "options": [
+        { "text": "发号施令的架构师/队长", "assign_tag": "leader", "value": 0 },
+        { "text": "冲锋陷阵的尖刀/执行者", "assign_tag": "striker", "value": 0 },
+        { "text": "兜底排雷的后勤/辅助", "assign_tag": "support", "value": 0 }
+      ]
+    }
+  ],
+  "question_pool": [
+    {
+      "id": "q_moba_01", "tags": ["moba"], "dimension": "heroism",
+      "text": "【峡谷情境】打团时，我更喜欢选能一秀五的刺客/AD，而不是开团承伤的纯工具人坦克。",
+      "options": [
+        { "text": "非常赞同 (我就是绝对核心)", "weight": 10 },
+        { "text": "比较赞同", "weight": 5 },
+        { "text": "看阵容吧", "weight": 0 },
+        { "text": "不太赞同", "weight": -5 },
+        { "text": "非常反对 (我喜欢为团队牺牲)", "weight": -10 }
+      ]
+    },
+    {
+      "id": "q_fps_01", "tags": ["fps"], "dimension": "heroism",
+      "text": "【残局情境】1v3 残局，我更相信自己的干拉枪法去主动找机会，而不是躲在死角被动等队友报点。",
+      "options": [
+        { "text": "非常赞同", "weight": 10 }, { "text": "比较赞同", "weight": 5 }, { "text": "中立", "weight": 0 }, { "text": "不太赞同", "weight": -5 }, { "text": "非常反对", "weight": -10 }
+      ]
+    },
+    {
+      "id": "q_life_01", "tags": ["life", "leader"], "dimension": "tradition",
+      "text": "【商业情境】投资餐厅，我更倾向于选择一家有50年历史、规矩森严的老字号，而不是刚成立、风格激进的快闪店。",
+      "options": [
+        { "text": "非常赞同 (底蕴至上)", "weight": 10 }, { "text": "比较赞同", "weight": 5 }, { "text": "中立", "weight": 0 }, { "text": "不太赞同", "weight": -5 }, { "text": "非常反对 (渴望颠覆)", "weight": -10 }
+      ]
+    },
+    {
+      "id": "q_univ_01", "tags": ["universal"], "dimension": "proactive",
+      "text": "【社交情境】在一场有陌生人的聚会中，我通常是那个主动寻找话题、掌控聊天节奏的人。",
+      "options": [
+        { "text": "非常赞同 (极致主动压制)", "weight": 10 }, { "text": "比较赞同", "weight": 5 }, { "text": "中立", "weight": 0 }, { "text": "不太赞同", "weight": -5 }, { "text": "非常反对 (习惯被动反击)", "weight": -10 }
+      ]
+    },
+    {
+      "id": "q_univ_02", "tags": ["universal"], "dimension": "pragmatism",
+      "text": "【处世哲学】只要能达到目的，过程中使用一些不太体面甚至取巧的手段（只要不违法），是可以接受的。",
+      "options": [
+        { "text": "非常赞同 (极致功利)", "weight": 10 }, { "text": "比较赞同", "weight": 5 }, { "text": "中立", "weight": 0 }, { "text": "不太赞同", "weight": -5 }, { "text": "非常反对 (过程必须优雅)", "weight": -10 }
+      ]
+    },
+    {
+      "id": "q_univ_03", "tags": ["universal"], "dimension": "control",
+      "text": "【旅行情境】出去旅游，我会提前把每天的行程精确到小时，我不喜欢充满未知和变数的“说走就走”。",
+      "options": [
+        { "text": "非常赞同 (极致控场)", "weight": 10 }, { "text": "比较赞同", "weight": 5 }, { "text": "中立", "weight": 0 }, { "text": "不太赞同", "weight": -5 }, { "text": "非常反对 (拥抱混乱与机会)", "weight": -10 }
+      ]
+    },
+    {
+      "id": "q_moba_02", "tags": ["moba", "fps"], "dimension": "resilience",
+      "text": "【绝境逆风】当游戏大比分落后，队友开始发起投降时，我不仅不会点赞同，反而会激发出更强烈的操作欲望。",
+      "options": [
+        { "text": "非常赞同 (逆境之王)", "weight": 10 }, { "text": "比较赞同", "weight": 5 }, { "text": "中立", "weight": 0 }, { "text": "不太赞同", "weight": -5 }, { "text": "非常反对 (早点下一把)", "weight": -10 }
+      ]
+    },
+    {
+      "id": "q_univ_04", "tags": ["universal"], "dimension": "physicality",
+      "text": "【运动偏好】如果必须选修一门体育课，我会选强调绝对力量与爆发的拳击/举重，而不是强调灵活性和技巧的击剑/体操。",
+      "options": [
+        { "text": "非常赞同 (肌肉对抗)", "weight": 10 }, { "text": "比较赞同", "weight": 5 }, { "text": "中立", "weight": 0 }, { "text": "不太赞同", "weight": -5 }, { "text": "非常反对 (技术至上)", "weight": -10 }
+      ]
+    },
+    {
+      "id": "q_univ_05", "tags": ["universal"], "dimension": "adaptability",
+      "text": "【职场抗压】当老板突然把执行了一半的方案全部推翻，要求按照新思路重做时，我能立刻停止抱怨并迅速切换状态。",
+      "options": [
+        { "text": "非常赞同 (战术变色龙)", "weight": 10 }, { "text": "比较赞同", "weight": 5 }, { "text": "中立", "weight": 0 }, { "text": "不太赞同", "weight": -5 }, { "text": "非常反对 (一以贯之的固执)", "weight": -10 }
+      ]
+    }
+  ]
+}

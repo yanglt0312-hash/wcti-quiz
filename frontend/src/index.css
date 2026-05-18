@@ -1,0 +1,5 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 如果需要，可以在这里保留一些基础的全局变量定义，但不建议写死具体的样式逻辑 */
