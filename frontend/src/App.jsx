@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useQuizStore } from './store/quizStore';
 import { useLangStore } from './store/langStore';
 import { translations } from './i18n/translations';
@@ -8,12 +8,24 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Responsi
 import { Trophy, ChevronRight, RefreshCw, Zap, Check, ArrowLeft } from 'lucide-react';
 
 export default function App() {
-  const { currentView, resetQuiz, syncLanguage } = useQuizStore();
+  const { currentView, resetQuiz, syncLanguage, tryRestoreProgress } = useQuizStore();
   const lang = useLangStore((state) => state.lang);
+  const didInit = useRef(false);
 
   useEffect(() => {
+    if (!didInit.current) {
+      didInit.current = true;
+      console.log('[WCTI] App init: trying restore');
+      const restored = tryRestoreProgress();
+      if (!restored) {
+        console.log('[WCTI] App init: no cache, starting fresh');
+        syncLanguage(lang);
+        resetQuiz();
+      }
+      return;
+    }
     syncLanguage(lang);
-    if (currentView === 'home') {
+    if (useQuizStore.getState().currentView === 'home') {
       resetQuiz();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

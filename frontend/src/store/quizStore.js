@@ -4,6 +4,46 @@ import dynamicQuestionsEn from '../data/questions_dynamic_en.json';
 import teamsDataZh from '../data/teams.json';
 import teamsDataEn from '../data/teams_en.json';
 
+const CACHE_KEY = 'wcti_quiz_progress';
+
+function saveCache(state) {
+  try {
+    const cache = {
+      currentView: state.currentView,
+      quizMode: state.quizMode,
+      isCalibrationPhase: state.isCalibrationPhase,
+      userTags: state.userTags,
+      activeQuestions: state.activeQuestions,
+      currentQuestionIndex: state.currentQuestionIndex,
+      scores: state.scores,
+      answerHistory: state.answerHistory,
+      lang: state.lang,
+      matchResult: state.matchResult,
+      isLoading: state.isLoading
+    };
+    localStorage.setItem(CACHE_KEY, JSON.stringify(cache));
+    console.log('[WCTI] Cache saved', { view: cache.currentView, index: cache.currentQuestionIndex, total: cache.activeQuestions?.length, completed: !!cache.matchResult });
+  } catch { /* quota exceeded, ignore */ }
+}
+
+function loadCache() {
+  try {
+    const raw = localStorage.getItem(CACHE_KEY);
+    if (!raw) { console.log('[WCTI] No cache found'); return null; }
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== 'object') return null;
+    if (!parsed.activeQuestions || !Array.isArray(parsed.activeQuestions)) return null;
+    console.log('[WCTI] Cache loaded', { view: parsed.currentView, index: parsed.currentQuestionIndex, total: parsed.activeQuestions.length });
+    return parsed;
+  } catch {
+    return null;
+  }
+}
+
+function clearCache() {
+  try { console.log('[WCTI] Cache cleared'); console.trace('[WCTI] Clear trace'); localStorage.removeItem(CACHE_KEY); } catch { /* ignore */ }
+}
+
 const QUESTION_BANKS = {
   zh: {
     simple: () => import('../data/questions.json'),
@@ -299,6 +339,7 @@ export const useQuizStore = create((set, get) => ({
   },
 
   startQuiz: async (mode, lang) => {
+    clearCache();
     const bank = QUESTION_BANKS[lang] || QUESTION_BANKS.zh;
     const questionsModule = await bank.simple();
     const questions = questionsModule.default || questionsModule;
@@ -318,6 +359,7 @@ export const useQuizStore = create((set, get) => ({
         scores: DEFAULT_SCORES,
         answerHistory: []
       });
+      saveCache(get());
     } else {
       set({
         currentView: 'quiz',
@@ -332,6 +374,7 @@ export const useQuizStore = create((set, get) => ({
         scores: DEFAULT_SCORES,
         answerHistory: []
       });
+      saveCache(get());
     }
   },
 
@@ -417,6 +460,7 @@ export const useQuizStore = create((set, get) => ({
           activeQuestions: finalExam,
           currentQuestionIndex: 0
         });
+        saveCache(get());
       } else {
         set({
           userTags: newTags,
@@ -429,6 +473,7 @@ export const useQuizStore = create((set, get) => ({
             selectedTags: selectedTags || []
           }]
         });
+        saveCache(get());
       }
       return;
     }
@@ -445,6 +490,7 @@ export const useQuizStore = create((set, get) => ({
 
     if (isLastQuestion) {
       set({ scores: newScores, currentView: 'result', isLoading: true, answerHistory: newHistory });
+      saveCache(get());
 
       fetchWithTimeout('/Team_8D_Soul_Scores.csv?v=' + Date.now())
         .then(res => {
@@ -475,14 +521,17 @@ export const useQuizStore = create((set, get) => ({
               }
             }
             set({ matchResult: bestMatch, isLoading: false });
+            saveCache(get());
           }, 1500);
         })
         .catch(err => {
           console.error("Data loading failed:", err);
           set({ isLoading: false, matchResult: null });
+          saveCache(get());
         });
     } else {
       set({ scores: newScores, currentQuestionIndex: state.currentQuestionIndex + 1, answerHistory: newHistory });
+      saveCache(get());
     }
   },
 
@@ -511,7 +560,62 @@ export const useQuizStore = create((set, get) => ({
       userTags: newTags,
       answerHistory: newHistory
     });
+    saveCache(get());
   },
 
-  resetQuiz: () => set({ currentView: 'home', matchResult: null })
+  resetQuiz: () => { clearCache(); set({ currentView: 'home', matchResult: null }); },
+
+  tryRestoreProgress: () => {
+    const cached = loadCache();
+    if (!cached) { console.log('[WCTI] Restore: no cache to restore'); return false; }
+
+    if (cached.currentView === 'result' && cached.matchResult) {
+      console.log('[WCTI] Restore: result already seen, clearing cache');
+      clearCache();
+      return false;
+    }
+
+    if (cached.currentView === 'result' && !cached.matchResult) {
+      console.log('[WCTI] Restore: result failed, back to last question');
+      if (cached.activeQuestions && cached.activeQuestions.length > 0) {
+        set({
+          currentView: 'quiz',
+          quizMode: cached.quizMode || 'simple',
+          isCalibrationPhase: false,
+          userTags: cached.userTags || ['universal'],
+          activeQuestions: cached.activeQuestions,
+          currentQuestionIndex: Math.max(0, cached.activeQuestions.length - 1),
+          scores: cached.scores || DEFAULT_SCORES,
+          answerHistory: cached.answerHistory || [],
+          lang: cached.lang || 'zh',
+          matchResult: null,
+          isLoading: false
+        });
+        return true;
+      }
+      clearCache();
+      return false;
+    }
+
+    if (cached.currentView === 'quiz' && cached.activeQuestions && cached.activeQuestions.length > 0) {
+      console.log('[WCTI] Restore: quiz resumed at', cached.currentQuestionIndex, '/', cached.activeQuestions.length);
+      set({
+        currentView: 'quiz',
+        quizMode: cached.quizMode || 'simple',
+        isCalibrationPhase: !!cached.isCalibrationPhase,
+        userTags: cached.userTags || ['universal'],
+        activeQuestions: cached.activeQuestions,
+        currentQuestionIndex: cached.currentQuestionIndex || 0,
+        scores: cached.scores || DEFAULT_SCORES,
+        answerHistory: cached.answerHistory || [],
+        lang: cached.lang || 'zh',
+        matchResult: null,
+        isLoading: false
+      });
+      return true;
+    }
+
+    clearCache();
+    return false;
+  }
 }));
