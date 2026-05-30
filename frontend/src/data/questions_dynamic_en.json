@@ -2,89 +2,5810 @@
   "calibration_nodes": [
     {
       "id": "cal_01",
-      "text": "[Beacon Scan 1/2] In your limited free time, where do you usually hang out in the digital battlefield?",
+      "text": "What type of electronic games do you usually play or like the most?",
       "options": [
-        { "text": "MOBA games (League, Dota, etc.)", "assign_tag": "moba", "value": 0 },
-        { "text": "FPS games (CS:GO, Valorant, PUBG)", "assign_tag": "fps", "value": 0 },
-        { "text": "I don't really game, prefer real life/work/TV shows", "assign_tag": "life", "value": 0 }
+        {
+          "text": "League of Legends",
+          "assign_tag": "lol"
+        },
+        {
+          "text": "Honor of Kings",
+          "assign_tag": "wzry"
+        },
+        {
+          "text": "DOTA2",
+          "assign_tag": "dota2"
+        },
+        {
+          "text": "CS",
+          "assign_tag": "cs"
+        },
+        {
+          "text": "APEX",
+          "assign_tag": "apex"
+        },
+        {
+          "text": "PUBG",
+          "assign_tag": "pubg"
+        },
+        {
+          "text": "Valorant",
+          "assign_tag": "valorant"
+        },
+        {
+          "text": "Dark Souls",
+          "assign_tag": "dark_souls"
+        },
+        {
+          "text": "Elden Ring",
+          "assign_tag": "elden_ring"
+        },
+        {
+          "text": "Sekiro",
+          "assign_tag": "sekiro"
+        },
+        {
+          "text": "Black Myth: Wukong",
+          "assign_tag": "black_myth_wukong"
+        },
+        {
+          "text": "God of War",
+          "assign_tag": "god_of_war"
+        },
+        {
+          "text": "Red Dead Redemption",
+          "assign_tag": "red_dead_redemption"
+        },
+        {
+          "text": "Genshin Impact",
+          "assign_tag": "genshin"
+        },
+        {
+          "text": "Honkai: Star Rail",
+          "assign_tag": "honkai_star_rail"
+        },
+        {
+          "text": "I hardly play video games",
+          "assign_tag": "no_game"
+        }
       ]
     },
     {
       "id": "cal_02",
-      "text": "[Beacon Scan 2/2] If you were thrown into a 10-person team to complete a major project, what role do you usually play?",
+      "text": "What style of music do you most often listen to with headphones?",
       "options": [
-        { "text": "The architect/captain who calls the shots", "assign_tag": "leader", "value": 0 },
-        { "text": "The vanguard/executor who charges ahead", "assign_tag": "striker", "value": 0 },
-        { "text": "The support who covers the rear and clears mines", "assign_tag": "support", "value": 0 }
+        {
+          "text": "Pop",
+          "assign_tag": "music_pop"
+        },
+        {
+          "text": "Rock",
+          "assign_tag": "music_rock"
+        },
+        {
+          "text": "Metal",
+          "assign_tag": "music_metal"
+        },
+        {
+          "text": "Jazz",
+          "assign_tag": "music_jazz"
+        },
+        {
+          "text": "Blues",
+          "assign_tag": "music_blues"
+        },
+        {
+          "text": "Electronic",
+          "assign_tag": "music_electronic"
+        },
+        {
+          "text": "Folk",
+          "assign_tag": "music_folk"
+        },
+        {
+          "text": "Classical",
+          "assign_tag": "music_classical"
+        },
+        {
+          "text": "Hip-hop/Rap",
+          "assign_tag": "music_hiphop"
+        },
+        {
+          "text": "R&B",
+          "assign_tag": "music_rnb"
+        },
+        {
+          "text": "I prefer silence and rarely listen to music",
+          "assign_tag": "no_music"
+        }
+      ]
+    },
+    {
+      "id": "cal_03",
+      "text": "During offline social gatherings, which activities do you prefer?",
+      "options": [
+        {
+          "text": "Murder Mystery Games",
+          "assign_tag": "script_murder"
+        },
+        {
+          "text": "Tabletop RPG",
+          "assign_tag": "trpg"
+        },
+        {
+          "text": "Werewolf/Mafia",
+          "assign_tag": "werewolf"
+        },
+        {
+          "text": "Go",
+          "assign_tag": "go"
+        },
+        {
+          "text": "Texas Hold'em",
+          "assign_tag": "texas_holdem"
+        },
+        {
+          "text": "KTV",
+          "assign_tag": "ktv"
+        },
+        {
+          "text": "Drinking",
+          "assign_tag": "drinking"
+        },
+        {
+          "text": "Clubbing",
+          "assign_tag": "clubbing"
+        },
+        {
+          "text": "I avoid pointless socializing and prefer being alone",
+          "assign_tag": "social_solo"
+        }
+      ]
+    },
+    {
+      "id": "cal_04",
+      "text": "Besides football, what physical exercise do you tend to prefer?",
+      "options": [
+        {
+          "text": "Gym/Weightlifting",
+          "assign_tag": "gym_strength"
+        },
+        {
+          "text": "Tennis",
+          "assign_tag": "tennis"
+        },
+        {
+          "text": "Badminton",
+          "assign_tag": "badminton"
+        },
+        {
+          "text": "Swimming",
+          "assign_tag": "swimming"
+        },
+        {
+          "text": "Basketball",
+          "assign_tag": "basketball"
+        },
+        {
+          "text": "Running",
+          "assign_tag": "running"
+        },
+        {
+          "text": "Yoga",
+          "assign_tag": "yoga"
+        },
+        {
+          "text": "Rock Climbing",
+          "assign_tag": "climbing"
+        },
+        {
+          "text": "I don't exercise unless necessary",
+          "assign_tag": "no_sports"
+        }
+      ]
+    },
+    {
+      "id": "cal_05",
+      "text": "In daily life, what kind of pet would you prefer to keep you company?",
+      "options": [
+        {
+          "text": "Cat",
+          "assign_tag": "pet_cat"
+        },
+        {
+          "text": "Dog",
+          "assign_tag": "pet_dog"
+        },
+        {
+          "text": "Other",
+          "assign_tag": "pet_other"
+        },
+        {
+          "text": "None",
+          "assign_tag": "no_pet"
+        }
       ]
     }
   ],
   "question_pool": [
     {
-      "id": "q_moba_01", "tags": ["moba"], "dimension": "heroism",
-      "text": "[MOBA Scenario] In team fights, I prefer picking assassins/ADCs who can 1v5 rather than pure tank supports who initiate and absorb damage.",
+      "id": "q_univ_tradition_01",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "I am more easily moved by things with history, heritage, and shared memory than by newly fashionable concepts.",
       "options": [
-        { "text": "Strongly agree (I am the absolute core)", "weight": 10 },
-        { "text": "Somewhat agree", "weight": 5 },
-        { "text": "Depends on team comp", "weight": 0 },
-        { "text": "Somewhat disagree", "weight": -5 },
-        { "text": "Strongly disagree (I like sacrificing for the team)", "weight": -10 }
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
       ]
     },
     {
-      "id": "q_fps_01", "tags": ["fps"], "dimension": "heroism",
-      "text": "[Clutch Scenario] In a 1v3 clutch, I trust my own aim to actively seek opportunities rather than hiding in a corner waiting for teammate callouts.",
+      "id": "q_univ_tradition_02",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "If two brands are similar in quality, I trust the one tested by time more.",
       "options": [
-        { "text": "Strongly agree", "weight": 10 }, { "text": "Somewhat agree", "weight": 5 }, { "text": "Neutral", "weight": 0 }, { "text": "Somewhat disagree", "weight": -5 }, { "text": "Strongly disagree", "weight": -10 }
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
       ]
     },
     {
-      "id": "q_life_01", "tags": ["life", "leader"], "dimension": "tradition",
-      "text": "[Business Scenario] When investing in a restaurant, I prefer a 50-year-old traditional brand with strict rules over a newly established, aggressively styled pop-up.",
+      "id": "q_univ_tradition_03",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "When joining a group, I care whether it has clear traditions, rituals, and identity.",
       "options": [
-        { "text": "Strongly agree (heritage above all)", "weight": 10 }, { "text": "Somewhat agree", "weight": 5 }, { "text": "Neutral", "weight": 0 }, { "text": "Somewhat disagree", "weight": -5 }, { "text": "Strongly disagree (crave disruption)", "weight": -10 }
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
       ]
     },
     {
-      "id": "q_univ_01", "tags": ["universal"], "dimension": "proactive",
-      "text": "[Social Scenario] At a party with strangers, I'm usually the one who actively seeks topics and controls the conversation rhythm.",
+      "id": "q_univ_tradition_04",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "I appreciate designs with classical order, weight, and continuity.",
       "options": [
-        { "text": "Strongly agree (extremely proactive)", "weight": 10 }, { "text": "Somewhat agree", "weight": 5 }, { "text": "Neutral", "weight": 0 }, { "text": "Somewhat disagree", "weight": -5 }, { "text": "Strongly disagree (used to passive counter)", "weight": -10 }
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
       ]
     },
     {
-      "id": "q_univ_02", "tags": ["universal"], "dimension": "pragmatism",
-      "text": "[Life Philosophy] As long as the goal is achieved, using some less dignified or opportunistic methods (as long as not illegal) is acceptable.",
+      "id": "q_univ_tradition_05",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "The fact that a group has lasted for a long time already proves it has inner value worth respecting.",
       "options": [
-        { "text": "Strongly agree (extremely pragmatic)", "weight": 10 }, { "text": "Somewhat agree", "weight": 5 }, { "text": "Neutral", "weight": 0 }, { "text": "Somewhat disagree", "weight": -5 }, { "text": "Strongly disagree (process must be elegant)", "weight": -10 }
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
       ]
     },
     {
-      "id": "q_univ_03", "tags": ["universal"], "dimension": "control",
-      "text": "[Travel Scenario] When traveling, I plan every day's itinerary down to the hour. I don't like spontaneous 'go-with-the-flow' trips full of unknowns.",
+      "id": "q_univ_tradition_06",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "I would rather slowly enter a mature and reliable path than constantly chase brand-new opportunities.",
       "options": [
-        { "text": "Strongly agree (extreme control)", "weight": 10 }, { "text": "Somewhat agree", "weight": 5 }, { "text": "Neutral", "weight": 0 }, { "text": "Somewhat disagree", "weight": -5 }, { "text": "Strongly disagree (embrace chaos and opportunity)", "weight": -10 }
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
       ]
     },
     {
-      "id": "q_moba_02", "tags": ["moba", "fps"], "dimension": "resilience",
-      "text": "[Comeback Scenario] When the game is heavily behind and teammates start surrender votes, I not only don't agree but get more motivated to play harder.",
+      "id": "q_univ_tradition_07",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "I am usually cautious toward the urge to overthrow old rules and reinvent everything.",
       "options": [
-        { "text": "Strongly agree (king of adversity)", "weight": 10 }, { "text": "Somewhat agree", "weight": 5 }, { "text": "Neutral", "weight": 0 }, { "text": "Somewhat disagree", "weight": -5 }, { "text": "Strongly disagree (next game please)", "weight": -10 }
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
       ]
     },
     {
-      "id": "q_univ_04", "tags": ["universal"], "dimension": "physicality",
-      "text": "[Sports Preference] If I must choose a PE class, I'd pick boxing/weightlifting emphasizing absolute strength and power over fencing/gymnastics emphasizing flexibility and technique.",
+      "id": "q_univ_tradition_08",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "I want to belong to something larger than my present individual choices.",
       "options": [
-        { "text": "Strongly agree (muscle confrontation)", "weight": 10 }, { "text": "Somewhat agree", "weight": 5 }, { "text": "Neutral", "weight": 0 }, { "text": "Somewhat disagree", "weight": -5 }, { "text": "Strongly disagree (technique above all)", "weight": -10 }
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
       ]
     },
     {
-      "id": "q_univ_05", "tags": ["universal"], "dimension": "adaptability",
-      "text": "[Workplace Pressure] When the boss suddenly scraps half-executed plans and demands a complete redo with new ideas, I can immediately stop complaining and quickly switch gears.",
+      "id": "q_univ_tradition_09",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "I prefer organizations with stable systems, clear hierarchy, and transferable experience.",
       "options": [
-        { "text": "Strongly agree (tactical chameleon)", "weight": 10 }, { "text": "Somewhat agree", "weight": 5 }, { "text": "Neutral", "weight": 0 }, { "text": "Somewhat disagree", "weight": -5 }, { "text": "Strongly disagree (stubborn consistency)", "weight": -10 }
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_tradition_10",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "I respect people who hold one set of values for a long time, even if they seem conservative.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_tradition_11",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "If something new is exciting enough, I can quickly abandon old habits and old identities.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": -10
+        },
+        {
+          "text": "Agree",
+          "weight": -5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": 5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_tradition_12",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "History and heritage are often baggage; what really matters is who is stronger right now.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": -10
+        },
+        {
+          "text": "Agree",
+          "weight": -5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": 5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_01",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "At a party with strangers, I am usually the one who actively finds topics and controls the rhythm.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_02",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "When disagreement appears, I tend to state my view first and pull the situation into my rhythm.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_03",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "When the task direction is unclear, I actively propose a plan instead of waiting for others.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_04",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "I prefer striking first and using constant pressure to make the opponent adapt to me.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_05",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "Facing a new field, I prefer trial, output, and feedback over watching from the side for a long time.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_06",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "I dislike only reacting; I would rather be the person who pushes the situation forward.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_07",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "I actively set topics, boundaries, and rhythm to avoid being led by others.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_08",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "When a good chance appears, I would rather rush in and occupy the position first, then fix details later.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_09",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "If I hold a strong view, I usually say it directly instead of circling around for a long time.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_10",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "The more stuck a situation becomes, the more I want to actively break the balance.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_11",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "In uncertain situations, I prefer stabilizing the defense first and waiting for the other side to show a weakness.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": -10
+        },
+        {
+          "text": "Agree",
+          "weight": -5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": 5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_12",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "I usually do not rush to lead the conversation; I prefer observing how others unfold it.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": -10
+        },
+        {
+          "text": "Agree",
+          "weight": -5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": 5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_01",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "At crucial moments, I believe one top person's flash of brilliance can change the whole direction.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_02",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "If the team is in trouble, I hope I can be the one who steps up and solves it.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_03",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "I am more easily fired up by scenes where one protagonist turns the tide alone.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_04",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "I especially admire people with irreplaceable individual ability.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_05",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "When everyone hesitates, I am willing to take higher risks to create a breakthrough.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_06",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "Great leaders should have decision-making power beyond the system at key moments.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_07",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "I enjoy being trusted in important moments and answering that expectation with performance.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_08",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "The harder and more unwanted a problem is, the more it triggers my fighting spirit.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_09",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "Sometimes one person's ceiling decides the final height more than team process does.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_10",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "I do not mind being the focus if it means I can influence the result.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_11",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "I trust stable division of labor and collective execution more than waiting for one person to explode.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": -10
+        },
+        {
+          "text": "Agree",
+          "weight": -5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": 5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_12",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "A mature team should reduce its dependence on star individuals as much as possible.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": -10
+        },
+        {
+          "text": "Agree",
+          "weight": -5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": 5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_01",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "As long as the goal is achieved, using less graceful or opportunistic methods is acceptable if they are not illegal.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_02",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "I believe reaching the goal matters more than whether the process looks elegant.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_03",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "If resources are limited, I prioritize the places most likely to create real returns.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_04",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "When making major decisions, I try to lower emotion and calculate real gains and losses.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_05",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "I care more about whether something can truly land than whether it feels idealistic.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_06",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "If a solution is effective enough, I do not mind if it looks clumsy or unattractive.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_07",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "On major interest issues, I prefer making rules and accounts clear.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_08",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "When necessary, I can give up a pretty posture and choose the most direct effective solution.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_09",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "I respect people who get things done, even if they are not romantic.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_10",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "If I must choose, I protect the result first, then discuss style and sentiment.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_11",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "I am willing to accept obvious real-world loss for pure passion.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": -10
+        },
+        {
+          "text": "Agree",
+          "weight": -5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": 5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_12",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "If the process violates my aesthetics and principles, even a good result is hard for me to accept.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": -10
+        },
+        {
+          "text": "Agree",
+          "weight": -5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": 5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_01",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "When traveling, I plan every day down to the hour; I dislike go-with-the-flow trips full of unknowns.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_02",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "Before starting a complex task, I first break down structure, steps, and risks.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_03",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "I like organizing scattered information into a clear framework before judging further.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_04",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "I believe stable rhythm and clear roles help teams perform better.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_05",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "I gain security from order, such as lists, schedules, and fixed processes.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_06",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "When explaining complex problems, I start from background and logical chains.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_07",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "I trust preparation and reviewable methods more than improvisation.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_08",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "I dislike things constantly changing direction and interrupting the original plan.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_09",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "I prefer progressing through a systematic course rather than learning bits and pieces everywhere.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_10",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "When the surroundings are chaotic, my first reaction is to establish order.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_11",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "I often feel plans limit creativity; doing and adjusting suits me better.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": -10
+        },
+        {
+          "text": "Agree",
+          "weight": -5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": 5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_12",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "Facing a new problem, I like jumping in first and summarizing patterns later.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": -10
+        },
+        {
+          "text": "Agree",
+          "weight": -5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": 5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_01",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "The worse the start, the more it awakens my unwillingness to lose.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_02",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "After a failure, I usually enter review and counterattack mode quickly.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_03",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "When questioned, I do not retreat immediately; I want even more to prove myself.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_04",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "If the goal matters, I can endure a long low period.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_05",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "Falling behind does not make me give up quickly; it makes me more focused.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_06",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "I can keep pushing while uncomfortable instead of waiting until I fully recover.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_07",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "The harder the situation, the clearer it becomes whether I truly want to win.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_08",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "When morale drops, I am willing to keep holding the situation and stop it from collapsing.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_09",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "I am not very afraid of being dragged into a war of attrition because I believe I can endure it.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_10",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "If I truly care about something, short-term setbacks rarely make me walk away.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_11",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "Once the situation clearly goes wrong, I tend to cut losses quickly and preserve energy.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": -10
+        },
+        {
+          "text": "Agree",
+          "weight": -5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": 5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_12",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "After several failures in a row, I quickly doubt whether I should continue.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": -10
+        },
+        {
+          "text": "Agree",
+          "weight": -5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": 5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_01",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "If I must choose a PE class, I would pick boxing or weightlifting over fencing or gymnastics.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_02",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "When facing a stuck obstacle, I first try a more direct and forceful breakthrough.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_03",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "I appreciate the intimidation created by speed, power, and pressure.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_04",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "When necessary, I do not mind using a tough stance to make others feel my boundaries.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_05",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "I trust execution, physical energy, and repeated impact more than delicate calculation.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_06",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "I respect people who can absorb pressure and stand at the very front.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_07",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "In matches or action scenes, I am easily attracted by direct physical confrontation.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_08",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "High-intensity, fast-paced tasks that require hard resistance sometimes excite me.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_09",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "I believe physical condition and action energy deeply influence a person's judgment.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_10",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "When a situation freezes, I tend to increase force rather than take a detour first.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_11",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "I admire clever handling that uses angles and skill more than charging straight ahead.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": -10
+        },
+        {
+          "text": "Agree",
+          "weight": -5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": 5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_12",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "If skill and leverage can solve a problem, I usually do not want to spend energy forcing it.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": -10
+        },
+        {
+          "text": "Agree",
+          "weight": -5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": 5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_01",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "When a half-executed plan is suddenly scrapped, I can stop complaining and switch quickly.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_02",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "When a plan suddenly fails, I usually start looking for a new way to play very quickly.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_03",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "Facing different circles, I can naturally adjust my expression and rhythm.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_04",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "When new rules appear, I get excited to study the opportunities they may bring.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_05",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "I do not reject temporary direction changes if they open new space.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_06",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "I am willing to try unfamiliar cities, foods, and routes.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_07",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "If the original method proves unsuitable, I can let it go quickly without obsessing over sunk cost.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_08",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "I can switch among roles such as organizer, executor, and observer.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_09",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "I often recombine limited resources at hand into a new solution.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_10",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "The unknown does not always make me anxious; sometimes it makes things feel alive.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_11",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "Once I decide a method works, I prefer continuing to use it even when the environment changes.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": -10
+        },
+        {
+          "text": "Agree",
+          "weight": -5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": 5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_12",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "If familiar rules are broken, I usually need a long time to get back into rhythm.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": -10
+        },
+        {
+          "text": "Agree",
+          "weight": -5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": 5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_tradition_01",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "tradition",
+      "text": "I naturally like old champions or heroes that have survived many patches and still have loyal players.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_tradition_02",
+      "tags": [
+        "lol"
+      ],
+      "dimension": "tradition",
+      "text": "I believe that if you master one signature hero to an exceptional level, you can still make it work even when it is not meta.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_proactive_03",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "proactive",
+      "text": "In the early game, whenever I see a chance, I actively pressure lane, invade, roam, or support teammates to create tempo.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_proactive_04",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "proactive",
+      "text": "I prefer engaging first or forcing enemy cooldowns instead of waiting for opponents to make mistakes.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_heroism_05",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "heroism",
+      "text": "I am deeply attracted to heroes that can change a decisive teamfight with one perfect sequence.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_heroism_06",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "heroism",
+      "text": "If the game is stuck, I would rather believe I can open the situation through one perfect play.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_pragmatism_07",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "pragmatism",
+      "text": "As long as it helps me win, I can accept picking heroes and playstyles that are not flashy but have higher win rates.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_pragmatism_08",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "pragmatism",
+      "text": "Even if the process feels frustrating, I can accept avoiding fights, trading resources, and farming quietly if it leads to victory.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_control_09",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "control",
+      "text": "I care a lot about waves, vision, jungle resources, and key neutral objective timers; I like holding the map rhythm in my hands.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_control_10",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "control",
+      "text": "Compared with constant fighting, I enjoy slowly expanding an advantage through macro, vision, and resource trades.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_resilience_11",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "resilience",
+      "text": "Even if the early game collapses, as long as the base is standing, I seriously look for comeback chances.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_resilience_12",
+      "tags": [
+        "lol"
+      ],
+      "dimension": "resilience",
+      "text": "When teammates become negative or start surrender votes, I want even more to stabilize the game and drag it later.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_physicality_13",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "physicality",
+      "text": "I prefer tanks, fighters, or heroes that can charge directly into the enemy formation, absorb damage, and tear it open.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_physicality_14",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "physicality",
+      "text": "Compared with kiting and poking, I prefer fighting face-to-face and crushing opponents through raw pressure.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_adaptability_15",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "adaptability",
+      "text": "After a patch update, I am willing to quickly try new heroes, builds, and playstyles instead of sticking to old habits.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_adaptability_16",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "adaptability",
+      "text": "If the shape of a game suddenly changes, I can quickly adjust my build, lane assignment, or teamfight plan.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_tradition_01",
+      "tags": [
+        "cs"
+      ],
+      "dimension": "tradition",
+      "text": "I have a natural preference for classic maps like Dust2 and Inferno\u2014new maps just don\u2019t feel like they have the same soul.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_tradition_02",
+      "tags": [
+        "traditional_shooter"
+      ],
+      "dimension": "tradition",
+      "text": "I\u2019d rather hold a standard position I\u2019ve played a thousand times than try an off-angle I\u2019ve never practiced, just for the element of surprise.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_proactive_03",
+      "tags": [
+        "fps"
+      ],
+      "dimension": "proactive",
+      "text": "In a firefight, I like to peek first to gather intel and look for the opening pick.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_proactive_04",
+      "tags": [
+        "traditional_shooter"
+      ],
+      "dimension": "proactive",
+      "text": "When the economy allows it, I prefer to rush at full speed, using tempo and surprise to disrupt the opponent\u2019s setup.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_heroism_05",
+      "tags": [
+        "fps"
+      ],
+      "dimension": "heroism",
+      "text": "In a 1vN clutch situation, I don\u2019t get nervous\u2014I get excited. That\u2019s the best stage to prove individual skill.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_heroism_06",
+      "tags": [
+        "fps"
+      ],
+      "dimension": "heroism",
+      "text": "In-game, when the team is struggling and morale is low, I\u2019ll step up to make the call, break through, and swing the momentum with my own rhythm.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_pragmatism_07",
+      "tags": [
+        "traditional_shooter"
+      ],
+      "dimension": "pragmatism",
+      "text": "On an eco round with low HP, I won\u2019t gamble for a miracle\u2014I\u2019ll save my weapon to build economy for the next round.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_pragmatism_08",
+      "tags": [
+        "fps"
+      ],
+      "dimension": "pragmatism",
+      "text": "As long as we win, I\u2019m fine doing the dirty work all game\u2014entry fragging, holding the rear, covering flanks. My stats don\u2019t matter.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_control_09",
+      "tags": [
+        "traditional_shooter"
+      ],
+      "dimension": "control",
+      "text": "More than direct gunfights, I enjoy the satisfaction of carving up map space step by step with smokes, molotovs, and flashes.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_control_10",
+      "tags": [
+        "traditional_shooter"
+      ],
+      "dimension": "control",
+      "text": "On the defensive side, I prefer to hold a key angle patiently, waiting for the opponent to make a mistake, rather than pushing forward to create opportunities.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_resilience_11",
+      "tags": [
+        "traditional_shooter"
+      ],
+      "dimension": "resilience",
+      "text": "In competitive shooters, even if we\u2019re far behind at halftime, I\u2019ll still play every round seriously after the side switch\u2014there are too many comeback stories.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_resilience_12",
+      "tags": [
+        "traditional_shooter"
+      ],
+      "dimension": "resilience",
+      "text": "When we\u2019re on a losing streak with a broken economy, I actually calm down and organize the team for a solid eco round, waiting for the comeback window.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_physicality_13",
+      "tags": [
+        "fps"
+      ],
+      "dimension": "physicality",
+      "text": "In-game, I have absolute confidence in my aim\u2014even if I\u2019m in a bad position, I\u2019ll hard-peek and bet on my accuracy.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_physicality_14",
+      "tags": [
+        "traditional_shooter"
+      ],
+      "dimension": "physicality",
+      "text": "When I have the AWP, I prefer to play aggressively, scoping in and pushing forward to challenge, rather than sitting deep holding a pixel angle.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_adaptability_15",
+      "tags": [
+        "fps"
+      ],
+      "dimension": "adaptability",
+      "text": "In-game, if we can\u2019t break through from one direction, I\u2019ll quickly switch angles and routes instead of banging our heads against their defense.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_adaptability_16",
+      "tags": [
+        "fps"
+      ],
+      "dimension": "adaptability",
+      "text": "When our standard play gets countered, I can quickly switch to off-angle positions or off-meta weapons to catch them off guard.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_lol_control_01",
+      "tags": [
+        "lol"
+      ],
+      "dimension": "control",
+      "text": "When I enter champ select, I'm already simulating the full team comp's power curve in my head—when we should spike, where the enemy will slip.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_dota2_control_01",
+      "tags": [
+        "dota2"
+      ],
+      "dimension": "control",
+      "text": "In the laning phase, I excel at denying—precisely disrupting the opponent's last-hit rhythm and suppressing their economy through micro-play feels more rewarding than just last-hitting.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_dota2_tradition_01",
+      "tags": [
+        "dota2"
+      ],
+      "dimension": "tradition",
+      "text": "What fascinates me most about DOTA2 is that a single hero can be played in completely different ways—the complex item tree and skill build branching are a form of intellectual strategy in themselves.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_wzry_adaptability_01",
+      "tags": [
+        "wzry"
+      ],
+      "dimension": "adaptability",
+      "text": "Before queuing for ranked, I proactively enable Do Not Disturb mode to block all notifications and ensure my game isn't interrupted.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_br_pragmatism_01",
+      "tags": [
+        "battle_royale"
+      ],
+      "dimension": "pragmatism",
+      "text": "When dropping, I deliberately avoid hot zones\u2014I\u2019d rather gear up slowly than get caught in an early brawl. Safe looting wins late-game.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_br_control_02",
+      "tags": [
+        "battle_royale"
+      ],
+      "dimension": "control",
+      "text": "As soon as the circle timer starts, I\u2019m already planning my rotation route, cover spots, and positioning\u2014I never wait until the zone is closing in.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_br_adaptability_03",
+      "tags": [
+        "battle_royale"
+      ],
+      "dimension": "adaptability",
+      "text": "In the final circle with bad terrain, I\u2019d rather ditch fully-kitted gear and rush to claim the only cover or high ground\u2014survival comes before firepower.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_val_control_01",
+      "tags": [
+        "valorant"
+      ],
+      "dimension": "control",
+      "text": "In Valorant, I\u2019d rather pick a Controller than a Duelist\u2014using abilities to zone off areas, cut off vision, and force enemy movement is more satisfying than pure gunplay.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_val_heroism_02",
+      "tags": [
+        "valorant"
+      ],
+      "dimension": "heroism",
+      "text": "In Valorant, once my ultimate is fully charged, I don\u2019t rush to use it\u2014I wait for the decisive moment to turn the entire round. One perfect ult is worth more than a wasted burst.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_apex_proactive_01",
+      "tags": [
+        "apex"
+      ],
+      "dimension": "proactive",
+      "text": "The evo-shield system pushes me to take fights early\u2014not for the kills, but to level my armor to purple or red before the final circle.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_apex_adaptability_02",
+      "tags": [
+        "apex"
+      ],
+      "dimension": "adaptability",
+      "text": "When a teammate goes down, I don\u2019t rush to revive\u2014I read whether the enemy is holding the angle. Sometimes reviving is just giving them a free kill; you have to know when to cut your losses.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_pubg_physicality_01",
+      "tags": [
+        "pubg"
+      ],
+      "dimension": "physicality",
+      "text": "Long-range tap-firing and high-magnification recoil control are what I practice the most\u2014in PUBG there are no shortcuts to good aim. One missed shot and it\u2019s over.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_pubg_pragmatism_02",
+      "tags": [
+        "pubg"
+      ],
+      "dimension": "pragmatism",
+      "text": "I\u2019ve gotten used to matches where I only have one or two direct gunfights\u2014most of the game is spent looting, rotating, scouting, and waiting.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_console_tradition_01",
+      "tags": [
+        "console"
+      ],
+      "dimension": "tradition",
+      "text": "More than the flood of new IPs, I\u2019d rather revisit old classics I\u2019ve already beaten a dozen times\u2014new games can rarely replace that timeless charm.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_console_proactive_02",
+      "tags": [
+        "console"
+      ],
+      "dimension": "proactive",
+      "text": "When I start a new game, I absolutely refuse to check guides or spoilers\u2014even if I get stuck for days, the satisfaction of figuring it out myself is leagues above copying a walkthrough.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_console_pragmatism_03",
+      "tags": [
+        "console"
+      ],
+      "dimension": "pragmatism",
+      "text": "As long as I get the clear, I don\u2019t care about style points. Chugging potions, chipping away sliver by sliver, even getting lucky with a crit\u2014whatever works is fair game.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_console_control_04",
+      "tags": [
+        "console"
+      ],
+      "dimension": "control",
+      "text": "I can\u2019t stand missing any hidden content\u2014every new area gets swept clean; even bosses drive me to chase no-hit or perfect-parry runs. Leaving any item behind genuinely bothers me.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_console_resilience_05",
+      "tags": [
+        "console"
+      ],
+      "dimension": "resilience",
+      "text": "Dying forty or fifty times to the same boss is perfectly normal to me\u2014I just make the run back every time. I refuse to believe there\u2019s a boss I can\u2019t beat with enough practice.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_console_heroism_06",
+      "tags": [
+        "console"
+      ],
+      "dimension": "heroism",
+      "text": "The more a boss or stage is known as a brick wall, the more I want to break through it on my own\u2014proving to myself that I can do it is even more addictive than beating the game.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_console_adaptability_07",
+      "tags": [
+        "console"
+      ],
+      "dimension": "adaptability",
+      "text": "If I\u2019ve tried multiple approaches against a boss and still can\u2019t beat it, I won\u2019t bash my head against the wall\u2014I\u2019ll step back, break down its patterns, re-gear, and come back with a hard counter.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_anime_adaptability_01",
+      "tags": [
+        "anime_gacha"
+      ],
+      "dimension": "adaptability",
+      "text": "Even after investing months into a character, I\u2019ll drop them without hesitation if the meta shifts and their numbers get countered\u2014sunk cost doesn\u2019t get a say in my team-building. That\u2019s the fundamental difference between gacha games and single-player ones.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_elden_ring_adaptability_01",
+      "tags": [
+        "elden_ring"
+      ],
+      "dimension": "adaptability",
+      "text": "In Elden Ring, if I can\u2019t beat something, I\u2019ll just mount up and ride elsewhere to level and gear up, then come back to crush it\u2014that\u2019s the whole point of an open world.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sekiro_resilience_01",
+      "tags": [
+        "sekiro"
+      ],
+      "dimension": "resilience",
+      "text": "To me, Sekiro is the purest test of action skill in the Souls lineage\u2014no builds, no spirit ashes, no overleveling. If you can\u2019t beat it, you just can\u2019t. All you can do is keep practicing until your muscles remember every frame.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_gow_proactive_01",
+      "tags": [
+        "god_of_war"
+      ],
+      "dimension": "proactive",
+      "text": "In God of War, I never hang back and throw the axe\u2014I rush in for brutal melee, parry into runic attacks, pop Spartan Rage, and bulldoze everything. Kratos\u2019s combat is meant to be a steamroll.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_rdr2_pragmatism_01",
+      "tags": [
+        "red_dead_redemption"
+      ],
+      "dimension": "pragmatism",
+      "text": "In Red Dead Redemption 2, I never rush the story\u2014I stop for every random encounter, brew a coffee at camp, and just watch the sunset on horseback. This game was never meant to be sprinted through.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_music_tradition_01",
+      "tags": [
+        "music"
+      ],
+      "dimension": "tradition",
+      "text": "When listening to music, I firmly believe an album is a complete work\u2014from the intro through every track to the outro, the sequencing, the emotional arc, it\u2019s all intentional. Skipping tracks or shuffling ruins it.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_music_proactive_01",
+      "tags": [
+        "music"
+      ],
+      "dimension": "proactive",
+      "text": "I never rely on algorithms or trending charts to discover new music\u2014I browse niche forums, dig through obscure labels, and trace samples back to the original tracks. Passive recommendations hold zero appeal for me.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_metal_tradition_01",
+      "tags": [
+        "music_metal"
+      ],
+      "dimension": "tradition",
+      "text": "In metal, only black metal, death metal, and doom metal are the real deal with true soul\u2014bands that borrow metal elements but are essentially alt-rock or core don\u2019t even deserve to be called metal.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_rock_tradition_01",
+      "tags": [
+        "music_rock"
+      ],
+      "dimension": "tradition",
+      "text": "Led Zeppelin, Pink Floyd, and Black Sabbath in the 70s defined the ceiling of rock music\u2014no matter how much later rock evolves, it will never surpass the foundation laid during that golden era.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_jazz_control_01",
+      "tags": [
+        "music_jazz"
+      ],
+      "dimension": "control",
+      "text": "When I listen to jazz, I fixate on the complexity of the improvisation\u2014the chord substitutions in a bebop solo or the odd-meter rhythmic shifts excite me more than the melody itself.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_classical_control_01",
+      "tags": [
+        "music_classical"
+      ],
+      "dimension": "control",
+      "text": "I collect multiple recordings of the same piece by different conductors and orchestras and compare them endlessly\u2014Karajan\u2019s precision, Bernstein\u2019s passion, Gould\u2019s rebelliousness, each one tells a completely different story.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_electronic_heroism_01",
+      "tags": [
+        "music_electronic"
+      ],
+      "dimension": "heroism",
+      "text": "I have zero interest in mainstream EDM and commercial electronic music\u2014what\u2019s actually worth listening to is buried in Berlin\u2019s underground clubs, Detroit\u2019s old warehouse parties, and Bandcamp pages with only a few hundred followers.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_kpop_heroism_01",
+      "tags": [
+        "music_kpop"
+      ],
+      "dimension": "heroism",
+      "text": "K-POP is about more than just the music\u2014it\u2019s fan culture. During comeback season, I stream to boost charts, rally sales, defend ratings, and fight anti-fans. Pushing my idol\u2019s achievements to the top is where the real engagement lies.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_rap_heroism_01",
+      "tags": [
+        "music_rap"
+      ],
+      "dimension": "heroism",
+      "text": "What I value most in a rapper is street credibility in their lyrics\u2014you can tell instantly whether the story is fabricated or genuinely grew out of the struggle.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_blues_tradition_01",
+      "tags": [
+        "music_blues"
+      ],
+      "dimension": "tradition",
+      "text": "The beauty of the blues is that it was already complete 100 years ago\u2014what Robert Johnson, Muddy Waters, and B.B. King created remains the pure form; the white blues-rock that came after is just a diluted version.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_pop_pragmatism_01",
+      "tags": [
+        "music_pop"
+      ],
+      "dimension": "pragmatism",
+      "text": "Pop music getting looked down on is nothing new, but I don\u2019t think listening to mainstream pop makes anyone inferior\u2014a song that resonates with tens of millions of people is an achievement in its own right.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sports_tradition_01",
+      "tags": [
+        "sports"
+      ],
+      "dimension": "tradition",
+      "text": "I firmly believe classic training methods will never go out of style\u2014running is running, lifting is lifting. All those flashy new training systems and smart devices are just repackaging the same principles.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sports_proactive_01",
+      "tags": [
+        "sports"
+      ],
+      "dimension": "proactive",
+      "text": "I don\u2019t need a coach or a preset program to tell me what to do during training\u2014I research movement patterns on my own, record myself for form checks, and study sports science articles. Designing my own plan is far more effective than passively following one.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sports_heroism_01",
+      "tags": [
+        "sports"
+      ],
+      "dimension": "heroism",
+      "text": "In sports, individual achievement feels far more rewarding than team success\u2014finishing a marathon alone, pulling a heavy deadlift, or summiting a peak with nothing but your own strength, that sense of self-reliance is irreplaceable.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sports_pragmatism_01",
+      "tags": [
+        "sports"
+      ],
+      "dimension": "pragmatism",
+      "text": "I have zero obsession with workout gear or ritual\u2014a worn-out pair of running shoes and shorts and I\u2019m out the door. Exercise is about getting the work done, not putting on a show.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sports_pragmatism_02",
+      "tags": [
+        "sports"
+      ],
+      "dimension": "pragmatism",
+      "text": "I never block out dedicated gym time\u2014I walk instead of driving short distances, take the stairs instead of the elevator. Weaving movement into daily life is far more sustainable than scheduled training.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sports_control_01",
+      "tags": [
+        "sports"
+      ],
+      "dimension": "control",
+      "text": "I am borderline obsessive about tracking training data and nutrition\u2014daily calorie intake down to the gram, every set and rep logged. Training without data to back it up is just guessing.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sports_resilience_01",
+      "tags": [
+        "sports"
+      ],
+      "dimension": "resilience",
+      "text": "On the last set when I\u2019m already at failure, I still force myself to grind out one more rep\u2014even if my form starts breaking down and every muscle fiber is screaming at me to stop. Skipping those extra reps makes the whole session feel incomplete.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sports_physicality_01",
+      "tags": [
+        "sports"
+      ],
+      "dimension": "physicality",
+      "text": "I genuinely enjoy the physical confrontation in sports\u2014muscle-on-muscle contact when boxing out, the suffocating burn in your lungs during a full sprint, the searing ache of muscles pushed to their limit. That raw physical feedback is the very essence of sport.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sports_adaptability_01",
+      "tags": [
+        "sports"
+      ],
+      "dimension": "adaptability",
+      "text": "I refuse to lock myself into a single training modality\u2014when my strength peaks, I add cardio; when flexibility becomes a weakness, I pick up yoga; when I hit a plateau, I switch the entire movement pattern. The body needs diverse stimulus to keep progressing.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_gym_control_01",
+      "tags": [
+        "gym_strength"
+      ],
+      "dimension": "control",
+      "text": "I strictly split my training into bulking, cutting, and peaking phases\u2014caloric surplus, training volume, and exercise selection all get re-planned for each cycle. Training without periodization is just mindlessly stacking fatigue.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_badminton_adaptability_01",
+      "tags": [
+        "badminton"
+      ],
+      "dimension": "adaptability",
+      "text": "In doubles, when the opponents keep pinning me to the backcourt, I won\u2019t just keep grinding high clears\u2014I drop to the net, switch pacing with flat drives, or fire body shots to break their positioning. Breaking through with tactical shifts is far smarter than brute stamina.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_basketball_physicality_01",
+      "tags": [
+        "basketball"
+      ],
+      "dimension": "physicality",
+      "text": "On the court I naturally gravitate toward the paint\u2014boxing out on rebounds, seeking contact on drives, using my torso to impose on defense. Overpowering opponents with physical strength satisfies me way more than scoring from outside.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_running_resilience_01",
+      "tags": [
+        "running"
+      ],
+      "dimension": "resilience",
+      "text": "When I hit the wall during a long run, I actually get more fired up\u2014my breathing falls apart, my legs feel like concrete, my head fills with every excuse to stop, but it\u2019s precisely in that state that every extra step I push through defines what running truly means to me.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_yoga_control_01",
+      "tags": [
+        "yoga"
+      ],
+      "dimension": "control",
+      "text": "Yoga for me is not about relaxation\u2014I spend entire sessions refining the micro-alignment of an inversion or arm balance: the firing sequence of my core, the position of my shoulder blades, the synchronization of breath with movement. If it\u2019s not precise, I keep drilling.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_climbing_control_01",
+      "tags": [
+        "climbing"
+      ],
+      "dimension": "control",
+      "text": "When climbing, I spend just as much time on the ground as on the wall\u2014before I even touch a hold, I run through the entire route in my head multiple times: how to grip each hold, where to shift my center of gravity, which spots let me hang and rest. Planning everything out before pulling on is twice as efficient as just throwing myself at it.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_eating_proactive_01",
+      "tags": [
+        "eating"
+      ],
+      "dimension": "proactive",
+      "text": "Choosing the restaurant for every group dinner is my domain\u2014I\u2019m the first to scout new openings, I know every hidden alley gem like the back of my hand. Cuisine, budget, per-head cost\u2014I lock it in within five minutes, and my friends never have a bad meal with me.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_ktv_heroism_01",
+      "tags": [
+        "ktv"
+      ],
+      "dimension": "heroism",
+      "text": "At karaoke, I am the atmosphere engine for the entire room\u2014I seize control of the playlist from the first song, ballads, rock, shout-along anthems, I\u2019ll take them all. I only surrender the mic when my voice is raw. A room without me is just background instrumentals.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_drinking_control_01",
+      "tags": [
+        "drinking"
+      ],
+      "dimension": "control",
+      "text": "Drinking, for me, is about atmosphere and conversation\u2014I can\u2019t sit still in loud nightclubs or rowdy food stalls. I gravitate toward quiet craft beer bars, whisky lounges, or izakayas where you can actually talk. What I\u2019m drinking for has never been the alcohol percentage.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_clubbing_resilience_01",
+      "tags": [
+        "clubbing"
+      ],
+      "dimension": "resilience",
+      "text": "I\u2019m the type who dances to the very last song and only leaves when the lights come on\u2014my friends drop off one by one, and I\u2019m still soaked in the middle of the floor. Walking out drenched is the proof that tonight was worth the ticket.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_clubbing_heroism_01",
+      "tags": [
+        "clubbing"
+      ],
+      "dimension": "heroism",
+      "text": "When I go clubbing, I need to be in the dead center of the dance floor\u2014lights on my face, bass pounding through my chest. I don\u2019t care if I look good or not; when the vibe is right, the entire floor is my stage.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_pet_other_heroism_01",
+      "tags": [
+        "pet_other"
+      ],
+      "dimension": "heroism",
+      "text": "Most people\u2019s first reaction to snakes, spiders, or lizards is fear and rejection, but I see a beauty in them that\u2019s obscured by prejudice\u2014being willing to understand and accept these misunderstood creatures is itself an aesthetic judgment that refuses to follow the crowd.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": 10
+        },
+        {
+          "text": "Agree",
+          "weight": 5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": -5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_no_pet_proactive_01",
+      "tags": [
+        "no_pet"
+      ],
+      "dimension": "proactive",
+      "text": "Raising cats or dogs is beneath me — I close my eyes and nurture my spirit instead.",
+      "options": [
+        {
+          "text": "Strongly agree",
+          "weight": -10
+        },
+        {
+          "text": "Agree",
+          "weight": -5
+        },
+        {
+          "text": "Neutral",
+          "weight": 0
+        },
+        {
+          "text": "Disagree",
+          "weight": 5
+        },
+        {
+          "text": "Strongly disagree",
+          "weight": 10
+        }
       ]
     }
   ]

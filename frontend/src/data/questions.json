@@ -1,162 +1,242 @@
 [
   {
     "id": 1,
-    "text": "你刚加入一家新公司，你更希望这是一家什么样的企业？",
+    "text": "一张老照片、一段旧旋律或故乡某道菜的味道，总能触动我内心深处的东西。",
+    "dimension": "tradition",
     "options": [
-      { "text": "行业巨头，有深厚的历史底蕴和完善的制度，稳定且充满荣耀。", "dimension": "tradition", "value": 20 },
-      { "text": "初创黑马，哪怕现在规模不大，但充满打破行业旧规的野心。", "dimension": "tradition", "value": -20 }
+      { "text": "非常赞同", "value": 10 },
+      { "text": "赞同", "value": 5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": -5 },
+      { "text": "非常反对", "value": -10 }
     ]
   },
   {
     "id": 2,
-    "text": "玩带有竞技性质的电子游戏（如王者、LOL）时，你的核心策略是？",
+    "text": "我认为经典之所以能成为经典，是因为它经过了时间的筛选，比一时流行的东西更经得起推敲。",
+    "dimension": "tradition",
     "options": [
-      { "text": "开局就疯狂入侵野区压制对手，把节奏牢牢抓在自己手里。", "dimension": "proactive", "value": 20 },
-      { "text": "前期猥琐发育，诱敌深入，后期抓住对方一个失误一波猝死带走。", "dimension": "proactive", "value": -20 }
+      { "text": "非常赞同", "value": 10 },
+      { "text": "赞同", "value": 5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": -5 },
+      { "text": "非常反对", "value": -10 }
     ]
   },
   {
     "id": 3,
-    "text": "团队项目遇到了一个前所未见的致命 Bug，距离交付只剩 3 小时，你的反应是？",
+    "text": "在团队里，我希望大家遵循经过验证的工作方式，而不是每次都另起炉灶重新发明轮子。",
+    "dimension": "tradition",
     "options": [
-      { "text": "呼叫团队里的技术大神，或者自己开启暴走模式，单兵突击解决。", "dimension": "heroism", "value": 20 },
-      { "text": "立刻组织全员开短会，拆解排查任务，哪怕时间紧也要按流程协作。", "dimension": "heroism", "value": -20 }
+      { "text": "非常赞同", "value": 10 },
+      { "text": "赞同", "value": 5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": -5 },
+      { "text": "非常反对", "value": -10 }
     ]
   },
   {
     "id": 4,
-    "text": "在完成一项重要的工作任务时，你更认同以下哪种观念？",
+    "text": "比起百年老店的厚重感，我更喜欢新锐品牌敢闯敢试的冲劲。",
+    "dimension": "tradition",
     "options": [
-      { "text": "结果最重要。哪怕过程跌跌撞撞、手段功利，只要按时搞定就行。", "dimension": "pragmatism", "value": 20 },
-      { "text": "不仅要搞定，过程和代码结构必须优雅漂亮，这是我的底线和浪漫。", "dimension": "pragmatism", "value": -20 }
+      { "text": "非常赞同", "value": -10 },
+      { "text": "赞同", "value": -5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": 5 },
+      { "text": "非常反对", "value": 10 }
     ]
   },
   {
     "id": 5,
-    "text": "当你向别人解释一个复杂的概念时，你的表达习惯通常是：",
+    "text": "我很少怀念过去，更关心的是接下来会发生什么。",
+    "dimension": "tradition",
     "options": [
-      { "text": "从背景开始，抽丝剥茧，把所有细节和逻辑链条都铺陈清楚。", "dimension": "control", "value": 20 },
-      { "text": "直接甩出结论和核心痛点，直奔主题，能省一句话是一句。", "dimension": "control", "value": -20 }
+      { "text": "非常赞同", "value": -10 },
+      { "text": "赞同", "value": -5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": 5 },
+      { "text": "非常反对", "value": 10 }
     ]
   },
   {
     "id": 6,
-    "text": "如果你在某项极度看重的考试或比赛中，开局就不利（落后很多），你的心理状态是：",
+    "text": "当讨论陷入僵局时，我会主动打破沉默并提出新方向。",
+    "dimension": "proactive",
     "options": [
-      { "text": "心态容易崩盘，感觉大势已去，很难重新集中注意力。", "dimension": "resilience", "value": -20 },
-      { "text": "反而会被激发出一种可怕的斗志，越是绝境我越兴奋！", "dimension": "resilience", "value": 20 }
+      { "text": "非常赞同", "value": 10 },
+      { "text": "赞同", "value": 5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": -5 },
+      { "text": "非常反对", "value": -10 }
     ]
   },
   {
     "id": 7,
-    "text": "周末和朋友去密室逃脱，遇到一扇怎么也打不开的机关门，你会：",
+    "text": "看到机会时，我的第一反应是先冲上去占住位置，再慢慢修正细节。",
+    "dimension": "proactive",
     "options": [
-      { "text": "相信大力出奇迹，尝试用蛮力推拽或者直接暴力破解。", "dimension": "physicality", "value": 20 },
-      { "text": "静下心来寻找微小的线索，尝试用巧劲和机关逻辑解开。", "dimension": "physicality", "value": -20 }
+      { "text": "非常赞同", "value": 10 },
+      { "text": "赞同", "value": 5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": -5 },
+      { "text": "非常反对", "value": -10 }
     ]
   },
   {
     "id": 8,
-    "text": "面对变幻莫测的市场环境（或突发状况），你倾向于：",
+    "text": "如果我有强烈观点，通常会直接说出来，不太会绕很久。",
+    "dimension": "proactive",
     "options": [
-      { "text": "见招拆招，随时准备推翻原计划，灵活适应新的规则。", "dimension": "adaptability", "value": 20 },
-      { "text": "以不变应万变，坚信自己跑通的那套体系，用执行力对抗变化。", "dimension": "adaptability", "value": -20 }
+      { "text": "非常赞同", "value": 10 },
+      { "text": "赞同", "value": 5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": -5 },
+      { "text": "非常反对", "value": -10 }
     ]
   },
   {
     "id": 9,
-    "text": "看电影或小说时，你更容易被哪种剧情打动？",
+    "text": "我愿意把节奏交给别人掌握，自己安安心心把分内事做好就行。",
+    "dimension": "proactive",
     "options": [
-      { "text": "正统血脉的王子复仇记，重铸昔日家族的辉煌。", "dimension": "tradition", "value": 20 },
-      { "text": "毫无背景的小镇青年，踩着财阀和权贵的尸体逆袭登顶。", "dimension": "tradition", "value": -20 }
+      { "text": "非常赞同", "value": -10 },
+      { "text": "赞同", "value": -5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": 5 },
+      { "text": "非常反对", "value": 10 }
     ]
   },
   {
     "id": 10,
-    "text": "与人发生激烈争执时，你的攻击方式更偏向：",
+    "text": "我通常不急着主导对话，更愿意观察别人怎样展开再说。",
+    "dimension": "proactive",
     "options": [
-      { "text": "先发制人，用连珠炮式的理由压制对方，不给喘息机会。", "dimension": "proactive", "value": 20 },
-      { "text": "冷眼旁观对方输出，抓住逻辑漏洞后，一击毙命。", "dimension": "proactive", "value": -20 }
+      { "text": "非常赞同", "value": -10 },
+      { "text": "赞同", "value": -5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": 5 },
+      { "text": "非常反对", "value": 10 }
     ]
   },
   {
     "id": 11,
-    "text": "如果你是一支特种小队的指挥官，选拔队员时你更看重：",
+    "text": "关键时刻我更相信一个人的灵光一现能改变局面，而非靠制度和流程慢慢推进。",
+    "dimension": "heroism",
     "options": [
-      { "text": "个人能力极其突出的“刺头”兵王，能在关键时刻创造奇迹。", "dimension": "heroism", "value": 20 },
-      { "text": "能力均衡但绝对服从命令的普通士兵，能完美执行战术齿轮的作用。", "dimension": "heroism", "value": -20 }
+      { "text": "非常赞同", "value": 10 },
+      { "text": "赞同", "value": 5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": -5 },
+      { "text": "非常反对", "value": -10 }
     ]
   },
   {
     "id": 12,
-    "text": "在感情或交友中，如果双方出现了不可调和的现实矛盾，你会：",
+    "text": "如果团队陷入困境，我希望自己能成为那个站出来解决问题的人。",
+    "dimension": "heroism",
     "options": [
-      { "text": "及时止损，哪怕痛苦也要做出最理智、最实用的切割。", "dimension": "pragmatism", "value": 20 },
-      { "text": "选择感性，相信缘分和奇迹，为了内心的纯粹再冲动一次。", "dimension": "pragmatism", "value": -20 }
+      { "text": "非常赞同", "value": 10 },
+      { "text": "赞同", "value": 5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": -5 },
+      { "text": "非常反对", "value": -10 }
     ]
   },
   {
     "id": 13,
-    "text": "规划一次长途旅行，你的行李箱整理方式是：",
+    "text": "在群体中我很希望自己的意见被重视，不喜欢默默无闻地当背景板。",
+    "dimension": "heroism",
     "options": [
-      { "text": "分类打包，连充电线都要缠好，享受把控一切细节的安全感。", "dimension": "control", "value": 20 },
-      { "text": "拿上几件衣服胡乱塞进去，大不了缺什么到当地再买，随性就好。", "dimension": "control", "value": -20 }
+      { "text": "非常赞同", "value": 10 },
+      { "text": "赞同", "value": 5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": -5 },
+      { "text": "非常反对", "value": -10 }
     ]
   },
   {
     "id": 14,
-    "text": "在工作/学习中，你觉得自己最高效的状态出现在什么时候？",
+    "text": "一个人的高光远不如一个团队的默契协作让我动容。",
+    "dimension": "heroism",
     "options": [
-      { "text": "顺风顺水、资源充足、时间充裕，一切都在按计划推进时。", "dimension": "resilience", "value": -20 },
-      { "text": "被逼到悬崖边上，所有人都觉得我搞不定的时候。", "dimension": "resilience", "value": 20 }
+      { "text": "非常赞同", "value": -10 },
+      { "text": "赞同", "value": -5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": 5 },
+      { "text": "非常反对", "value": 10 }
     ]
   },
   {
     "id": 15,
-    "text": "参加体育运动（如篮球、足球），你更依赖自己的什么天赋？",
+    "text": "比起个人英雄式的孤胆拯救，我更信赖集体智慧和团队协作的力量。",
+    "dimension": "heroism",
     "options": [
-      { "text": "速度、力量、爆发力，用身体素质生吃对手。", "dimension": "physicality", "value": 20 },
-      { "text": "视野、节奏感、细腻的技术，用脑子和球商戏耍对手。", "dimension": "physicality", "value": -20 }
+      { "text": "非常赞同", "value": -10 },
+      { "text": "赞同", "value": -5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": 5 },
+      { "text": "非常反对", "value": 10 }
     ]
   },
   {
     "id": 16,
-    "text": "你有一个经常去吃、觉得味道很赞的餐厅，今晚要和朋友聚餐，你会：",
+    "text": "过程漂亮固然好，但如果结果没达成，我很难说服自己这算成功。",
+    "dimension": "pragmatism",
     "options": [
-      { "text": "果断带朋友去那家老店，稳妥且绝不踩雷。", "dimension": "adaptability", "value": -20 },
-      { "text": "提议去尝试街角新开的另一家店，冒险换换口味。", "dimension": "adaptability", "value": 20 }
+      { "text": "非常赞同", "value": 10 },
+      { "text": "赞同", "value": 5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": -5 },
+      { "text": "非常反对", "value": -10 }
     ]
   },
   {
     "id": 17,
-    "text": "如果有一天你拥有了巨额财富，你会：",
+    "text": "在感情中出现不可调和的矛盾时，我会选择及时止损，哪怕很痛苦。",
+    "dimension": "pragmatism",
     "options": [
-      { "text": "买豪宅跑车，维护自己的社会阶层，享受顶流生活。", "dimension": "tradition", "value": 15 },
-      { "text": "成立基金会或风投，去发掘和资助那些一无所有的平民天才。", "dimension": "tradition", "value": -15 }
+      { "text": "非常赞同", "value": 10 },
+      { "text": "赞同", "value": 5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": -5 },
+      { "text": "非常反对", "value": -10 }
     ]
   },
   {
     "id": 18,
-    "text": "遇到不喜欢你的人在背后议论你，你的处理方式是：",
+    "text": "比起理想感召，我更看重一件事能不能真正落地。",
+    "dimension": "pragmatism",
     "options": [
-      { "text": "当面硬刚，把事情挑明，绝不吃暗亏。", "dimension": "proactive", "value": 15 },
-      { "text": "无视他们，做好自己的事，用最终的成功狠狠打他们的脸。", "dimension": "proactive", "value": -15 }
+      { "text": "非常赞同", "value": 10 },
+      { "text": "赞同", "value": 5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": -5 },
+      { "text": "非常反对", "value": -10 }
     ]
   },
   {
     "id": 19,
-    "text": "在一支乐队里，你最想担任哪个角色？",
+    "text": "有些事情的意义不在于结果，就算明知会输，我也会为了过程中的信念坚持到底。",
+    "dimension": "pragmatism",
     "options": [
-      { "text": "站在聚光灯下的主唱或主音吉他手，吸引所有目光。", "dimension": "heroism", "value": 15 },
-      { "text": "在后方稳定输出节奏的贝斯手或鼓手，是整首歌的灵魂地基。", "dimension": "heroism", "value": -15 }
+      { "text": "非常赞同", "value": -10 },
+      { "text": "赞同", "value": -5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": 5 },
+      { "text": "非常反对", "value": 10 }
     ]
   },
   {
     "id": 20,
-    "text": "终于来到了最后一道题！现在，如果不考虑任何战术，足球对你而言意味着什么？",
+    "text": "我宁愿亏一点钱或吃点亏，也不想在一件小事上跟人斤斤计较太久。",
+    "dimension": "pragmatism",
     "options": [
-      { "text": "成王败寇。只有捧起大力神杯，才能被历史铭记。", "dimension": "pragmatism", "value": 15 },
-      { "text": "一种信仰。哪怕没有冠军，那些华丽的瞬间和精神图腾也永垂不朽。", "dimension": "pragmatism", "value": -15 }
+      { "text": "非常赞同", "value": -10 },
+      { "text": "赞同", "value": -5 },
+      { "text": "中立", "value": 0 },
+      { "text": "反对", "value": 5 },
+      { "text": "非常反对", "value": 10 }
     ]
   }
 ]

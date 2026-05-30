@@ -1,162 +1,242 @@
 [
   {
     "id": 1,
-    "text": "You just joined a new company. What kind of company do you hope it is?",
+    "text": "A faded photo, an old melody, or the taste of a hometown dish — these always touch something deep inside me.",
+    "dimension": "tradition",
     "options": [
-      { "text": "An industry giant with deep history and solid systems, stable and glorious.", "dimension": "tradition", "value": 20 },
-      { "text": "A startup dark horse, even if small now, full of ambition to break old rules.", "dimension": "tradition", "value": -20 }
+      { "text": "Strongly agree", "value": 10 },
+      { "text": "Agree", "value": 5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": -5 },
+      { "text": "Strongly disagree", "value": -10 }
     ]
   },
   {
     "id": 2,
-    "text": "When playing competitive games (like League or Dota), your core strategy is?",
+    "text": "I believe classics earn their status because they've stood the test of time, something fleeting trends can't match.",
+    "dimension": "tradition",
     "options": [
-      { "text": "Invade the enemy jungle aggressively from the start and control the tempo.", "dimension": "proactive", "value": 20 },
-      { "text": "Play safe early, bait enemies in, then punish one mistake to end the game late.", "dimension": "proactive", "value": -20 }
+      { "text": "Strongly agree", "value": 10 },
+      { "text": "Agree", "value": 5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": -5 },
+      { "text": "Strongly disagree", "value": -10 }
     ]
   },
   {
     "id": 3,
-    "text": "Your team hits a fatal bug never seen before, with only 3 hours until delivery. Your reaction?",
+    "text": "In a team, I prefer everyone follows proven methods rather than reinventing the wheel every time.",
+    "dimension": "tradition",
     "options": [
-      { "text": "Call the tech wizard or go into overdrive yourself to solo-fix it.", "dimension": "heroism", "value": 20 },
-      { "text": "Immediately organize a quick all-hands meeting to divide and conquer systematically.", "dimension": "heroism", "value": -20 }
+      { "text": "Strongly agree", "value": 10 },
+      { "text": "Agree", "value": 5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": -5 },
+      { "text": "Strongly disagree", "value": -10 }
     ]
   },
   {
     "id": 4,
-    "text": "When completing an important work task, which mindset do you agree with more?",
+    "text": "I'm more drawn to the bold, experimental energy of new brands than the gravitas of century-old institutions.",
+    "dimension": "tradition",
     "options": [
-      { "text": "Results matter most. Even if the process is messy or pragmatic, just get it done on time.", "dimension": "pragmatism", "value": 20 },
-      { "text": "Not just done, the process and code structure must be elegant. That's my bottom line and romance.", "dimension": "pragmatism", "value": -20 }
+      { "text": "Strongly agree", "value": -10 },
+      { "text": "Agree", "value": -5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": 5 },
+      { "text": "Strongly disagree", "value": 10 }
     ]
   },
   {
     "id": 5,
-    "text": "When explaining a complex concept to others, your expression habit is usually:",
+    "text": "I rarely dwell on the past — I'm far more interested in what comes next.",
+    "dimension": "tradition",
     "options": [
-      { "text": "Start from background, unravel thread by thread, lay out all details and logic chains.", "dimension": "control", "value": 20 },
-      { "text": "Drop the conclusion and core pain point directly, get to the point, save every word possible.", "dimension": "control", "value": -20 }
+      { "text": "Strongly agree", "value": -10 },
+      { "text": "Agree", "value": -5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": 5 },
+      { "text": "Strongly disagree", "value": 10 }
     ]
   },
   {
     "id": 6,
-    "text": "If you start badly (falling far behind) in an exam or competition you deeply care about, your mental state is:",
+    "text": "When a discussion stalls, I'll be the one to break the silence and propose a new direction.",
+    "dimension": "proactive",
     "options": [
-      { "text": "Mentally easy to collapse, feeling the game is over, hard to refocus.", "dimension": "resilience", "value": -20 },
-      { "text": "反而会被激发出一种可怕的斗志，越是绝境我越兴奋！", "dimension": "resilience", "value": 20 }
+      { "text": "Strongly agree", "value": 10 },
+      { "text": "Agree", "value": 5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": -5 },
+      { "text": "Strongly disagree", "value": -10 }
     ]
   },
   {
     "id": 7,
-    "text": "Weekend escape room with friends, you encounter a door that just won't open. You would:",
+    "text": "When I spot an opportunity, my first instinct is to charge in and claim my spot, then refine the details later.",
+    "dimension": "proactive",
     "options": [
-      { "text": "Believe in brute force, try pushing/pulling hard or directly breaking it.", "dimension": "physicality", "value": 20 },
-      { "text": "Calm down and look for tiny clues, try using finesse and mechanism logic to solve it.", "dimension": "physicality", "value": -20 }
+      { "text": "Strongly agree", "value": 10 },
+      { "text": "Agree", "value": 5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": -5 },
+      { "text": "Strongly disagree", "value": -10 }
     ]
   },
   {
     "id": 8,
-    "text": "Facing unpredictable market changes (or sudden situations), you tend to:",
+    "text": "If I have a strong opinion, I usually say it directly rather than dancing around it.",
+    "dimension": "proactive",
     "options": [
-      { "text": "Adapt to each situation, always ready to overturn original plans, flexibly adapt to new rules.", "dimension": "adaptability", "value": 20 },
-      { "text": "Respond to change with constancy. Believe in your proven system, fight change with execution.", "dimension": "adaptability", "value": -20 }
+      { "text": "Strongly agree", "value": 10 },
+      { "text": "Agree", "value": 5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": -5 },
+      { "text": "Strongly disagree", "value": -10 }
     ]
   },
   {
     "id": 9,
-    "text": "When watching movies or reading novels, which plot moves you more?",
+    "text": "I'm happy to let others set the pace while I quietly take care of my own responsibilities.",
+    "dimension": "proactive",
     "options": [
-      { "text": "The orthodox prince's revenge story, restoring the family's former glory.", "dimension": "tradition", "value": 20 },
-      { "text": "A small-town youth with no background climbing over tycoons and elites to reach the top.", "dimension": "tradition", "value": -20 }
+      { "text": "Strongly agree", "value": -10 },
+      { "text": "Agree", "value": -5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": 5 },
+      { "text": "Strongly disagree", "value": 10 }
     ]
   },
   {
     "id": 10,
-    "text": "When in fierce argument with someone, your attack style leans more toward:",
+    "text": "I don't usually rush to steer the conversation — I'd rather observe how others unfold things first.",
+    "dimension": "proactive",
     "options": [
-      { "text": "Strike first, suppress the opponent with rapid-fire reasoning, give no breathing room.", "dimension": "proactive", "value": 20 },
-      { "text": "Coldly observe their output, catch a logic flaw, then deliver one fatal blow.", "dimension": "proactive", "value": -20 }
+      { "text": "Strongly agree", "value": -10 },
+      { "text": "Agree", "value": -5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": 5 },
+      { "text": "Strongly disagree", "value": 10 }
     ]
   },
   {
     "id": 11,
-    "text": "If you were a special ops squad commander, when selecting team members you value more:",
+    "text": "At critical moments, I trust a single person's flash of brilliance to turn things around more than slow-moving processes.",
+    "dimension": "heroism",
     "options": [
-      { "text": "A 'thorny' soldier king with extremely outstanding individual ability who can create miracles at critical moments.", "dimension": "heroism", "value": 20 },
-      { "text": "An ordinary soldier with balanced abilities who absolutely obeys orders, perfectly executing tactical gear roles.", "dimension": "heroism", "value": -20 }
+      { "text": "Strongly agree", "value": 10 },
+      { "text": "Agree", "value": 5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": -5 },
+      { "text": "Strongly disagree", "value": -10 }
     ]
   },
   {
     "id": 12,
-    "text": "In relationships or friendships, if an irreconcilable real-world conflict arises, you would:",
+    "text": "When the team is stuck, I want to be the one who steps up and solves the problem.",
+    "dimension": "heroism",
     "options": [
-      { "text": "Cut losses in time, even if painful, make the most rational and practical decision.", "dimension": "pragmatism", "value": 20 },
-      { "text": "Choose emotionality, believe in fate and miracles, act on impulse once more for inner purity.", "dimension": "pragmatism", "value": -20 }
+      { "text": "Strongly agree", "value": 10 },
+      { "text": "Agree", "value": 5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": -5 },
+      { "text": "Strongly disagree", "value": -10 }
     ]
   },
   {
     "id": 13,
-    "text": "Planning a long trip, how do you pack your suitcase?",
+    "text": "In a group setting, I really want my opinion to be noticed — I don't like fading into the background.",
+    "dimension": "heroism",
     "options": [
-      { "text": "Categorize and pack, even charging cables must be neatly wrapped, enjoying the security of controlling every detail.", "dimension": "control", "value": 20 },
-      { "text": "Throw in a few clothes randomly, if missing something just buy it locally, go with the flow.", "dimension": "control", "value": -20 }
+      { "text": "Strongly agree", "value": 10 },
+      { "text": "Agree", "value": 5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": -5 },
+      { "text": "Strongly disagree", "value": -10 }
     ]
   },
   {
     "id": 14,
-    "text": "In work/study, when do you feel most efficient?",
+    "text": "A team pulling together in perfect sync moves me far more than any individual highlight reel.",
+    "dimension": "heroism",
     "options": [
-      { "text": "When everything goes smoothly, resources are abundant, time is plentiful, everything proceeds according to plan.", "dimension": "resilience", "value": -20 },
-      { "text": "When pushed to the cliff edge, when everyone thinks I can't handle it.", "dimension": "resilience", "value": 20 }
+      { "text": "Strongly agree", "value": -10 },
+      { "text": "Agree", "value": -5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": 5 },
+      { "text": "Strongly disagree", "value": 10 }
     ]
   },
   {
     "id": 15,
-    "text": "In sports (like basketball or football), what talent do you rely on more?",
+    "text": "I trust collective wisdom and teamwork more than any lone-hero narrative.",
+    "dimension": "heroism",
     "options": [
-      { "text": "Speed, strength, explosiveness, overpowering opponents with physical attributes.", "dimension": "physicality", "value": 20 },
-      { "text": "Vision, rhythm sense, delicate technique, outplaying opponents with brain and football IQ.", "dimension": "physicality", "value": -20 }
+      { "text": "Strongly agree", "value": -10 },
+      { "text": "Agree", "value": -5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": 5 },
+      { "text": "Strongly disagree", "value": 10 }
     ]
   },
   {
     "id": 16,
-    "text": "You have a restaurant you often eat at and love. Tonight you're dining with friends, you would:",
+    "text": "A beautiful process is nice, but if the result isn't there, I can't convince myself it was a success.",
+    "dimension": "pragmatism",
     "options": [
-      { "text": "Decisively take friends to that old reliable shop, safe and never a miss.", "dimension": "adaptability", "value": -20 },
-      { "text": "Suggest trying that newly opened place on the corner, take a risk for a change of flavor.", "dimension": "adaptability", "value": 20 }
+      { "text": "Strongly agree", "value": 10 },
+      { "text": "Agree", "value": 5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": -5 },
+      { "text": "Strongly disagree", "value": -10 }
     ]
   },
   {
     "id": 17,
-    "text": "If one day you had massive wealth, you would:",
+    "text": "When irreconcilable conflicts arise in a relationship, I'll cut my losses in time, painful as it may be.",
+    "dimension": "pragmatism",
     "options": [
-      { "text": "Buy mansions and sports cars, maintain your social class, enjoy the top-tier lifestyle.", "dimension": "tradition", "value": 15 },
-      { "text": "Set up a foundation or venture capital to discover and fund talented平民 geniuses with nothing.", "dimension": "tradition", "value": -15 }
+      { "text": "Strongly agree", "value": 10 },
+      { "text": "Agree", "value": 5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": -5 },
+      { "text": "Strongly disagree", "value": -10 }
     ]
   },
   {
     "id": 18,
-    "text": "When people you don't like gossip about you behind your back, your approach is:",
+    "text": "I care more about whether something can actually be executed than how inspiring the vision sounds.",
+    "dimension": "pragmatism",
     "options": [
-      { "text": "Confront them directly, call things out, never take hidden losses.", "dimension": "proactive", "value": 15 },
-      { "text": "Ignore them, focus on your own work, use ultimate success to slap their faces.", "dimension": "proactive", "value": -15 }
+      { "text": "Strongly agree", "value": 10 },
+      { "text": "Agree", "value": 5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": -5 },
+      { "text": "Strongly disagree", "value": -10 }
     ]
   },
   {
     "id": 19,
-    "text": "In a band, which role do you most want to play?",
+    "text": "Some things aren't about the outcome — even knowing I'll lose, I'll see it through for the principle behind it.",
+    "dimension": "pragmatism",
     "options": [
-      { "text": "The lead singer or lead guitarist in the spotlight, attracting all attention.", "dimension": "heroism", "value": 15 },
-      { "text": "The bassist or drummer steadily outputting rhythm in the back, the soul foundation of the whole song.", "dimension": "heroism", "value": -15 }
+      { "text": "Strongly agree", "value": -10 },
+      { "text": "Agree", "value": -5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": 5 },
+      { "text": "Strongly disagree", "value": 10 }
     ]
   },
   {
     "id": 20,
-    "text": "Finally at the last question! Now, without considering any tactics, what does football mean to you?",
+    "text": "I'd rather lose a bit of money or take a small loss than haggle endlessly over something trivial.",
+    "dimension": "pragmatism",
     "options": [
-      { "text": "Winner takes all. Only by lifting the World Cup can one be remembered by history.", "dimension": "pragmatism", "value": 15 },
-      { "text": "A belief. Even without championships, those glorious moments and spiritual totems are immortal.", "dimension": "pragmatism", "value": -15 }
+      { "text": "Strongly agree", "value": -10 },
+      { "text": "Agree", "value": -5 },
+      { "text": "Neutral", "value": 0 },
+      { "text": "Disagree", "value": 5 },
+      { "text": "Strongly disagree", "value": 10 }
     ]
   }
 ]

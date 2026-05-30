@@ -7,7 +7,7 @@ export const translations = {
       quickStart: "快速灵魂扫掠",
       quickStartSub: "20 道精选问题",
       proStart: "硬核全维解构",
-      proStartSub: "80 道深度问题",
+      proStartSub: "96 道深度问题",
       langSwitch: "English"
     },
     quiz: {
@@ -19,7 +19,6 @@ export const translations = {
       matchSuccess: "匹配成功",
       yourTeam: "你的足球灵魂归宿",
       matchRate: "契合度: {percentage}%",
-      exportReport: "导出战术报告",
       retry: "重新匹配",
       dimensions: {
         tradition: { left: "草根新贵", right: "豪门底蕴" },
@@ -36,7 +35,8 @@ export const translations = {
     error: {
       dataFailed: "数据加载失败",
       dataFailedDesc: "未能成功读取球队数据文件，请检查网络后重试。",
-      backHome: "返回首页重试"
+      backHome: "返回首页",
+      retry: "重新加载"
     }
   },
   en: {
@@ -47,7 +47,7 @@ export const translations = {
       quickStart: "Quick Soul Scan",
       quickStartSub: "20 Selected Questions",
       proStart: "Deep Full Analysis",
-      proStartSub: "80 In-depth Questions",
+      proStartSub: "96 In-depth Questions",
       langSwitch: "中文"
     },
     quiz: {
@@ -59,7 +59,6 @@ export const translations = {
       matchSuccess: "Match Successful",
       yourTeam: "Your Football Soul Home",
       matchRate: "Match Rate: {percentage}%",
-      exportReport: "Export Report",
       retry: "Rematch",
       dimensions: {
         tradition: { left: "Underdog", right: "Heritage" },
@@ -76,7 +75,8 @@ export const translations = {
     error: {
       dataFailed: "Data Loading Failed",
       dataFailedDesc: "Failed to load team data. Please check your network and try again.",
-      backHome: "Back to Home"
+      backHome: "Back to Home",
+      retry: "Reload"
     }
   }
 };

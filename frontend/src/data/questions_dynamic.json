@@ -2,89 +2,5810 @@
   "calibration_nodes": [
     {
       "id": "cal_01",
-      "text": "【信标扫描 1/2】在你为数不多的空闲时间里，你最常出没的数字战场是？",
+      "text": "你平时最常玩或者最喜欢哪类电子游戏？",
       "options": [
-        { "text": "峡谷与战场 (LOL, 王者, DOTA)", "assign_tag": "moba", "value": 0 },
-        { "text": "枪林弹雨 (CS:GO, 瓦罗兰特, PUBG)", "assign_tag": "fps", "value": 0 },
-        { "text": "我不怎么打电竞，我更喜欢现充/职场/追剧", "assign_tag": "life", "value": 0 }
+        {
+          "text": "英雄联盟",
+          "assign_tag": "lol"
+        },
+        {
+          "text": "王者荣耀",
+          "assign_tag": "wzry"
+        },
+        {
+          "text": "DOTA2",
+          "assign_tag": "dota2"
+        },
+        {
+          "text": "CS",
+          "assign_tag": "cs"
+        },
+        {
+          "text": "APEX",
+          "assign_tag": "apex"
+        },
+        {
+          "text": "PUBG",
+          "assign_tag": "pubg"
+        },
+        {
+          "text": "瓦罗兰特",
+          "assign_tag": "valorant"
+        },
+        {
+          "text": "黑暗之魂",
+          "assign_tag": "dark_souls"
+        },
+        {
+          "text": "艾尔登法环",
+          "assign_tag": "elden_ring"
+        },
+        {
+          "text": "只狼",
+          "assign_tag": "sekiro"
+        },
+        {
+          "text": "黑神话悟空",
+          "assign_tag": "black_myth_wukong"
+        },
+        {
+          "text": "战神",
+          "assign_tag": "god_of_war"
+        },
+        {
+          "text": "荒野大镖客",
+          "assign_tag": "red_dead_redemption"
+        },
+        {
+          "text": "原神",
+          "assign_tag": "genshin"
+        },
+        {
+          "text": "崩坏星穹铁道",
+          "assign_tag": "honkai_star_rail"
+        },
+        {
+          "text": "我几乎不碰电子游戏",
+          "assign_tag": "no_game"
+        }
       ]
     },
     {
       "id": "cal_02",
-      "text": "【信标扫描 2/2】如果把你扔进一个 10 人团队完成一项大工程，你通常的角色是？",
+      "text": "你戴上耳机最常听哪种风格的音乐？",
       "options": [
-        { "text": "发号施令的架构师/队长", "assign_tag": "leader", "value": 0 },
-        { "text": "冲锋陷阵的尖刀/执行者", "assign_tag": "striker", "value": 0 },
-        { "text": "兜底排雷的后勤/辅助", "assign_tag": "support", "value": 0 }
+        {
+          "text": "流行乐",
+          "assign_tag": "music_pop"
+        },
+        {
+          "text": "摇滚乐",
+          "assign_tag": "music_rock"
+        },
+        {
+          "text": "金属乐",
+          "assign_tag": "music_metal"
+        },
+        {
+          "text": "爵士乐",
+          "assign_tag": "music_jazz"
+        },
+        {
+          "text": "蓝调",
+          "assign_tag": "music_blues"
+        },
+        {
+          "text": "电子乐",
+          "assign_tag": "music_electronic"
+        },
+        {
+          "text": "民谣",
+          "assign_tag": "music_folk"
+        },
+        {
+          "text": "古典乐",
+          "assign_tag": "music_classical"
+        },
+        {
+          "text": "嘻哈说唱",
+          "assign_tag": "music_hiphop"
+        },
+        {
+          "text": "R&B",
+          "assign_tag": "music_rnb"
+        },
+        {
+          "text": "我习惯安静，极少听歌",
+          "assign_tag": "no_music"
+        }
+      ]
+    },
+    {
+      "id": "cal_03",
+      "text": "在线下社交或者聚会时，你更偏好哪种活动？",
+      "options": [
+        {
+          "text": "剧本杀",
+          "assign_tag": "script_murder"
+        },
+        {
+          "text": "跑团",
+          "assign_tag": "trpg"
+        },
+        {
+          "text": "狼人杀",
+          "assign_tag": "werewolf"
+        },
+        {
+          "text": "围棋",
+          "assign_tag": "go"
+        },
+        {
+          "text": "德州扑克",
+          "assign_tag": "texas_holdem"
+        },
+        {
+          "text": "KTV",
+          "assign_tag": "ktv"
+        },
+        {
+          "text": "喝酒",
+          "assign_tag": "drinking"
+        },
+        {
+          "text": "蹦迪",
+          "assign_tag": "clubbing"
+        },
+        {
+          "text": "我排斥无效社交，宁愿一个人待着",
+          "assign_tag": "social_solo"
+        }
+      ]
+    },
+    {
+      "id": "cal_04",
+      "text": "除了足球，你平时更倾向于哪种身体锻炼方式？",
+      "options": [
+        {
+          "text": "健身房撸铁",
+          "assign_tag": "gym_strength"
+        },
+        {
+          "text": "网球",
+          "assign_tag": "tennis"
+        },
+        {
+          "text": "羽毛球",
+          "assign_tag": "badminton"
+        },
+        {
+          "text": "游泳",
+          "assign_tag": "swimming"
+        },
+        {
+          "text": "篮球",
+          "assign_tag": "basketball"
+        },
+        {
+          "text": "跑步",
+          "assign_tag": "running"
+        },
+        {
+          "text": "瑜伽",
+          "assign_tag": "yoga"
+        },
+        {
+          "text": "攀岩",
+          "assign_tag": "climbing"
+        },
+        {
+          "text": "我非必要不运动",
+          "assign_tag": "no_sports"
+        }
+      ]
+    },
+    {
+      "id": "cal_05",
+      "text": "在日常生活里，你更愿意养哪种宠物来陪伴自己？",
+      "options": [
+        {
+          "text": "猫",
+          "assign_tag": "pet_cat"
+        },
+        {
+          "text": "狗",
+          "assign_tag": "pet_dog"
+        },
+        {
+          "text": "其他",
+          "assign_tag": "pet_other"
+        },
+        {
+          "text": "不养",
+          "assign_tag": "no_pet"
+        }
       ]
     }
   ],
   "question_pool": [
     {
-      "id": "q_moba_01", "tags": ["moba"], "dimension": "heroism",
-      "text": "【峡谷情境】打团时，我更喜欢选能一秀五的刺客/AD，而不是开团承伤的纯工具人坦克。",
+      "id": "q_univ_tradition_01",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "我更容易被有历史、传承和共同记忆的事物打动，而不是刚刚冒头的新潮概念。",
       "options": [
-        { "text": "非常赞同 (我就是绝对核心)", "weight": 10 },
-        { "text": "比较赞同", "weight": 5 },
-        { "text": "看阵容吧", "weight": 0 },
-        { "text": "不太赞同", "weight": -5 },
-        { "text": "非常反对 (我喜欢为团队牺牲)", "weight": -10 }
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
       ]
     },
     {
-      "id": "q_fps_01", "tags": ["fps"], "dimension": "heroism",
-      "text": "【残局情境】1v3 残局，我更相信自己的干拉枪法去主动找机会，而不是躲在死角被动等队友报点。",
+      "id": "q_univ_tradition_02",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "如果两个品牌实力接近，我会更信任那个经历过时间检验的老品牌。",
       "options": [
-        { "text": "非常赞同", "weight": 10 }, { "text": "比较赞同", "weight": 5 }, { "text": "中立", "weight": 0 }, { "text": "不太赞同", "weight": -5 }, { "text": "非常反对", "weight": -10 }
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
       ]
     },
     {
-      "id": "q_life_01", "tags": ["life", "leader"], "dimension": "tradition",
-      "text": "【商业情境】投资餐厅，我更倾向于选择一家有50年历史、规矩森严的老字号，而不是刚成立、风格激进的快闪店。",
+      "id": "q_univ_tradition_03",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "加入一个团队时，我很在意它有没有清晰的传统、仪式和身份感。",
       "options": [
-        { "text": "非常赞同 (底蕴至上)", "weight": 10 }, { "text": "比较赞同", "weight": 5 }, { "text": "中立", "weight": 0 }, { "text": "不太赞同", "weight": -5 }, { "text": "非常反对 (渴望颠覆)", "weight": -10 }
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
       ]
     },
     {
-      "id": "q_univ_01", "tags": ["universal"], "dimension": "proactive",
-      "text": "【社交情境】在一场有陌生人的聚会中，我通常是那个主动寻找话题、掌控聊天节奏的人。",
+      "id": "q_univ_tradition_04",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "我欣赏那些带有经典秩序、厚重感和延续性的设计。",
       "options": [
-        { "text": "非常赞同 (极致主动压制)", "weight": 10 }, { "text": "比较赞同", "weight": 5 }, { "text": "中立", "weight": 0 }, { "text": "不太赞同", "weight": -5 }, { "text": "非常反对 (习惯被动反击)", "weight": -10 }
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
       ]
     },
     {
-      "id": "q_univ_02", "tags": ["universal"], "dimension": "pragmatism",
-      "text": "【处世哲学】只要能达到目的，过程中使用一些不太体面甚至取巧的手段（只要不违法），是可以接受的。",
+      "id": "q_univ_tradition_05",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "一个群体能长期存在，本身就说明它有值得尊重的内在价值。",
       "options": [
-        { "text": "非常赞同 (极致功利)", "weight": 10 }, { "text": "比较赞同", "weight": 5 }, { "text": "中立", "weight": 0 }, { "text": "不太赞同", "weight": -5 }, { "text": "非常反对 (过程必须优雅)", "weight": -10 }
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
       ]
     },
     {
-      "id": "q_univ_03", "tags": ["universal"], "dimension": "control",
-      "text": "【旅行情境】出去旅游，我会提前把每天的行程精确到小时，我不喜欢充满未知和变数的“说走就走”。",
+      "id": "q_univ_tradition_06",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "我宁愿慢慢进入一条成熟可靠的路径，也不愿频繁追逐全新的机会。",
       "options": [
-        { "text": "非常赞同 (极致控场)", "weight": 10 }, { "text": "比较赞同", "weight": 5 }, { "text": "中立", "weight": 0 }, { "text": "不太赞同", "weight": -5 }, { "text": "非常反对 (拥抱混乱与机会)", "weight": -10 }
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
       ]
     },
     {
-      "id": "q_moba_02", "tags": ["moba", "fps"], "dimension": "resilience",
-      "text": "【绝境逆风】当游戏大比分落后，队友开始发起投降时，我不仅不会点赞同，反而会激发出更强烈的操作欲望。",
+      "id": "q_univ_tradition_07",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "我对“推翻旧规则、重新发明一切”的冲动通常保持警惕。",
       "options": [
-        { "text": "非常赞同 (逆境之王)", "weight": 10 }, { "text": "比较赞同", "weight": 5 }, { "text": "中立", "weight": 0 }, { "text": "不太赞同", "weight": -5 }, { "text": "非常反对 (早点下一把)", "weight": -10 }
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
       ]
     },
     {
-      "id": "q_univ_04", "tags": ["universal"], "dimension": "physicality",
-      "text": "【运动偏好】如果必须选修一门体育课，我会选强调绝对力量与爆发的拳击/举重，而不是强调灵活性和技巧的击剑/体操。",
+      "id": "q_univ_tradition_08",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "我希望自己属于某种更大的传统，而不是只代表当下的个人选择。",
       "options": [
-        { "text": "非常赞同 (肌肉对抗)", "weight": 10 }, { "text": "比较赞同", "weight": 5 }, { "text": "中立", "weight": 0 }, { "text": "不太赞同", "weight": -5 }, { "text": "非常反对 (技术至上)", "weight": -10 }
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
       ]
     },
     {
-      "id": "q_univ_05", "tags": ["universal"], "dimension": "adaptability",
-      "text": "【职场抗压】当老板突然把执行了一半的方案全部推翻，要求按照新思路重做时，我能立刻停止抱怨并迅速切换状态。",
+      "id": "q_univ_tradition_09",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "我更喜欢制度稳定、层级清楚、经验可传承的组织。",
       "options": [
-        { "text": "非常赞同 (战术变色龙)", "weight": 10 }, { "text": "比较赞同", "weight": 5 }, { "text": "中立", "weight": 0 }, { "text": "不太赞同", "weight": -5 }, { "text": "非常反对 (一以贯之的固执)", "weight": -10 }
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_tradition_10",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "我会尊重那些长期坚持一套价值观的人，即使他们显得有点保守。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_tradition_11",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "只要新事物足够刺激，我愿意很快抛开原有习惯和旧身份。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": -10
+        },
+        {
+          "text": "赞同",
+          "weight": -5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": 5
+        },
+        {
+          "text": "非常反对",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_tradition_12",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "tradition",
+      "text": "所谓历史和底蕴常常只是包袱，真正重要的是眼下谁更强。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": -10
+        },
+        {
+          "text": "赞同",
+          "weight": -5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": 5
+        },
+        {
+          "text": "非常反对",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_01",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "在一场有陌生人的聚会中，我通常是那个主动寻找话题、掌控聊天节奏的人。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_02",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "遇到分歧时，我倾向于先把观点亮出来，让局势进入我的节奏。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_03",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "当任务方向模糊时，我会主动提出方案，而不是等待别人先行动。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_04",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "我更喜欢先发制人，用持续压力让对手来适应我。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_05",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "面对新领域，我会先大量试错和输出，而不是长时间旁观。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_06",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "我不太喜欢只做响应者，更愿意成为推动局面变化的人。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_07",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "我会主动设定议题、边界和节奏，避免被别人牵着走。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_08",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "当好机会出现时，我宁愿先冲上去占住位置，再慢慢修正细节。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_09",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "如果我有强烈观点，我通常会直接说出来，不太会绕很久。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_10",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "越是局面僵住，我越想主动打破平衡。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_11",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "在不确定的局面里，我更愿意先稳住防线，等待对方露出破绽。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": -10
+        },
+        {
+          "text": "赞同",
+          "weight": -5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": 5
+        },
+        {
+          "text": "非常反对",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_proactive_12",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "proactive",
+      "text": "我通常不急着主导对话，更愿意观察别人怎样展开。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": -10
+        },
+        {
+          "text": "赞同",
+          "weight": -5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": 5
+        },
+        {
+          "text": "非常反对",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_01",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "关键时刻，我相信一个顶级人物的灵光一现可以改变整件事的走向。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_02",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "如果团队陷入困境，我希望自己能成为那个站出来解决问题的人。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_03",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "我更容易被主角孤身扭转局面的桥段点燃。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_04",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "我会格外欣赏那些拥有不可替代个人能力的人。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_05",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "当所有人都犹豫时，我愿意承担更高风险去创造突破。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_06",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "优秀领导者应该在关键节点拥有超越体系的决断力。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_07",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "我享受在重要场合被寄予厚望，并用表现回应期待。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_08",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "越是没人敢接手的难题，越能激发我的斗志。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_09",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "一个人的上限有时比团队流程更能决定最终高度。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_10",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "我不排斥成为焦点，只要那意味着我能影响结果。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_11",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "我更相信稳定分工和集体执行，而不是等待某个人爆发。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": -10
+        },
+        {
+          "text": "赞同",
+          "weight": -5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": 5
+        },
+        {
+          "text": "非常反对",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_heroism_12",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "heroism",
+      "text": "真正成熟的团队应该尽量减少对明星人物的依赖。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": -10
+        },
+        {
+          "text": "赞同",
+          "weight": -5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": 5
+        },
+        {
+          "text": "非常反对",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_01",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "只要能达到目的，过程中使用一些不太体面甚至取巧的手段（只要不违法），是可以接受的。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_02",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "我认为完成目标比过程是否漂亮更重要。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_03",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "如果资源有限，我会优先投入最可能带来实际回报的地方。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_04",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "做重要决定时，我会尽量压低情绪，把现实收益和损失算清楚。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_05",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "比起理想感，我更看重一件事能不能真正落地。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_06",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "如果某个方案够有效，我不介意它看起来有些笨重或不好看。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_07",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "在重大利益问题上，我倾向于把规则和账目说清楚。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_08",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "必要时我能放弃好看的姿态，选择最直接有效的解法。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_09",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "我尊重那些能把事情办成的人，即使他们不够浪漫。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_10",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "如果必须取舍，我会先保住结果，再谈风格和情怀。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_11",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "我愿意为了纯粹的热爱承受明显的现实损失。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": -10
+        },
+        {
+          "text": "赞同",
+          "weight": -5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": 5
+        },
+        {
+          "text": "非常反对",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_pragmatism_12",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "pragmatism",
+      "text": "如果过程不符合我的美感和原则，即使结果很好我也很难接受。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": -10
+        },
+        {
+          "text": "赞同",
+          "weight": -5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": 5
+        },
+        {
+          "text": "非常反对",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_01",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "出去旅游，我会提前把每天的行程精确到小时，我不喜欢充满未知和变数的“说走就走”。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_02",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "开始复杂任务前，我会先拆结构、定步骤、找风险点。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_03",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "我喜欢把零散信息整理成清晰框架，再继续判断。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_04",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "我认为稳定节奏和明确分工能让团队发挥得更好。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_05",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "我会从秩序感中获得安全感，比如清单、日程和固定流程。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_06",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "解释复杂问题时，我习惯从背景和逻辑链条讲起。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_07",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "相比临场发挥，我更信任提前准备和可复盘的方法。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_08",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "我不喜欢事情一会儿一个方向，频繁打断原有计划。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_09",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "我更愿意按系统课程逐步推进，而不是东学一点西试一点。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_10",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "当周围混乱时，我第一反应是先建立秩序。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_11",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "我常常觉得计划会限制创造力，边做边改更适合我。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": -10
+        },
+        {
+          "text": "赞同",
+          "weight": -5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": 5
+        },
+        {
+          "text": "非常反对",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_control_12",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "control",
+      "text": "面对新问题，我喜欢先跳进去试，之后再总结规律。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": -10
+        },
+        {
+          "text": "赞同",
+          "weight": -5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": 5
+        },
+        {
+          "text": "非常反对",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_01",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "越是开局不利，我越容易被激发出不服输的劲头。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_02",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "一次失败之后，我通常会很快进入复盘和反击状态。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_03",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "被质疑时，我不太会立刻退缩，反而更想证明自己。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_04",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "只要目标重要，我能忍受很长一段时间的低谷。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_05",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "落后并不会让我马上放弃，反而会让我更专注。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_06",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "我可以带着不舒服继续推进事情，而不是等状态完全恢复。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_07",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "越难的局面，越能让我看清自己到底想不想赢。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_08",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "当大家士气低落时，我愿意继续咬住局面，不让它彻底崩掉。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_09",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "我不太害怕被拖进消耗战，因为我相信自己能熬过去。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_10",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "如果我真的在乎一件事，短期挫折很难让我转身离开。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_11",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "局面一旦明显不顺，我会倾向于及时止损，保存精力。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": -10
+        },
+        {
+          "text": "赞同",
+          "weight": -5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": 5
+        },
+        {
+          "text": "非常反对",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_resilience_12",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "resilience",
+      "text": "如果连续几次失败，我会很快怀疑自己是否还该继续。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": -10
+        },
+        {
+          "text": "赞同",
+          "weight": -5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": 5
+        },
+        {
+          "text": "非常反对",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_01",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "如果必须选修一门体育课，我会选强调绝对力量与爆发的拳击/举重，而不是强调灵活性和技巧的击剑/体操。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_02",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "遇到卡住的障碍时，我会先尝试用更直接、更有冲击力的方式突破。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_03",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "我欣赏速度、力量、压迫感带来的震慑。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_04",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "必要时我不介意用强硬姿态让对方感受到边界。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_05",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "比起精细计算，我更相信执行力、体能和持续冲击。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_06",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "我会尊重那些能扛住压力、顶在最前面的人。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_07",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "看比赛或动作场面时，我很容易被硬碰硬的对抗吸引。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_08",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "高强度、快节奏、需要硬顶的任务有时反而让我兴奋。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_09",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "我认为身体状态和行动能量会深刻影响一个人的判断力。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_10",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "当局面僵住时，我倾向于加大力度，而不是先绕路。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_11",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "我更欣赏四两拨千斤的精巧处理，而不是正面硬冲。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": -10
+        },
+        {
+          "text": "赞同",
+          "weight": -5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": 5
+        },
+        {
+          "text": "非常反对",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_physicality_12",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "physicality",
+      "text": "如果能用巧劲和角度解决问题，我通常不愿消耗体力硬拼。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": -10
+        },
+        {
+          "text": "赞同",
+          "weight": -5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": 5
+        },
+        {
+          "text": "非常反对",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_01",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "当老板突然把执行了一半的方案全部推翻，要求按照新思路重做时，我能立刻停止抱怨并迅速切换状态。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_02",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "计划突然失效时，我通常会很快开始寻找新的玩法。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_03",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "面对不同圈子的人，我能自然调整表达方式和相处节奏。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_04",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "新规则出现时，我会兴奋地研究它可能带来的机会。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_05",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "我不排斥临时改方向，只要它能打开新的空间。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_06",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "我愿意尝试陌生城市、陌生食物和陌生路线。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_07",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "如果原方法被证明不合适，我能快速放下，不会太纠结沉没成本。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_08",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "我可以在不同角色之间切换，比如组织者、执行者、观察者。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_09",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "我常常能把手边有限资源重新组合成新的方案。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_10",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "未知不会总让我焦虑，有时反而让我觉得事情有活力。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_11",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "一旦我认定某种做法有效，就算环境变化，我也更愿意继续沿用它。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": -10
+        },
+        {
+          "text": "赞同",
+          "weight": -5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": 5
+        },
+        {
+          "text": "非常反对",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_univ_adaptability_12",
+      "tags": [
+        "universal"
+      ],
+      "dimension": "adaptability",
+      "text": "如果熟悉的规则被打破，我通常需要很久才能重新进入状态。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": -10
+        },
+        {
+          "text": "赞同",
+          "weight": -5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": 5
+        },
+        {
+          "text": "非常反对",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_tradition_01",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "tradition",
+      "text": "我会对那些经历过很多版本变化、仍然有人坚持使用的老牌英雄有天然好感。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_tradition_02",
+      "tags": [
+        "lol"
+      ],
+      "dimension": "tradition",
+      "text": "我觉得只要把一个本命英雄练到登峰造极，即使版本不算强势，也照样能打出效果。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_proactive_03",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "proactive",
+      "text": "前期只要我觉得有机会，就会主动压线、入侵、游走或支援，把节奏打出来。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_proactive_04",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "proactive",
+      "text": "我更喜欢主动开团或先手逼技能，而不是一直等对面犯错。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_heroism_05",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "heroism",
+      "text": "我会被那种能在关键团战里一套操作改变战局的英雄深深吸引。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_heroism_06",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "heroism",
+      "text": "如果队伍陷入僵局，我宁愿相信自己能靠一次完美操作打开局面。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_pragmatism_07",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "pragmatism",
+      "text": "只要能赢，我可以接受选择不华丽、不好看但胜率更高的英雄和打法。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_pragmatism_08",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "pragmatism",
+      "text": "哪怕过程很憋屈，只要通过避战、换资源、偷发育能赢，我就能接受。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_control_09",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "control",
+      "text": "我很在意兵线、视野、野区资源和关键中立资源刷新，喜欢把地图节奏握在手里。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_control_10",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "control",
+      "text": "相比频繁打架，我更享受通过运营、视野和资源交换慢慢扩大优势。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_resilience_11",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "resilience",
+      "text": "即使前期被打崩，只要基地还没爆，我都会认真寻找翻盘机会。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_resilience_12",
+      "tags": [
+        "lol"
+      ],
+      "dimension": "resilience",
+      "text": "队友开始消极或点投降时，我反而会更想稳住局面，把游戏拖进后期。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_physicality_13",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "physicality",
+      "text": "我偏爱坦克、战士或能正面冲阵的英雄，享受硬吃伤害并撕开阵型的感觉。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_physicality_14",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "physicality",
+      "text": "比起拉扯和消耗，我更喜欢直接贴脸对拼，用强度压垮对手。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_adaptability_15",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "adaptability",
+      "text": "版本更新后，我愿意很快尝试新英雄、新出装和新打法，而不是守着旧习惯。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_moba_adaptability_16",
+      "tags": [
+        "moba"
+      ],
+      "dimension": "adaptability",
+      "text": "如果一局游戏的形势突然变化，我能快速改变原本的出装、分路或团战思路。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_tradition_01",
+      "tags": [
+        "cs"
+      ],
+      "dimension": "tradition",
+      "text": "我对Dust2、Inferno这些经典老图有一种天然的偏爱，新出的地图总感觉少了灵魂。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_tradition_02",
+      "tags": [
+        "traditional_shooter"
+      ],
+      "dimension": "tradition",
+      "text": "我宁愿守一个自己打了上千遍的常规点位，也不愿意为了出其不意去蹲一个从未练习过的非常规位置。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_proactive_03",
+      "tags": [
+        "fps"
+      ],
+      "dimension": "proactive",
+      "text": "交火前我喜欢第一时间拉出去侦查，主动搜集信息并寻找首杀机会。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_proactive_04",
+      "tags": [
+        "traditional_shooter"
+      ],
+      "dimension": "proactive",
+      "text": "经济允许的情况下，我倾向于直接提速Rush，用速度和突然性打乱对方部署。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_heroism_05",
+      "tags": [
+        "fps"
+      ],
+      "dimension": "heroism",
+      "text": "1vN的残局时刻我不会紧张反而会兴奋，这正是证明个人能力的最好舞台。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_heroism_06",
+      "tags": [
+        "fps"
+      ],
+      "dimension": "heroism",
+      "text": "在游戏中，当队伍连续受挫陷入低迷时，我会主动站出来做决策、打开突破口，用个人节奏扭转局面。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_pragmatism_07",
+      "tags": [
+        "traditional_shooter"
+      ],
+      "dimension": "pragmatism",
+      "text": "ECO局残血时，我不会想着去拼一把，而是果断保枪为下一局积累经济。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_pragmatism_08",
+      "tags": [
+        "fps"
+      ],
+      "dimension": "pragmatism",
+      "text": "只要能赢，我可以接受一整场都在做脏活——拉枪线、架后点、打掩护，个人数据难看也无所谓。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_control_09",
+      "tags": [
+        "traditional_shooter"
+      ],
+      "dimension": "control",
+      "text": "比起直接对枪，我更享受通过烟雾弹、燃烧弹和闪光弹把地图空间一步步切割、控制的快感。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_control_10",
+      "tags": [
+        "traditional_shooter"
+      ],
+      "dimension": "control",
+      "text": "作为防守方，我习惯卡在关键位置架点，耐心等对面犯错，而不是主动前压找机会。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_resilience_11",
+      "tags": [
+        "traditional_shooter"
+      ],
+      "dimension": "resilience",
+      "text": "在竞技射击游戏中，即使上半场大比分落后，换边后我依然会认真打每一局，翻盘先例太多了。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_resilience_12",
+      "tags": [
+        "traditional_shooter"
+      ],
+      "dimension": "resilience",
+      "text": "连败经济崩盘的时候，我反而会冷静下来，组织队友打一波扎实的ECO战术，等待翻盘窗口。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_physicality_13",
+      "tags": [
+        "fps"
+      ],
+      "dimension": "physicality",
+      "text": "在游戏中，我对自己的枪法有绝对自信，哪怕掩体位置不利也敢硬拉出去跟对面拼准度。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_physicality_14",
+      "tags": [
+        "traditional_shooter"
+      ],
+      "dimension": "physicality",
+      "text": "拿大狙的时候，我更喜欢打进攻狙，主动开镜前压找人对枪，而不是龟缩在远点架一条缝。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_adaptability_15",
+      "tags": [
+        "fps"
+      ],
+      "dimension": "adaptability",
+      "text": "在游戏中，如果一个方向久攻不下，我会果断换角度换路线，不跟对方的防守硬耗。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_cs_adaptability_16",
+      "tags": [
+        "fps"
+      ],
+      "dimension": "adaptability",
+      "text": "发现常规打法被针对后，我能很快切换到非常规站位或非主流武器，打对方一个措手不及。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_lol_control_01",
+      "tags": [
+        "lol"
+      ],
+      "dimension": "control",
+      "text": "进入选人界面时，我已经在脑中模拟完整阵容的强弱势曲线——什么时间点该发力、对面会在哪里失误，我心里有数。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_dota2_control_01",
+      "tags": [
+        "dota2"
+      ],
+      "dimension": "control",
+      "text": "对线期我擅长反补，能精准卡住对面补刀节奏，用细节压制对手经济比单纯正补更有成就感。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_dota2_tradition_01",
+      "tags": [
+        "dota2"
+      ],
+      "dimension": "tradition",
+      "text": "DOTA2最吸引我的是一个英雄可以有完全不同的玩法路线，复杂的出装树和技能分支本身就是一种智力博弈。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_wzry_adaptability_01",
+      "tags": [
+        "wzry"
+      ],
+      "dimension": "adaptability",
+      "text": "打排位前我会主动打开免打扰模式，屏蔽所有通知，确保整局不被打断。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_br_pragmatism_01",
+      "tags": [
+        "battle_royale"
+      ],
+      "dimension": "pragmatism",
+      "text": "跳伞时我会刻意避开热门资源点，宁可起装慢一点也不愿落地就陷入混战，稳定发育才有后期。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_br_control_02",
+      "tags": [
+        "battle_royale"
+      ],
+      "dimension": "control",
+      "text": "缩圈开始倒计时的时候，我脑子里已经在规划入圈路线、掩体和有利地形，不会等到毒圈逼近才仓促移动。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_br_adaptability_03",
+      "tags": [
+        "battle_royale"
+      ],
+      "dimension": "adaptability",
+      "text": "决赛圈地形不利时，我宁可扔掉满配装备也要抢先占据唯一的掩体或高点——活着才有输出的机会。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_val_control_01",
+      "tags": [
+        "valorant"
+      ],
+      "dimension": "control",
+      "text": "在瓦洛兰特中，比起决斗者，我更愿意选控场特工——用技能封锁区域、切割视野、强迫对手走位，这种掌控感比单纯对枪更有意思。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_val_heroism_02",
+      "tags": [
+        "valorant"
+      ],
+      "dimension": "heroism",
+      "text": "在瓦洛兰特中，大招充能攒满后我不会急着放——我会等待那个足以扭转整个战局的关键时机，一个完美大招比一波无效输出有价值得多。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_apex_proactive_01",
+      "tags": [
+        "apex"
+      ],
+      "dimension": "proactive",
+      "text": "护甲进化系统让我更愿意前期主动找架打——不是为了击杀数，而是为了把紫甲红甲升起来，为决赛圈做铺垫。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_apex_adaptability_02",
+      "tags": [
+        "apex"
+      ],
+      "dimension": "adaptability",
+      "text": "队友倒了我不急着拉人——先判断对面有没有在架枪，有时候拉起来也是白送，该卖就得卖。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_pubg_physicality_01",
+      "tags": [
+        "pubg"
+      ],
+      "dimension": "physicality",
+      "text": "远距离单点和高倍镜控枪是我投入最多时间练习的东西——PUBG的枪法没有捷径，一发打偏就全没了。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_pubg_pragmatism_02",
+      "tags": [
+        "pubg"
+      ],
+      "dimension": "pragmatism",
+      "text": "我已经习惯了整局下来可能只打一两波正面交火的节奏——大部分时间都在搜图、跑圈、观察和等待。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_console_tradition_01",
+      "tags": [
+        "console"
+      ],
+      "dimension": "tradition",
+      "text": "相比层出不穷的新 IP，我更偏爱反复重温那些已经通关了无数遍的老作品——经典的质感是新游戏很难替代的。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_console_proactive_02",
+      "tags": [
+        "console"
+      ],
+      "dimension": "proactive",
+      "text": "开荒新游戏我绝对不会查攻略或看剧透，哪怕在同一个地方卡了两三天，自己摸索出来的成就感远比照抄答案来得真实。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_console_pragmatism_03",
+      "tags": [
+        "console"
+      ],
+      "dimension": "pragmatism",
+      "text": "只要能通关，我不在意评价和观赏性。喝药死撑也好、一点点磨血也好、甚至靠运气暴击混过去也行——达到目的就是本事。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_console_control_04",
+      "tags": [
+        "console"
+      ],
+      "dimension": "control",
+      "text": "我无法忍受错过任何隐藏内容，每到一个新区域必定地毯式搜刮；打 BOSS 也总想练到无伤或全弹反，少拿一个道具都觉得难受。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_console_resilience_05",
+      "tags": [
+        "console"
+      ],
+      "dimension": "resilience",
+      "text": "同一个 BOSS 连续死四五十次对我来说再正常不过——死了就再跑一次，我不信有练不过去的 BOSS。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_console_heroism_06",
+      "tags": [
+        "console"
+      ],
+      "dimension": "heroism",
+      "text": "游戏里越是公认劝退的 BOSS 或关卡，我越要凭自己的实力硬闯过去——向自己证明我能行，比通关本身更让我上瘾。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_console_adaptability_07",
+      "tags": [
+        "console"
+      ],
+      "dimension": "adaptability",
+      "text": "一个 BOSS 换了好几套打法还过不去时，我不会死磕——静下心来分析它的出招表、重新配装，用针对性克制来碾压它。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_anime_adaptability_01",
+      "tags": [
+        "anime_gacha"
+      ],
+      "dimension": "adaptability",
+      "text": "即使在一个角色身上投入了几个月的心血，一旦版本环境大变、数值被针对，我也会果断转练新体系——沉没成本不能左右我对强度的判断，这是抽卡游戏跟单机最大的区别。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_elden_ring_adaptability_01",
+      "tags": [
+        "elden_ring"
+      ],
+      "dimension": "adaptability",
+      "text": "法环里打不过我就骑马跑路去别处发育，回头再来碾压——开放世界的意义就是不被一个地方卡死，总有一条曲线变强的路可以走。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sekiro_resilience_01",
+      "tags": [
+        "sekiro"
+      ],
+      "dimension": "resilience",
+      "text": "只狼对我来说是魂系里最纯粹的动作考验——没有Build、没有骨灰、没有刷级碾压，过不去就是过不去，只能一遍遍练到肌肉记住为止。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_gow_proactive_01",
+      "tags": [
+        "god_of_war"
+      ],
+      "dimension": "proactive",
+      "text": "战神里我从不缩在后面扔斧子——冲上去贴身肉搏、盾反接符文攻击、斯巴达之怒一开谁都不认，奎爷的战斗就应该是碾过去的。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_rdr2_pragmatism_01",
+      "tags": [
+        "red_dead_redemption"
+      ],
+      "dimension": "pragmatism",
+      "text": "大镖客2里我从不追求通关速度——路上遇到随机事件就停下、营地煮咖啡喝一杯、骑马看日落也是一种享受，这游戏生来就不是用来赶路的。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_music_tradition_01",
+      "tags": [
+        "music"
+      ],
+      "dimension": "tradition",
+      "text": "在听音乐时，我始终觉得专辑才是一部完整的作品——从Intro到Outro按顺序听完，中间的曲序过渡、情绪起伏都是创作者精心设计的，切歌或随机播放等于破坏了它。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_music_proactive_01",
+      "tags": [
+        "music"
+      ],
+      "dimension": "proactive",
+      "text": "我从不依赖算法推荐或热歌榜来发现新音乐——逛小众论坛、翻冷门厂牌、从采样溯源挖到原曲，被动推送对我没有任何吸引力。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_metal_tradition_01",
+      "tags": [
+        "music_metal"
+      ],
+      "dimension": "tradition",
+      "text": "在金属乐中，黑金属、死亡金属、厄运金属才是真正有灵魂的重型音乐——那些带金属元素但本质上是另类摇滚或核类的乐队，根本不配被称为金属。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_rock_tradition_01",
+      "tags": [
+        "music_rock"
+      ],
+      "dimension": "tradition",
+      "text": "70年代的齐柏林飞艇、平克·弗洛伊德、黑色安息日定义了摇滚的上限——后来的摇滚再怎么创新，也跳不出那个黄金年代打下的地基。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_jazz_control_01",
+      "tags": [
+        "music_jazz"
+      ],
+      "dimension": "control",
+      "text": "我听爵士时会在意乐手的即兴段落的复杂程度——一段Bebop里的和弦替代、奇数拍的节奏变化，比旋律本身更让我兴奋。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_classical_control_01",
+      "tags": [
+        "music_classical"
+      ],
+      "dimension": "control",
+      "text": "同一部作品我会收藏好几个不同指挥和乐团的版本反复对比——卡拉扬的精准、伯恩斯坦的激情、古尔德的叛逆，每个版本都在讲不同的故事。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_electronic_heroism_01",
+      "tags": [
+        "music_electronic"
+      ],
+      "dimension": "heroism",
+      "text": "我对主流EDM和商业化的电子乐毫无兴趣——真正值得听的电子乐藏在柏林的地下俱乐部、底特律的老仓库派对和只有几百个关注者的Bandcamp小站里。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_kpop_heroism_01",
+      "tags": [
+        "music_kpop"
+      ],
+      "dimension": "heroism",
+      "text": "K-POP的本质不仅是音乐，更是粉丝文化——我追回归期刷榜冲销量、捍评分反黑评，把偶像的成绩推到顶峰才是真正的参与感。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_rap_heroism_01",
+      "tags": [
+        "music_rap"
+      ],
+      "dimension": "heroism",
+      "text": "我听rapper最看重的是他的词有没有街头信用——编出来的假故事和真正从底层长出来的歌词，一听就能分辨。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_blues_tradition_01",
+      "tags": [
+        "music_blues"
+      ],
+      "dimension": "tradition",
+      "text": "蓝调的魅力在于它100年前就已经完整了——Robert Johnson、Muddy Waters、B.B. King做出来的东西，后来的白人布鲁斯摇滚只是稀释过的版本。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_pop_pragmatism_01",
+      "tags": [
+        "music_pop"
+      ],
+      "dimension": "pragmatism",
+      "text": "流行乐被鄙视是常态，但我不觉得听大众流行的就低人一等——一首歌能让几千万人有共鸣，本身就是一种了不起的成就。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sports_tradition_01",
+      "tags": [
+        "sports"
+      ],
+      "dimension": "tradition",
+      "text": "我坚信经典的训练方法永不过时——跑步就是跑，举铁就是举，那些花里胡哨的新型训练体系和智能设备本质上只是在包装相同的原理。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sports_proactive_01",
+      "tags": [
+        "sports"
+      ],
+      "dimension": "proactive",
+      "text": "训练时我不需要教练或课表告诉我该做什么——我会自己研究动作模式、拍视频复盘、查阅运动科学的文章，自己制定训练计划比被动执行有效得多。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sports_heroism_01",
+      "tags": [
+        "sports"
+      ],
+      "dimension": "heroism",
+      "text": "在运动中，个人项目的成就感远大于团队项目——靠自己一个人完成全马、拉起大重量、攀到顶峰，那种不依赖任何人的成就感无可替代。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sports_pragmatism_01",
+      "tags": [
+        "sports"
+      ],
+      "dimension": "pragmatism",
+      "text": "我对运动装备和仪式感没有执念——一双旧跑鞋、一条短裤就出门，运动是干实事不是走秀。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sports_pragmatism_02",
+      "tags": [
+        "sports"
+      ],
+      "dimension": "pragmatism",
+      "text": "我从不专门腾时间去健身房——走路代替短途出行、爬楼梯代替电梯，把运动拆进日常里比刻意训练更可持续。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sports_control_01",
+      "tags": [
+        "sports"
+      ],
+      "dimension": "control",
+      "text": "我对训练数据和饮食控制有近乎偏执的追求——每天的热量摄入精确到克、每次训练的组数和重量都记录在案，没有数据支撑的训练等于白练。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sports_resilience_01",
+      "tags": [
+        "sports"
+      ],
+      "dimension": "resilience",
+      "text": "训练中最后一组力竭时我会逼自己再做一个——哪怕动作已经开始变形、每根肌肉纤维都在喊停，不加这两个就感觉今天的训练不完整。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sports_physicality_01",
+      "tags": [
+        "sports"
+      ],
+      "dimension": "physicality",
+      "text": "我享受运动中身体对抗带来的快感——卡位时的肌肉碰撞、冲刺时肺快要炸开的窒息感、肌肉酸胀到极限的灼烧，这种原始的身体反馈才是运动的本质。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_sports_adaptability_01",
+      "tags": [
+        "sports"
+      ],
+      "dimension": "adaptability",
+      "text": "我不会死守一个训练项目——力量上去了我会加有氧、柔韧性差了我去练瑜伽、瓶颈期到了就换运动模式，身体需要多样性刺激才能持续进步。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_gym_control_01",
+      "tags": [
+        "gym_strength"
+      ],
+      "dimension": "control",
+      "text": "我会把自己的训练严格拆分为增肌期、减脂期和冲刺期——每个周期的热量盈余、训练容量、动作选择全部重新规划，没有周期化设计的训练只是无脑堆疲劳。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_badminton_adaptability_01",
+      "tags": [
+        "badminton"
+      ],
+      "dimension": "adaptability",
+      "text": "双打被对手连续压后场时我不会硬拉高远球死扛——放网转前场、平抽变节奏、追身球打乱对方站位，用战术变化破局比单纯体能消耗聪明得多。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_basketball_physicality_01",
+      "tags": [
+        "basketball"
+      ],
+      "dimension": "physicality",
+      "text": "我打球时偏爱往内线扎——抢篮板时卡住位置、上篮时主动寻求身体接触、防守时用躯干给对抗，用身体强度碾压对手比靠投射得分更让我满足。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_running_resilience_01",
+      "tags": [
+        "running"
+      ],
+      "dimension": "resilience",
+      "text": "长跑到了撞墙期我反而会更兴奋——呼吸紊乱、大腿像灌了铅、脑子里全是停下来的借口，但就是这种状态下继续迈出的每一步才是我跑步的真正意义。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_yoga_control_01",
+      "tags": [
+        "yoga"
+      ],
+      "dimension": "control",
+      "text": "瑜伽对我来说不是放松——我会反复打磨一个倒立或手臂支撑体式的细微对齐，核心发力顺序、肩胛骨位置、呼吸与动作的同步，做不到精准就继续练。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_climbing_control_01",
+      "tags": [
+        "climbing"
+      ],
+      "dimension": "control",
+      "text": "攀岩时我在地上花的时间不比在墙上少——上墙之前我会在脑子里把整条线路过好几遍，每个手点怎么抓、重心怎么转移、哪里可以挂脚休息，规划清楚再动手比莽上去效率高一倍。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_eating_proactive_01",
+      "tags": [
+        "eating"
+      ],
+      "dimension": "proactive",
+      "text": "每次聚餐选餐厅都是我的活——新店我第一个去踩点、小众巷子里的馆子如数家珍，菜系搭配预算人均我五分钟内拍板，朋友们跟着我吃从不踩雷。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_ktv_heroism_01",
+      "tags": [
+        "ktv"
+      ],
+      "dimension": "heroism",
+      "text": "KTV里我就是全场的气氛发动机——从第一首开始掌控歌单，抒情金曲、摇滚、喊麦来者不拒，唱到嗓子沙哑才舍得把麦递出去，包厢没有我那叫纯放伴奏。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_drinking_control_01",
+      "tags": [
+        "drinking"
+      ],
+      "dimension": "control",
+      "text": "喝酒对我来说是氛围和对话——嘈杂的夜店和大排档我坐不住，偏爱安静的精酿啤酒馆、威士忌吧或者能好好聊天的居酒屋，喝的从来不是酒精浓度。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_clubbing_resilience_01",
+      "tags": [
+        "clubbing"
+      ],
+      "dimension": "resilience",
+      "text": "我蹦迪是那种跳到最后一首歌、灯亮了才走的人——朋友一个个撤了，我还泡在舞池里，散场时浑身湿透才是今晚值回票价的证明。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_clubbing_heroism_01",
+      "tags": [
+        "clubbing"
+      ],
+      "dimension": "heroism",
+      "text": "蹦迪时我必须站在舞池最核心的位置——灯光打在脸上、Bass震到胸口，管自己跳得好不好看，氛围到位了全场都是我的主场。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_pet_other_heroism_01",
+      "tags": [
+        "pet_other"
+      ],
+      "dimension": "heroism",
+      "text": "大部分人看到蛇、蜘蛛或蜥蜴的第一反应是害怕和排斥，但我觉得它们有一种被偏见掩盖的美——愿意去了解和接纳这些被误解的动物，本身就是一种不随大流的审美判断。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": 10
+        },
+        {
+          "text": "赞同",
+          "weight": 5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": -5
+        },
+        {
+          "text": "非常反对",
+          "weight": -10
+        }
+      ]
+    },
+    {
+      "id": "q_no_pet_proactive_01",
+      "tags": [
+        "no_pet"
+      ],
+      "dimension": "proactive",
+      "text": "养猫养狗太低级了，我闭上眼睛就可以养神。",
+      "options": [
+        {
+          "text": "非常赞同",
+          "weight": -10
+        },
+        {
+          "text": "赞同",
+          "weight": -5
+        },
+        {
+          "text": "中立",
+          "weight": 0
+        },
+        {
+          "text": "反对",
+          "weight": 5
+        },
+        {
+          "text": "非常反对",
+          "weight": 10
+        }
       ]
     }
   ]

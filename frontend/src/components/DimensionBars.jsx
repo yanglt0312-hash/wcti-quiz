@@ -1,23 +1,22 @@
-
 import { useLangStore } from '../store/langStore';
 import { translations } from '../i18n/translations';
 
 const ALL_DIMENSIONS = [
-  { key: 'tradition', colorLeft: '#f59e0b', colorRight: '#8b5cf6' },
-  { key: 'proactive', colorLeft: '#3b82f6', colorRight: '#ef4444' },
-  { key: 'heroism', colorLeft: '#10b981', colorRight: '#f97316' },
-  { key: 'pragmatism', colorLeft: '#ec4899', colorRight: '#6366f1' },
-  { key: 'control', colorLeft: '#14b8a6', colorRight: '#a855f7' },
-  { key: 'resilience', colorLeft: '#84cc16', colorRight: '#dc2626' },
-  { key: 'physicality', colorLeft: '#06b6d4', colorRight: '#f43f5e' },
-  { key: 'adaptability', colorLeft: '#eab308', colorRight: '#7c3aed' },
+  { key: 'tradition' },
+  { key: 'proactive' },
+  { key: 'heroism' },
+  { key: 'pragmatism' },
+  { key: 'control' },
+  { key: 'resilience' },
+  { key: 'physicality' },
+  { key: 'adaptability' },
 ];
 
 const SIMPLE_DIMENSIONS = [
-  { key: 'tradition', colorLeft: '#f59e0b', colorRight: '#8b5cf6' },
-  { key: 'proactive', colorLeft: '#3b82f6', colorRight: '#ef4444' },
-  { key: 'heroism', colorLeft: '#10b981', colorRight: '#f97316' },
-  { key: 'pragmatism', colorLeft: '#ec4899', colorRight: '#6366f1' },
+  { key: 'tradition' },
+  { key: 'proactive' },
+  { key: 'heroism' },
+  { key: 'pragmatism' },
 ];
 
 export default function DimensionBars({ scores, quizMode }) {
@@ -27,7 +26,7 @@ export default function DimensionBars({ scores, quizMode }) {
 
   return (
     <div className="w-full space-y-4 mt-8">
-      <h3 className="text-lg font-bold text-slate-300 text-center md:text-left mb-4">
+      <h3 className="text-lg font-bold text-zinc-400 font-mono tracking-widest text-center md:text-left mb-4">
         {t.dimensionTitle}
       </h3>
       {dims.map((dim) => {
@@ -38,25 +37,25 @@ export default function DimensionBars({ scores, quizMode }) {
 
         return (
           <div key={dim.key} className="w-full">
-            <div className="flex justify-between text-xs font-bold text-slate-400 mb-1.5 uppercase tracking-wider">
-              <span style={{ color: dim.colorLeft }}>{labels.left}</span>
-              <span style={{ color: dim.colorRight }}>{labels.right}</span>
+            <div className="flex justify-between text-xs font-bold text-zinc-400 mb-1.5 tracking-widest font-mono">
+              <span>{labels.left}</span>
+              <span>{labels.right}</span>
             </div>
-            <div className="relative w-full h-3 rounded-full overflow-hidden flex">
+            <div className="relative w-full h-3 overflow-hidden flex border border-zinc-800">
               <div
-                className="h-full transition-all duration-1000 ease-out"
-                style={{ width: `${leftPercent}%`, backgroundColor: dim.colorLeft }}
+                className="h-full transition-all duration-1000 ease-out bg-zinc-600"
+                style={{ width: `${leftPercent}%` }}
               />
               <div
-                className="h-full transition-all duration-1000 ease-out"
-                style={{ width: `${rightPercent}%`, backgroundColor: dim.colorRight }}
+                className="h-full transition-all duration-1000 ease-out bg-green-500/60"
+                style={{ width: `${rightPercent}%` }}
               />
               <div
-                className="absolute top-0 bottom-0 w-1 bg-white rounded-full shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all duration-1000 ease-out"
+                className="absolute top-0 bottom-0 w-1 bg-green-500 transition-all duration-1000 ease-out"
                 style={{ left: `${leftPercent}%`, transform: 'translateX(-50%)' }}
               />
             </div>
-            <div className="flex justify-between text-[10px] text-slate-500 mt-0.5 font-mono">
+            <div className="flex justify-between text-[10px] text-zinc-500 mt-0.5 font-mono">
               <span>{leftPercent.toFixed(0)}%</span>
               <span>{rightPercent.toFixed(0)}%</span>
             </div>

@@ -7,12 +7,10 @@ import teamsDataEn from '../data/teams_en.json';
 const QUESTION_BANKS = {
   zh: {
     simple: () => import('../data/questions.json'),
-    pro: () => import('../data/questions_pro.json'),
     dynamic: dynamicQuestionsZh
   },
   en: {
     simple: () => import('../data/questions_en.json'),
-    pro: () => import('../data/questions_pro_en.json'),
     dynamic: dynamicQuestionsEn
   }
 };
@@ -27,6 +25,86 @@ const DIMENSION_MAPPING = {
   physicality: "Dim7_Physical",
   adaptability: "Dim8_Adaptive"
 };
+
+const TAG_HIERARCHY = {
+  moba: [],
+  lol: ['moba'],
+  wzry: ['moba'],
+  dota2: ['moba'],
+
+  fps: [],
+  traditional_shooter: ['fps'],
+  cs: ['traditional_shooter', 'fps'],
+  valorant: ['traditional_shooter', 'fps'],
+
+  battle_royale: ['fps'],
+  apex: ['battle_royale', 'fps'],
+  pubg: ['battle_royale', 'fps'],
+
+  console: [],
+  soulslike: ['console'],
+  dark_souls: ['soulslike', 'console'],
+  elden_ring: ['soulslike', 'console'],
+  sekiro: ['soulslike', 'console'],
+  black_myth_wukong: ['soulslike', 'console'],
+
+  traditional_single: ['console'],
+  god_of_war: ['traditional_single', 'console'],
+  red_dead_redemption: ['traditional_single', 'console'],
+
+  anime_gacha: ['console'],
+  genshin: ['anime_gacha', 'console'],
+  honkai_star_rail: ['anime_gacha', 'console'],
+
+  music: [],
+  music_pop: ['music'],
+  music_rock: ['music'],
+  music_metal: ['music'],
+  music_jazz: ['music'],
+  music_blues: ['music'],
+  music_electronic: ['music'],
+  music_kpop: ['music'],
+  music_rap: ['music'],
+  music_classical: ['music'],
+  music_instrumental: ['music'],
+  music_none: [],
+
+  sports: [],
+  gym_strength: ['sports'],
+  tennis: ['sports'],
+  badminton: ['sports'],
+  swimming: ['sports'],
+  basketball: ['sports'],
+  running: ['sports'],
+  yoga: ['sports'],
+  climbing: ['sports'],
+  no_sports: [],
+  no_pet: []
+};
+
+function expandTags(tags) {
+  const expanded = new Set(tags);
+  for (const tag of tags) {
+    const parents = TAG_HIERARCHY[tag];
+    if (parents) {
+      parents.forEach(p => expanded.add(p));
+    }
+  }
+  return [...expanded];
+}
+
+const DEFAULT_SCORES = {
+  tradition: 50,
+  proactive: 50,
+  heroism: 50,
+  pragmatism: 50,
+  control: 50,
+  resilience: 50,
+  physicality: 50,
+  adaptability: 50
+};
+
+const SCORE_SCALE = 5;
 
 const TEAM_NAME_TO_ID = {
   "Mexico": "MEX",
@@ -96,16 +174,64 @@ function parseCSV(csvText) {
   return result;
 }
 
-function calculateCosineSimilarity(userScores, teamData) {
-  let dotProduct = 0, normA = 0, normB = 0;
-  for (const [userDim, teamDim] of Object.entries(DIMENSION_MAPPING)) {
-    const val1 = userScores[userDim] ?? 50;
-    const val2 = teamData[teamDim] ?? 50;
+function calculateSimilarity(userScores, teamData) {
+  const dims = Object.entries(DIMENSION_MAPPING);
+  const n = dims.length;
+  let dotProduct = 0, normA = 0, normB = 0, euclidSq = 0;
+
+  for (const [userDim, teamDim] of dims) {
+    const val1 = Number.isFinite(Number(userScores[userDim])) ? Number(userScores[userDim]) : 50;
+    const val2 = Number.isFinite(Number(teamData[teamDim])) ? Number(teamData[teamDim]) : 50;
     dotProduct += val1 * val2;
     normA += val1 ** 2;
     normB += val2 ** 2;
+    euclidSq += (val1 - val2) ** 2;
   }
-  return normA === 0 || normB === 0 ? 0 : dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
+
+  const cosSim = normA === 0 || normB === 0
+    ? 0
+    : dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
+
+  const euclidDist = Math.sqrt(euclidSq);
+  const maxDist = Math.sqrt(n * 100 * 100);
+  const euclidSim = 1 - (euclidDist / maxDist);
+
+  return cosSim * 0.5 + euclidSim * 0.5;
+}
+
+function calculateNormalizedScores(answerHistory) {
+  const totals = {};
+  const counts = {};
+
+  Object.keys(DIMENSION_MAPPING).forEach(dim => {
+    totals[dim] = 0;
+    counts[dim] = 0;
+  });
+
+  answerHistory.forEach(answer => {
+    if (!answer.dimension || !Object.prototype.hasOwnProperty.call(totals, answer.dimension)) return;
+    const value = Number(answer.value);
+    if (!Number.isFinite(value)) return;
+    totals[answer.dimension] += value;
+    counts[answer.dimension] += 1;
+  });
+
+  return Object.fromEntries(
+    Object.keys(DIMENSION_MAPPING).map(dim => {
+      if (counts[dim] === 0) return [dim, 50];
+      const average = totals[dim] / counts[dim];
+      const score = 50 + average * SCORE_SCALE;
+      return [dim, Math.max(0, Math.min(100, Number(score.toFixed(1))))];
+    })
+  );
+}
+
+function fetchWithTimeout(url, options = {}, timeoutMs = 8000) {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
+  return fetch(url, { ...options, signal: controller.signal })
+    .finally(() => clearTimeout(timeoutId));
 }
 
 export const useQuizStore = create((set, get) => ({
@@ -115,48 +241,170 @@ export const useQuizStore = create((set, get) => ({
   userTags: [],
   activeQuestions: [],
   currentQuestionIndex: 0,
-  scores: { tradition: 50, proactive: 50, heroism: 50, pragmatism: 50, control: 50, resilience: 50, physicality: 50, adaptability: 50 },
+  scores: DEFAULT_SCORES,
   isLoading: false,
   matchResult: null,
   questionBank: null,
+  answerHistory: [],
 
-  startQuiz: async (mode, lang) => {
+  syncLanguage: async (lang) => {
+    const state = get();
+
+    if (state.currentView === 'home') {
+      set({ lang });
+      return;
+    }
+
+    if (state.currentView === 'result') {
+      const teamEnName = state.matchResult?.team?.stats?.Team;
+      const teamId = teamEnName ? TEAM_NAME_TO_ID[teamEnName] || teamEnName : null;
+      const teamsData = lang === 'en' ? teamsDataEn : teamsDataZh;
+      const teamInfo = teamId ? teamsData.find(t => t.id === teamId) : null;
+
+      set({
+        lang,
+        matchResult: state.matchResult && teamInfo
+          ? {
+              ...state.matchResult,
+              team: {
+                ...state.matchResult.team,
+                name: teamInfo.name,
+                description: teamInfo.description
+              }
+            }
+          : state.matchResult
+      });
+      return;
+    }
+
     const bank = QUESTION_BANKS[lang] || QUESTION_BANKS.zh;
-    const questionsModule = await bank[mode]();
+    const questionsModule = await bank.simple();
     const questions = questionsModule.default || questionsModule;
     const dynamic = bank.dynamic;
+    const sourceQuestions = state.isCalibrationPhase
+      ? dynamic.calibration_nodes
+      : questions;
+    const questionsById = new Map(sourceQuestions.map(question => [String(question.id), question]));
+    const translatedActiveQuestions = state.activeQuestions
+      .map(question => questionsById.get(String(question.id)))
+      .filter(Boolean);
 
     set({
-      currentView: 'quiz',
-      quizMode: mode,
-      lang: lang,
-      isCalibrationPhase: true,
-      userTags: ['universal'],
-      activeQuestions: dynamic.calibration_nodes,
-      currentQuestionIndex: 0,
-      matchResult: null,
-      questionBank: questions,
-      scores: { tradition: 50, proactive: 50, heroism: 50, pragmatism: 50, control: 50, resilience: 50, physicality: 50, adaptability: 50 }
+      lang,
+      activeQuestions: translatedActiveQuestions.length === state.activeQuestions.length
+        ? translatedActiveQuestions
+        : state.activeQuestions,
+      questionBank: questions
     });
   },
 
-  answerQuestion: (dimension_or_tag, score_or_value, isLastQuestion) => {
+  startQuiz: async (mode, lang) => {
+    const bank = QUESTION_BANKS[lang] || QUESTION_BANKS.zh;
+    const questionsModule = await bank.simple();
+    const questions = questionsModule.default || questionsModule;
+    const dynamic = bank.dynamic;
+
+    if (mode === 'simple') {
+      set({
+        currentView: 'quiz',
+        quizMode: mode,
+        lang: lang,
+        isCalibrationPhase: false,
+        userTags: ['universal'],
+        activeQuestions: questions,
+        currentQuestionIndex: 0,
+        matchResult: null,
+        questionBank: questions,
+        scores: DEFAULT_SCORES,
+        answerHistory: []
+      });
+    } else {
+      set({
+        currentView: 'quiz',
+        quizMode: mode,
+        lang: lang,
+        isCalibrationPhase: true,
+        userTags: ['universal'],
+        activeQuestions: dynamic.calibration_nodes,
+        currentQuestionIndex: 0,
+        matchResult: null,
+        questionBank: questions,
+        scores: DEFAULT_SCORES,
+        answerHistory: []
+      });
+    }
+  },
+
+  answerQuestion: (dimension_or_tag, score_or_value, isLastQuestion, selectedTags = null) => {
     const state = get();
 
+    // ==========================================
+    // 阶段 A：如果是信标题（打标签阶段）
+    // ==========================================
     if (state.isCalibrationPhase) {
       const newTags = [...state.userTags];
-      if (dimension_or_tag && !newTags.includes(dimension_or_tag)) {
+
+      // 多选模式：使用传入的 selectedTags 数组
+      if (selectedTags && Array.isArray(selectedTags)) {
+        selectedTags.forEach(tag => {
+          if (tag && !newTags.includes(tag)) {
+            newTags.push(tag);
+          }
+        });
+      } else if (dimension_or_tag && !newTags.includes(dimension_or_tag)) {
+        // 单选模式兼容
         newTags.push(dimension_or_tag);
       }
 
       if (isLastQuestion) {
+        // 信标收集完毕，开始组装最终考卷
         const dynamic = (QUESTION_BANKS[state.lang] || QUESTION_BANKS.zh).dynamic;
-        let pool = dynamic.question_pool.filter(q =>
-          q.tags.some(tag => newTags.includes(tag))
-        );
-        pool = pool.sort(() => Math.random() - 0.5);
-        const targetLength = state.quizMode === 'simple' ? 20 : pool.length;
-        const finalExam = pool.slice(0, targetLength);
+
+        // 核心配置：设定每个维度的抽题配额
+        // 简单模式：8维度 × 3题 = 24题；专业模式：8维度 × 12题 = 96题
+        const questionsPerDim = state.quizMode === 'simple' ? 3 : 12;
+        let finalExam = [];
+
+        // 洗牌算法函数 (Fisher-Yates)
+        const shuffleArray = (array) => {
+          let currentIndex = array.length, randomIndex;
+          while (currentIndex > 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+          }
+          return array;
+        };
+
+        // 提取所有 8 个维度的名称
+        const dimensions = Object.keys(DIMENSION_MAPPING);
+
+        // 展开标签层级：cs → [cs, fps], apex → [apex, battle_royale, fps] 等
+        const expandedTags = expandTags(newTags);
+
+        // 针对每个维度，进行定额抓取
+        dimensions.forEach(dim => {
+          // 1. 挑出题库中属于当前维度的所有题
+          const dimQuestions = dynamic.question_pool.filter(q => q.dimension === dim);
+
+          // 2. 分离出"专属题"和"通用题"
+          const tagMatched = dimQuestions.filter(q =>
+            q.tags.some(tag => expandedTags.includes(tag) && tag !== 'universal')
+          );
+          const universalMatched = dimQuestions.filter(q => q.tags.includes('universal'));
+
+          // 3. 将专属题合并到通用池中，统一洗牌后随机抽取
+          const combined = [...universalMatched, ...tagMatched];
+          shuffleArray(combined);
+
+          const selectedForDim = combined.slice(0, questionsPerDim);
+
+          // 将当前维度选好的题塞进总考卷
+          finalExam = finalExam.concat(selectedForDim);
+        });
+
+        // 6. 终极洗牌：把 8 个维度的题彻底混合，防止用户看出规律
+        shuffleArray(finalExam);
 
         set({
           isCalibrationPhase: false,
@@ -165,18 +413,35 @@ export const useQuizStore = create((set, get) => ({
           currentQuestionIndex: 0
         });
       } else {
-        set({ userTags: newTags, currentQuestionIndex: state.currentQuestionIndex + 1 });
+        set({
+          userTags: newTags,
+          currentQuestionIndex: state.currentQuestionIndex + 1,
+          answerHistory: [...state.answerHistory, {
+            dimension: null,
+            value: 0,
+            questionIndex: state.currentQuestionIndex,
+            isCalibration: true,
+            selectedTags: selectedTags || []
+          }]
+        });
       }
       return;
     }
 
-    const newScores = { ...state.scores };
-    newScores[dimension_or_tag] = Math.max(0, Math.min(100, newScores[dimension_or_tag] + score_or_value));
+    // ==========================================
+    // 阶段 B：如果是计分题（正式考试阶段）
+    // ==========================================
+    const newHistory = [...state.answerHistory, {
+      dimension: dimension_or_tag,
+      value: score_or_value,
+      questionIndex: state.currentQuestionIndex
+    }];
+    const newScores = calculateNormalizedScores(newHistory);
 
     if (isLastQuestion) {
-      set({ scores: newScores, currentView: 'result', isLoading: true });
+      set({ scores: newScores, currentView: 'result', isLoading: true, answerHistory: newHistory });
 
-      fetch('/Team_8D_Soul_Scores.csv')
+      fetchWithTimeout('/Team_8D_Soul_Scores.csv?v=' + Date.now())
         .then(res => {
           if (!res.ok) throw new Error("CSV read failed");
           return res.text();
@@ -187,14 +452,13 @@ export const useQuizStore = create((set, get) => ({
             let bestMatch = null;
             let highestSim = -1;
             for (const team of csvTeams) {
-              const sim = calculateCosineSimilarity(newScores, team);
+              const sim = calculateSimilarity(newScores, team);
               if (sim > highestSim) {
                 highestSim = sim;
                 const teamEnName = team.Team;
                 const teamId = TEAM_NAME_TO_ID[teamEnName] || teamEnName;
                 const teamsData = state.lang === 'en' ? teamsDataEn : teamsDataZh;
                 const teamInfo = teamsData.find(t => t.id === teamId);
-                console.log(`[DEBUG] Matching team: enName=${teamEnName}, teamId=${teamId}, lang=${state.lang}, foundTeam=${teamInfo?.name || 'NOT FOUND'}`);
                 bestMatch = {
                   team: {
                     name: teamInfo ? teamInfo.name : teamEnName,
@@ -213,8 +477,35 @@ export const useQuizStore = create((set, get) => ({
           set({ isLoading: false, matchResult: null });
         });
     } else {
-      set({ scores: newScores, currentQuestionIndex: state.currentQuestionIndex + 1 });
+      set({ scores: newScores, currentQuestionIndex: state.currentQuestionIndex + 1, answerHistory: newHistory });
     }
+  },
+
+  prevQuestion: () => {
+    const state = get();
+    if (state.currentQuestionIndex <= 0) return;
+
+    const lastAnswer = state.answerHistory[state.answerHistory.length - 1];
+    if (!lastAnswer) return;
+
+    const newTags = [...state.userTags];
+    let newHistory = state.answerHistory.slice(0, -1);
+
+    if (lastAnswer.isCalibration) {
+      if (lastAnswer.selectedTags) {
+        lastAnswer.selectedTags.forEach(tag => {
+          const idx = newTags.indexOf(tag);
+          if (idx > -1) newTags.splice(idx, 1);
+        });
+      }
+    }
+
+    set({
+      currentQuestionIndex: state.currentQuestionIndex - 1,
+      scores: calculateNormalizedScores(newHistory),
+      userTags: newTags,
+      answerHistory: newHistory
+    });
   },
 
   resetQuiz: () => set({ currentView: 'home', matchResult: null })
