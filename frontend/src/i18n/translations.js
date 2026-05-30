@@ -9,7 +9,7 @@ export const translations = {
       quickStart: "快速灵魂扫掠",
       quickStartSub: "20 道精选问题  ·  1 分钟",
       proStart: "硬核全维解构",
-      proStartSub: "96 道深度问题  ·  4 分钟",
+      proStartSub: "48 道深度问题  ·  4 分钟",
       langSwitch: "English"
     },
     quiz: {
@@ -51,7 +51,7 @@ export const translations = {
       quickStart: "Quick Soul Scan",
       quickStartSub: "20 Questions  ·  1 Minute",
       proStart: "Deep Full Analysis",
-      proStartSub: "96 Questions  ·  4 Minutes",
+      proStartSub: "48 Questions  ·  4 Minutes",
       langSwitch: "中文"
     },
     quiz: {

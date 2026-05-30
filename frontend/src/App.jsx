@@ -132,22 +132,20 @@ function QuizView() {
 
   const handleCalibrationSubmit = () => {
     const selectedTags = selectedOptions.map(idx => question.options[idx].assign_tag);
-    answerQuestion(null, 0, isLastQuestion, selectedTags);
     setSelectedOptions([]);
+    answerQuestion(null, 0, isLastQuestion, selectedTags);
   };
 
   return (
-    <div className="flex flex-col gap-6 md:gap-8 animate-in fade-in zoom-in-95 duration-500 w-full max-w-4xl mx-auto relative">
+    <div className="flex flex-col gap-6 md:gap-8 animate-in fade-in zoom-in-95 duration-500 w-full max-w-4xl mx-auto">
       {currentQuestionIndex > 0 && (
-        <div className="absolute -top-2 -left-2 md:-top-4 md:-left-4">
-          <button
-            onClick={prevQuestion}
-            className="flex items-center gap-1 px-3 py-2 md:px-4 md:py-2 bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 font-bold border border-zinc-800 transition-all active:scale-[0.97] text-xs md:text-sm font-mono tracking-widest"
-          >
-            <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" />
-            {navText.prev}
-          </button>
-        </div>
+        <button
+          onClick={prevQuestion}
+          className="self-start flex items-center gap-1 px-3 py-2 md:px-4 md:py-2 bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 font-bold border border-zinc-800 transition-all active:scale-[0.97] text-xs md:text-sm font-mono tracking-widest"
+        >
+          <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" />
+          {navText.prev}
+        </button>
       )}
 
       <div className="flex flex-col items-center text-center space-y-4 md:space-y-6">

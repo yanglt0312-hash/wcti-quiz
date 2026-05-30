@@ -361,8 +361,11 @@ export const useQuizStore = create((set, get) => ({
         const dynamic = (QUESTION_BANKS[state.lang] || QUESTION_BANKS.zh).dynamic;
 
         // 核心配置：设定每个维度的抽题配额
-        // 简单模式：8维度 × 3题 = 24题；专业模式：8维度 × 12题 = 96题
-        const questionsPerDim = state.quizMode === 'simple' ? 3 : 12;
+        // 简单模式：8维度 × 3题 = 24题；专业模式：8维度 × 6题 = 48题
+        const questionsPerDim = state.quizMode === 'simple' ? 3 : 6;
+        // 标签题占比上限：每个维度最多 30% 的题来自用户标签
+        const TAG_CAP_RATIO = 0.3;
+        const maxTagQuestionsPerDim = Math.floor(questionsPerDim * TAG_CAP_RATIO);
         let finalExam = [];
 
         // 洗牌算法函数 (Fisher-Yates)
@@ -393,8 +396,10 @@ export const useQuizStore = create((set, get) => ({
           );
           const universalMatched = dimQuestions.filter(q => q.tags.includes('universal'));
 
-          // 3. 将专属题合并到通用池中，统一洗牌后随机抽取
-          const combined = [...universalMatched, ...tagMatched];
+          // 3. 标签题洗牌，限制上限后合并到通用池
+          shuffleArray(tagMatched);
+          const cappedTagMatched = tagMatched.slice(0, maxTagQuestionsPerDim);
+          const combined = [...universalMatched, ...cappedTagMatched];
           shuffleArray(combined);
 
           const selectedForDim = combined.slice(0, questionsPerDim);
