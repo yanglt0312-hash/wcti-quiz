@@ -37,40 +37,50 @@ function HomeView() {
   const t = translations[lang].home;
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-12 lg:gap-20 animate-in fade-in slide-in-from-bottom-8 duration-700">
-      <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-6 md:space-y-8">
-        <div className="w-20 h-20 md:w-24 md:h-24 bg-green-500 flex items-center justify-center">
-          <Trophy className="w-10 h-10 md:w-12 md:h-12 text-black" />
+    <div className="flex flex-col items-center gap-10 animate-in fade-in slide-in-from-bottom-8 duration-700 text-center">
+      <div className="space-y-6 max-w-2xl">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-green-500/10 border border-green-500/40 text-green-500 text-xs font-bold tracking-widest font-mono">
+          <Trophy className="w-3.5 h-3.5" />
+          {t.badge}
         </div>
-        <div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter mb-3 md:mb-4 leading-tight whitespace-pre-line">
+
+        <h1 className="space-y-2">
+          <span className="block text-6xl sm:text-7xl md:text-8xl font-black tracking-tighter text-green-500 italic">
             {t.title}
-          </h1>
-          <p className="text-zinc-400 text-base sm:text-lg md:text-xl max-w-md leading-relaxed">
-            {t.description}
-          </p>
-        </div>
+          </span>
+          <span className="block text-3xl sm:text-4xl md:text-5xl font-black text-zinc-100">
+            {t.headline}
+          </span>
+        </h1>
+
+        <p className="text-zinc-400 text-sm tracking-widest font-mono font-bold">
+          {t.subtitle}
+        </p>
+
+        <p className="text-zinc-500 text-base leading-relaxed max-w-lg mx-auto">
+          {t.description}
+        </p>
       </div>
 
-      <div className="w-full md:w-1/2 space-y-4 md:space-y-6">
+      <div className="w-full max-w-md space-y-4">
         <button
           onClick={() => startQuiz('simple', lang)}
-          className="group w-full py-6 md:py-8 px-6 md:px-8 bg-green-500 hover:bg-green-400 text-black flex flex-col items-start transition-all active:scale-[0.98]"
+          className="group w-full py-5 px-6 bg-green-500 hover:bg-green-400 text-black flex flex-col items-center transition-all active:scale-[0.98]"
         >
-          <span className="text-xl md:text-2xl font-black flex items-center gap-2 mb-1">
-            {t.quickStart} <ChevronRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
+          <span className="text-lg font-black flex items-center gap-2">
+            {t.quickStart} <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </span>
-          <span className="text-black/60 text-xs md:text-sm tracking-widest font-mono font-bold">{t.quickStartSub}</span>
+          <span className="text-black/60 text-xs tracking-widest font-mono font-bold mt-1">{t.quickStartSub}</span>
         </button>
 
         <button
           onClick={() => startQuiz('pro', lang)}
-          className="group w-full py-6 md:py-8 px-6 md:px-8 bg-zinc-900 hover:bg-zinc-800 text-zinc-100 flex flex-col items-start transition-all active:scale-[0.98] border border-zinc-800"
+          className="group w-full py-5 px-6 bg-zinc-900 hover:bg-zinc-800 text-zinc-100 flex flex-col items-center transition-all active:scale-[0.98] border border-zinc-800"
         >
-          <span className="text-xl md:text-2xl font-black flex items-center gap-2 mb-1">
-            {t.proStart} <Zap className="w-4 h-4 md:w-5 md:h-5 text-green-500 fill-green-500" />
+          <span className="text-lg font-black flex items-center gap-2">
+            {t.proStart} <Zap className="w-4 h-4 text-green-500 fill-green-500" />
           </span>
-          <span className="text-zinc-500 text-xs md:text-sm tracking-widest font-mono font-bold">{t.proStartSub}</span>
+          <span className="text-zinc-500 text-xs tracking-widest font-mono font-bold mt-1">{t.proStartSub}</span>
         </button>
       </div>
     </div>

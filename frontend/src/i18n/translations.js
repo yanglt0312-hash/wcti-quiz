@@ -1,13 +1,15 @@
 export const translations = {
   zh: {
     home: {
-      title: "WCTI\n战术罗盘",
-      subtitle: "寻找灵魂主队",
-      description: "8 维向量，48 支国家队样本。你的每一次日常抉择，都在勾勒专属于你的绿茵哲学。点击启动，全维解构你的战术 DNA。",
+      title: "WCTI",
+      headline: "测试你的世界杯球队",
+      subtitle: "48 支国家队  ·  8 维灵魂评分",
+      description: "不需要懂越位，不需要认得球星。你只要诚实回答日常生活中的选择，我们就能算出哪支世界杯球队是你的灵魂归宿。",
+      badge: "世界杯球队性格测试",
       quickStart: "快速灵魂扫掠",
-      quickStartSub: "20 道精选问题",
+      quickStartSub: "20 道精选问题  ·  1 分钟",
       proStart: "硬核全维解构",
-      proStartSub: "96 道深度问题",
+      proStartSub: "96 道深度问题  ·  4 分钟",
       langSwitch: "English"
     },
     quiz: {
@@ -41,13 +43,15 @@ export const translations = {
   },
   en: {
     home: {
-      title: "WCTI\nTactical Compass",
-      subtitle: "Find Your Soul Team",
-      description: "8 dimensions, 48 national team samples. Every daily choice you make paints your unique football philosophy. Click to start and deconstruct your tactical DNA.",
+      title: "WCTI",
+      headline: "Find Your World Cup Team",
+      subtitle: "48 National Teams  ·  8-Dimension Soul Scores",
+      description: "No football knowledge required. Just answer honest questions about your daily life, and we'll calculate which World Cup team is your soul match.",
+      badge: "World Cup Personality Test",
       quickStart: "Quick Soul Scan",
-      quickStartSub: "20 Selected Questions",
+      quickStartSub: "20 Questions  ·  1 Minute",
       proStart: "Deep Full Analysis",
-      proStartSub: "96 In-depth Questions",
+      proStartSub: "96 Questions  ·  4 Minutes",
       langSwitch: "中文"
     },
     quiz: {
