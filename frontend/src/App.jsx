@@ -4,6 +4,9 @@ import { useLangStore } from './store/langStore';
 import { translations } from './i18n/translations';
 import LanguageSwitch from './components/LanguageSwitch';
 import DimensionBars from './components/DimensionBars';
+import { SCHEDULE } from './data/schedule';
+import { TEAM_INTRO } from './data/teamIntro';
+import { TEAM_FLAGS } from './data/teamFlags';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend } from 'recharts';
 import { Trophy, ChevronRight, RefreshCw, Zap, Check, ArrowLeft, Home } from 'lucide-react';
 
@@ -372,8 +375,128 @@ function ResultView() {
       </div>
 
       <div className="w-full max-w-3xl mx-auto">
+        {matchResult.allMatches && matchResult.allMatches.length > 3 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+            <div className="bg-zinc-900 border border-zinc-800 p-4">
+              <h4 className="text-xs text-zinc-500 font-mono tracking-widest mb-3">{t.subMatchTitle}</h4>
+              <div className="space-y-2">
+                {matchResult.allMatches.slice(1, 3).map((m, i) => (
+                  <div key={i} className="flex justify-between items-center">
+                    <span className="text-zinc-300 text-sm font-bold">{m.team.name}</span>
+                    <span className="text-zinc-500 text-xs font-mono">{m.match_percentage}%</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-zinc-900 border border-zinc-800 p-4">
+              <h4 className="text-xs text-zinc-500 font-mono tracking-widest mb-3">{t.worstMatchTitle}</h4>
+              <div className="flex justify-between items-center">
+                <span className="text-zinc-300 text-sm font-bold">{matchResult.allMatches[matchResult.allMatches.length - 1].team.name}</span>
+                <span className="text-zinc-500 text-xs font-mono">{matchResult.allMatches[matchResult.allMatches.length - 1].match_percentage}%</span>
+              </div>
+            </div>
+          </div>
+        )}
         <DimensionBars scores={scores} quizMode={quizMode} />
+        {(() => {
+          const dims = Object.keys(scores).filter(k => typeof scores[k] === 'number');
+          if (dims.length < 2) return null;
+          const sorted = [...dims].sort((a, b) => scores[b] - scores[a]);
+          const strongest = sorted[0];
+          const weakest = sorted[sorted.length - 1];
+          const dimLabels = t.dimensions;
+          return (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+              <div className="bg-green-500/5 border border-green-500/20 p-3">
+                <div className="text-xs text-green-500 font-mono tracking-widest mb-1">{t.strongestDim}</div>
+                <div className="text-green-400 text-sm font-bold">
+                  {dimLabels[strongest]?.right || strongest}
+                  <span className="text-green-500/60 ml-2 font-mono">{scores[strongest].toFixed(0)}</span>
+                </div>
+              </div>
+              <div className="bg-zinc-800/50 border border-zinc-700 p-3">
+                <div className="text-xs text-zinc-500 font-mono tracking-widest mb-1">{t.weakestDim}</div>
+                <div className="text-zinc-400 text-sm font-bold">
+                  {dimLabels[weakest]?.left || weakest}
+                  <span className="text-zinc-500 ml-2 font-mono">{scores[weakest].toFixed(0)}</span>
+                </div>
+              </div>
+            </div>
+          );
+        })()}
       </div>
+
+      {lang === 'zh' && team.name && TEAM_INTRO[team.name] ? (
+        <div className="w-full max-w-3xl mx-auto">
+          <div className="border-t border-zinc-800 pt-8 md:pt-10">
+            <h3 className="text-base md:text-lg font-black text-zinc-300 mb-6 md:mb-8 tracking-widest font-mono text-center">
+              {t.teamIntroTitle || '球队介绍'}
+            </h3>
+            <div className="bg-zinc-900 border border-zinc-800 p-5 md:p-6 flex gap-4 md:gap-5">
+              {TEAM_FLAGS[team.name] && (
+                <img
+                  src={`https://flagcdn.com/w80/${TEAM_FLAGS[team.name]}.png`}
+                  alt={team.name}
+                  className="w-12 h-12 md:w-16 md:h-16 object-contain shrink-0 mt-1"
+                />
+              )}
+              <div className="min-w-0">
+                {TEAM_INTRO[team.name].nickname && (
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="px-2 py-0.5 text-xs font-bold bg-green-500/10 text-green-500 border border-green-500/20 font-mono tracking-wider">
+                      {TEAM_INTRO[team.name].nickname}
+                    </span>
+                  </div>
+                )}
+                <p className="text-zinc-300 text-sm md:text-base leading-relaxed">
+                  {TEAM_INTRO[team.name].intro}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : lang === 'en' ? (
+        <div className="w-full max-w-3xl mx-auto">
+          <div className="border-t border-zinc-800 pt-8 md:pt-10">
+            <h3 className="text-base md:text-lg font-black text-zinc-300 mb-6 md:mb-8 tracking-widest font-mono text-center">
+              {t.teamIntroTitle || 'Team Introduction'}
+            </h3>
+            <div className="bg-zinc-900 border border-zinc-800 p-5 md:p-6">
+              <p className="text-zinc-500 text-sm md:text-base text-center font-mono">
+                English mode feature under development
+              </p>
+            </div>
+          </div>
+        </div>
+      ) : null}
+
+      {lang === 'zh' && team.name && SCHEDULE[team.name] && (
+        <div className="w-full max-w-3xl mx-auto">
+          <div className="border-t border-zinc-800 pt-8 md:pt-10">
+            <h3 className="text-base md:text-lg font-black text-zinc-300 mb-6 md:mb-8 tracking-widest font-mono text-center">
+              {t.schedule.title} — {t.schedule.group.replace('{group}', SCHEDULE[team.name].group)}
+              <span className="block text-xs text-zinc-500 mt-1 font-normal">{t.schedule.time}</span>
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
+              {SCHEDULE[team.name].matches.map((match, idx) => (
+                <div
+                  key={idx}
+                  className="bg-zinc-900 border border-zinc-800 p-4 md:p-5 text-center hover:border-zinc-700 transition-all"
+                >
+                  <div className="text-xs text-zinc-500 font-mono tracking-widest mb-2">
+                    {t.schedule.matchday.replace('{day}', idx + 1)}
+                  </div>
+                  <div className="text-zinc-400 text-sm mb-1">{match.date}</div>
+                  <div className="text-green-500 font-bold text-lg md:text-xl font-mono mb-2">{match.time}</div>
+                  <div className="text-zinc-300 font-bold text-sm md:text-base">
+                    {team.name} <span className="text-zinc-600 mx-1">vs</span> {match.opponent}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );

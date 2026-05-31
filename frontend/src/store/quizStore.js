@@ -500,27 +500,29 @@ export const useQuizStore = create((set, get) => ({
         .then(csvText => {
           const csvTeams = parseCSV(csvText);
           setTimeout(() => {
-            let bestMatch = null;
-            let highestSim = -1;
-            for (const team of csvTeams) {
+            const teamsData = state.lang === 'en' ? teamsDataEn : teamsDataZh;
+            const allMatches = csvTeams.map(team => {
               const sim = calculateSimilarity(newScores, team);
-              if (sim > highestSim) {
-                highestSim = sim;
-                const teamEnName = team.Team;
-                const teamId = TEAM_NAME_TO_ID[teamEnName] || teamEnName;
-                const teamsData = state.lang === 'en' ? teamsDataEn : teamsDataZh;
-                const teamInfo = teamsData.find(t => t.id === teamId);
-                bestMatch = {
-                  team: {
-                    name: teamInfo ? teamInfo.name : teamEnName,
-                    description: teamInfo ? teamInfo.description : '',
-                    stats: team
-                  },
-                  match_percentage: (sim * 100).toFixed(1)
-                };
-              }
-            }
-            set({ matchResult: bestMatch, isLoading: false });
+              const teamEnName = team.Team;
+              const teamId = TEAM_NAME_TO_ID[teamEnName] || teamEnName;
+              const teamInfo = teamsData.find(t => t.id === teamId);
+              return {
+                team: {
+                  name: teamInfo ? teamInfo.name : teamEnName,
+                  description: teamInfo ? teamInfo.description : '',
+                  stats: team
+                },
+                match_percentage: Number((sim * 100).toFixed(1))
+              };
+            });
+            allMatches.sort((a, b) => b.match_percentage - a.match_percentage);
+            set({
+              matchResult: {
+                ...allMatches[0],
+                allMatches
+              },
+              isLoading: false
+            });
             saveCache(get());
           }, 1500);
         })
