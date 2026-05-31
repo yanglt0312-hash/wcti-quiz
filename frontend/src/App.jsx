@@ -5,7 +5,7 @@ import { translations } from './i18n/translations';
 import LanguageSwitch from './components/LanguageSwitch';
 import DimensionBars from './components/DimensionBars';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend } from 'recharts';
-import { Trophy, ChevronRight, RefreshCw, Zap, Check, ArrowLeft } from 'lucide-react';
+import { Trophy, ChevronRight, RefreshCw, Zap, Check, ArrowLeft, Home } from 'lucide-react';
 
 export default function App() {
   const { currentView, resetQuiz, syncLanguage, tryRestoreProgress } = useQuizStore();
@@ -100,7 +100,7 @@ function HomeView() {
 }
 
 function QuizView() {
-  const { currentQuestionIndex, answerQuestion, prevQuestion, activeQuestions, isCalibrationPhase } = useQuizStore();
+  const { currentQuestionIndex, answerQuestion, prevQuestion, activeQuestions, isCalibrationPhase, resetQuiz } = useQuizStore();
   const lang = useLangStore((state) => state.lang);
   const t = translations[lang].quiz;
   const navText = {
@@ -150,15 +150,25 @@ function QuizView() {
 
   return (
     <div className="flex flex-col gap-6 md:gap-8 animate-in fade-in zoom-in-95 duration-500 w-full max-w-4xl mx-auto">
-      {currentQuestionIndex > 0 && (
+      <div className="flex items-center justify-between">
+        {currentQuestionIndex > 0 ? (
+          <button
+            onClick={prevQuestion}
+            className="flex items-center gap-1 px-3 py-2 md:px-4 md:py-2 bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 font-bold border border-zinc-800 transition-all active:scale-[0.97] text-xs md:text-sm font-mono tracking-widest focus:outline-none"
+          >
+            <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" />
+            {navText.prev}
+          </button>
+        ) : (
+          <div />
+        )}
         <button
-          onClick={prevQuestion}
-          className="self-start flex items-center gap-1 px-3 py-2 md:px-4 md:py-2 bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 font-bold border border-zinc-800 transition-all active:scale-[0.97] text-xs md:text-sm font-mono tracking-widest"
+          onClick={resetQuiz}
+          className="flex items-center gap-1 px-3 py-2 md:px-4 md:py-2 bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 font-bold border border-zinc-800 transition-all active:scale-[0.97] text-xs md:text-sm font-mono tracking-widest focus:outline-none"
         >
-          <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" />
-          {navText.prev}
+          <Home className="w-3 h-3 md:w-4 md:h-4" />
         </button>
-      )}
+      </div>
 
       <div className="flex flex-col items-center text-center space-y-4 md:space-y-6">
         {!isCalibrationPhase && (
@@ -189,7 +199,7 @@ function QuizView() {
               <button
                 key={idx}
                 onClick={() => toggleOption(idx)}
-                className={`relative p-4 md:p-5 border text-left transition-all active:scale-[0.97] ${
+                className={`relative p-4 md:p-5 border text-left transition-all active:scale-[0.97] focus:outline-none ${
                   isSelected
                     ? 'bg-green-500/10 border-green-500 text-green-400'
                     : 'bg-zinc-900 border-zinc-800 hover:border-zinc-600 text-zinc-300'
@@ -213,7 +223,7 @@ function QuizView() {
               onClick={() => {
                 answerQuestion(question.dimension, opt.value ?? opt.weight ?? 0, isLastQuestion);
               }}
-              className="w-full p-4 md:p-5 bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:border-l-4 hover:border-l-green-400 text-left transition-all active:scale-[0.97] text-zinc-300"
+              className="w-full p-4 md:p-5 bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:border-l-4 hover:border-l-green-400 text-left transition-all active:scale-[0.97] text-zinc-300 focus:outline-none"
             >
               <span className="font-bold text-sm md:text-base">{opt.text}</span>
             </button>
@@ -226,7 +236,7 @@ function QuizView() {
           <button
             onClick={handleCalibrationSubmit}
             disabled={selectedOptions.length === 0}
-            className={`px-8 py-3 md:px-10 md:py-4 font-bold tracking-widest font-mono transition-all active:scale-[0.97] text-sm md:text-base ${
+            className={`px-8 py-3 md:px-10 md:py-4 font-bold tracking-widest font-mono transition-all active:scale-[0.97] text-sm md:text-base focus:outline-none ${
               selectedOptions.length > 0
                 ? 'bg-green-500 hover:bg-green-400 text-black'
                 : 'bg-zinc-800 text-zinc-500 cursor-not-allowed border border-zinc-700'
