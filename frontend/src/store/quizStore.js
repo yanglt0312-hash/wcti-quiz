@@ -3,6 +3,8 @@ import dynamicQuestionsZh from '../data/questions_dynamic.json';
 import dynamicQuestionsEn from '../data/questions_dynamic_en.json';
 import teamsDataZh from '../data/teams.json';
 import teamsDataEn from '../data/teams_en.json';
+import { findBestArchetype } from '../data/tacticalArchetypes';
+import { calculateTraits } from '../data/tacticalTraits';
 
 const CACHE_KEY = 'wcti_quiz_progress';
 
@@ -406,9 +408,10 @@ export const useQuizStore = create((set, get) => ({
         // 核心配置：设定每个维度的抽题配额
         // 简单模式：8维度 × 3题 = 24题；专业模式：8维度 × 6题 = 48题
         const questionsPerDim = state.quizMode === 'simple' ? 3 : 6;
-        // 标签题占比上限：每个维度最多 30% 的题来自用户标签
-        const TAG_CAP_RATIO = 0.3;
-        const maxTagQuestionsPerDim = Math.floor(questionsPerDim * TAG_CAP_RATIO);
+        const MIN_TAG_RATIO = 0.15;
+        const MAX_TAG_RATIO = 0.3;
+        const minTagPerDim = Math.ceil(questionsPerDim * MIN_TAG_RATIO);
+        const maxTagPerDim = Math.ceil(questionsPerDim * MAX_TAG_RATIO);
         let finalExam = [];
 
         // 洗牌算法函数 (Fisher-Yates)
@@ -430,25 +433,38 @@ export const useQuizStore = create((set, get) => ({
 
         // 针对每个维度，进行定额抓取
         dimensions.forEach(dim => {
-          // 1. 挑出题库中属于当前维度的所有题
           const dimQuestions = dynamic.question_pool.filter(q => q.dimension === dim);
 
-          // 2. 分离出"专属题"和"通用题"
           const tagMatched = dimQuestions.filter(q =>
             q.tags.some(tag => expandedTags.includes(tag) && tag !== 'universal')
           );
           const universalMatched = dimQuestions.filter(q => q.tags.includes('universal'));
 
-          // 3. 标签题洗牌，限制上限后合并到通用池
           shuffleArray(tagMatched);
-          const cappedTagMatched = tagMatched.slice(0, maxTagQuestionsPerDim);
-          const combined = [...universalMatched, ...cappedTagMatched];
-          shuffleArray(combined);
+          shuffleArray(universalMatched);
 
-          const selectedForDim = combined.slice(0, questionsPerDim);
+          const guaranteed = tagMatched.slice(0, minTagPerDim);
+          let remainingTag = tagMatched.slice(minTagPerDim);
+          let remainingUniversal = [...universalMatched];
+          let selected = [...guaranteed];
 
-          // 将当前维度选好的题塞进总考卷
-          finalExam = finalExam.concat(selectedForDim);
+          if (guaranteed.length < minTagPerDim) {
+            const shortage = minTagPerDim - guaranteed.length;
+            const filler = remainingUniversal.slice(0, shortage);
+            selected = selected.concat(filler);
+            remainingUniversal = remainingUniversal.slice(shortage);
+          }
+
+          const remainingSlots = questionsPerDim - selected.length;
+          if (remainingSlots > 0) {
+            const tagSlotsRemaining = Math.max(0, maxTagPerDim - guaranteed.length);
+            const cappedTag = remainingTag.slice(0, tagSlotsRemaining);
+            const combined = [...remainingUniversal, ...cappedTag];
+            shuffleArray(combined);
+            selected = selected.concat(combined.slice(0, remainingSlots));
+          }
+
+          finalExam = finalExam.concat(selected);
         });
 
         // 6. 终极洗牌：把 8 个维度的题彻底混合，防止用户看出规律
@@ -516,10 +532,16 @@ export const useQuizStore = create((set, get) => ({
               };
             });
             allMatches.sort((a, b) => b.match_percentage - a.match_percentage);
+            const bestMatch = allMatches[0];
+            const archetypeResult = findBestArchetype(newScores);
+            const traitsResult = calculateTraits(bestMatch.team);
             set({
               matchResult: {
-                ...allMatches[0],
-                allMatches
+                ...bestMatch,
+                allMatches,
+                tacticalArchetype: archetypeResult.archetype,
+                tacticalBuffs: traitsResult.buffs,
+                tacticalDebuffs: traitsResult.debuffs
               },
               isLoading: false
             });

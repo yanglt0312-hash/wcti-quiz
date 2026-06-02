@@ -4,9 +4,11 @@ import { useLangStore } from './store/langStore';
 import { translations } from './i18n/translations';
 import LanguageSwitch from './components/LanguageSwitch';
 import DimensionBars from './components/DimensionBars';
+import TacticalReport from './components/TacticalReport';
 import { SCHEDULE } from './data/schedule';
 import { TEAM_INTRO } from './data/teamIntro';
 import { TEAM_FLAGS } from './data/teamFlags';
+import { PERSONALITY_TAGS } from './data/personalityTags';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend } from 'recharts';
 import { Trophy, ChevronRight, RefreshCw, Zap, Check, ArrowLeft, Home } from 'lucide-react';
 
@@ -259,6 +261,7 @@ function ResultView() {
   const lang = useLangStore((state) => state.lang);
   const t = translations[lang].result;
   const et = translations[lang].error;
+  const [traitModal, setTraitModal] = useState(null);
 
   if (isLoading) {
     return (
@@ -398,33 +401,170 @@ function ResultView() {
           </div>
         )}
         <DimensionBars scores={scores} quizMode={quizMode} />
-        {(() => {
-          const dims = Object.keys(scores).filter(k => typeof scores[k] === 'number');
+        {lang === 'zh' && (() => {
+          const visibleDims = quizMode === 'simple'
+            ? ['tradition', 'proactive', 'heroism', 'pragmatism']
+            : ['tradition', 'proactive', 'heroism', 'pragmatism', 'control', 'resilience', 'physicality', 'adaptability'];
+          const dims = visibleDims
+            .filter(k => PERSONALITY_TAGS[k] && typeof scores[k] === 'number')
+            .map(k => ({ key: k, score: scores[k], deviation: Math.abs(scores[k] - 50) }));
           if (dims.length < 2) return null;
-          const sorted = [...dims].sort((a, b) => scores[b] - scores[a]);
-          const strongest = sorted[0];
-          const weakest = sorted[sorted.length - 1];
+
+          const maxDev = Math.max(...dims.map(d => d.deviation));
+          const minDev = Math.min(...dims.map(d => d.deviation));
+          const distinctDims = dims.filter(d => d.deviation === maxDev);
+          const balancedDims = dims.filter(d => d.deviation === minDev);
           const dimLabels = t.dimensions;
+
+          const renderCard = (dim, tag, style) => (
+            <div key={dim.key} className="bg-zinc-900 border border-zinc-800 p-4 group hover:border-zinc-700 transition-colors">
+              <div className="flex items-center justify-between mb-2">
+                <div className="text-xs font-mono tracking-widest text-zinc-500">
+                  <span>{dimLabels[dim.key]?.left}</span>
+                  <span className="mx-1 text-zinc-700">/</span>
+                  <span>{dimLabels[dim.key]?.right}</span>
+                </div>
+                <span className={`px-2 py-0.5 text-xs font-bold font-mono tracking-wider border ${style}`}>
+                  {tag.label}
+                </span>
+              </div>
+              <div className="text-xs font-bold text-zinc-300 font-mono mb-2">
+                {tag.title}
+              </div>
+              <p className="text-xs text-zinc-500 leading-relaxed">
+                {tag.description}
+              </p>
+            </div>
+          );
+
           return (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
-              <div className="bg-green-500/5 border border-green-500/20 p-3">
-                <div className="text-xs text-green-500 font-mono tracking-widest mb-1">{t.strongestDim}</div>
-                <div className="text-green-400 text-sm font-bold">
-                  {dimLabels[strongest]?.right || strongest}
-                  <span className="text-green-500/60 ml-2 font-mono">{scores[strongest].toFixed(0)}</span>
+            <div className="mt-8 space-y-6">
+              <div>
+                <h3 className="text-sm font-bold text-zinc-400 font-mono tracking-widest text-center mb-3">
+                  最鲜明倾向
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {distinctDims.map(d => {
+                    const zone = d.score >= 50 ? 'high' : 'low';
+                    const style = zone === 'high'
+                      ? 'bg-green-500/10 text-green-500 border-green-500/20'
+                      : 'bg-amber-500/10 text-amber-500 border-amber-500/20';
+                    return renderCard(d, PERSONALITY_TAGS[d.key][zone], style);
+                  })}
                 </div>
               </div>
-              <div className="bg-zinc-800/50 border border-zinc-700 p-3">
-                <div className="text-xs text-zinc-500 font-mono tracking-widest mb-1">{t.weakestDim}</div>
-                <div className="text-zinc-400 text-sm font-bold">
-                  {dimLabels[weakest]?.left || weakest}
-                  <span className="text-zinc-500 ml-2 font-mono">{scores[weakest].toFixed(0)}</span>
+              {maxDev !== minDev && (
+                <div>
+                  <h3 className="text-sm font-bold text-zinc-400 font-mono tracking-widest text-center mb-3">
+                    最均衡维度
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {balancedDims.map(d => renderCard(
+                      d,
+                      PERSONALITY_TAGS[d.key].balanced,
+                      'bg-zinc-800 text-zinc-400 border-zinc-700'
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           );
         })()}
       </div>
+
+      {lang === 'zh' && matchResult.tacticalArchetype && (
+        <div className="w-full max-w-3xl mx-auto">
+          <div className="border-t border-zinc-800 pt-8 md:pt-10">
+            <h3 className="text-base md:text-lg font-black text-zinc-300 mb-6 md:mb-8 tracking-widest font-mono text-center">
+              战术原型
+            </h3>
+            <div className="bg-zinc-900 border border-zinc-800 p-5 md:p-6 space-y-4">
+              <div className="flex items-center gap-3">
+                <span className="px-2 py-0.5 text-xs font-bold bg-purple-500/10 text-purple-400 border border-purple-500/20 font-mono tracking-wider">
+                  主战术原型
+                </span>
+                <div>
+                  <div className="text-zinc-200 font-bold text-sm font-mono">
+                    {matchResult.tacticalArchetype.name}
+                  </div>
+                  <div className="text-zinc-500 text-xs font-mono tracking-wide">
+                    {matchResult.tacticalArchetype.nameEn}
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-zinc-400 text-xs leading-relaxed italic border-l-2 border-purple-500/30 pl-3">
+                {matchResult.tacticalArchetype.philosophy}
+              </p>
+
+              <p className="text-zinc-400 text-xs leading-relaxed">
+                {matchResult.tacticalArchetype.overview}
+              </p>
+
+              <div className="flex flex-wrap gap-2 pt-1">
+                {matchResult.tacticalBuffs.map((buff, i) => (
+                  <button
+                    key={`buff-${i}`}
+                    onClick={() => setTraitModal({ type: 'BUFF', ...buff })}
+                    className="px-2.5 py-1 text-xs font-bold bg-green-500/10 text-green-400 border border-green-500/20 font-mono tracking-wider hover:bg-green-500/20 hover:border-green-500/40 transition-colors cursor-pointer"
+                  >
+                    {buff.name}
+                  </button>
+                ))}
+                {matchResult.tacticalDebuffs.map((debuff, i) => (
+                  <button
+                    key={`debuff-${i}`}
+                    onClick={() => setTraitModal({ type: 'DEBUFF', ...debuff })}
+                    className="px-2.5 py-1 text-xs font-bold bg-red-500/10 text-red-400 border border-red-500/20 font-mono tracking-wider hover:bg-red-500/20 hover:border-red-500/40 transition-colors cursor-pointer"
+                  >
+                    {debuff.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <TacticalReport
+        archetype={matchResult?.tacticalArchetype}
+        buffs={matchResult?.tacticalBuffs}
+        debuffs={matchResult?.tacticalDebuffs}
+      />
+
+      {traitModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+          onClick={() => setTraitModal(null)}
+        >
+          <div
+            className="bg-zinc-900 border border-zinc-700 max-w-md w-full p-5 shadow-2xl"
+            onClick={e => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between mb-3">
+              <span className={`px-2 py-0.5 text-xs font-bold font-mono tracking-wider border ${
+                traitModal.type === 'BUFF'
+                  ? 'bg-green-500/10 text-green-400 border-green-500/20'
+                  : 'bg-red-500/10 text-red-400 border-red-500/20'
+              }`}>
+                {traitModal.type}
+              </span>
+              <button
+                onClick={() => setTraitModal(null)}
+                className="text-zinc-500 hover:text-zinc-300 transition-colors text-lg leading-none"
+              >
+                &times;
+              </button>
+            </div>
+            <h4 className="text-zinc-200 font-bold text-sm font-mono mb-2">
+              {traitModal.name}
+            </h4>
+            <p className="text-zinc-400 text-xs leading-relaxed">
+              {traitModal.desc}
+            </p>
+          </div>
+        </div>
+      )}
 
       {lang === 'zh' && team.name && TEAM_INTRO[team.name] ? (
         <div className="w-full max-w-3xl mx-auto">

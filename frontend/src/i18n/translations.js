@@ -52,9 +52,7 @@ export const translations = {
       teamIntroTitle: "球队介绍",
       teamIntroNickname: "别称",
       subMatchTitle: "次匹配球队",
-      worstMatchTitle: "最不匹配",
-      strongestDim: "最强维度",
-      weakestDim: "最弱维度"
+      worstMatchTitle: "最不匹配"
     },
     error: {
       dataFailed: "数据加载失败",
@@ -110,9 +108,7 @@ export const translations = {
       teamIntroTitle: "Team Introduction",
       teamIntroNickname: "Nickname",
       subMatchTitle: "Close Matches",
-      worstMatchTitle: "Complete Opposite",
-      strongestDim: "Strongest Trait",
-      weakestDim: "Weakest Trait"
+      worstMatchTitle: "Complete Opposite"
     },
     error: {
       dataFailed: "Data Loading Failed",
