@@ -1,65 +1,79 @@
-import { Redis } from 'ioredis';
+// 本地开发用的 mock API 服务器
+// 启动: node api/dev-server.js
+// 这个服务模拟 Vercel Serverless Function 的行为，但用本地内存代替 KV
+
+import http from 'http';
 import crypto from 'crypto';
 
-// 用 REDIS_URL 连接（Vercel Redis 自动注入）
-const redis = new Redis(process.env.REDIS_URL);
+const PORT = 3001;
+const CACHE = new Map(); // 本地内存缓存
+const CACHE_TTL = 30 * 24 * 60 * 60 * 1000; // 30 天
 
-// 指数退避 + Jitter 请求函数
+// 指数退避请求函数
 async function fetchWithBackoff(url, options, maxRetries = 3) {
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
     try {
       const response = await fetch(url, options);
-
-      // 429 限流时指数退避重试
       if (response.status === 429) {
-        if (attempt === maxRetries) {
-          throw new Error('尝试多次依然被限流，请稍后再试');
-        }
+        if (attempt === maxRetries) throw new Error('尝试多次依然被限流');
         const waitTime = Math.pow(2, attempt) * 1000 + Math.random() * 500;
-        console.log(`[Rate Limit] 等待 ${waitTime.toFixed(0)}ms 后第 ${attempt + 1} 次重试...`);
-        await new Promise(resolve => setTimeout(resolve, waitTime));
+        console.log(`[Rate Limit] 等待 ${waitTime.toFixed(0)}ms 后重试...`);
+        await new Promise(r => setTimeout(r, waitTime));
         continue;
       }
-
       return response;
     } catch (error) {
       if (attempt === maxRetries) throw error;
-      // 网络错误也退避
       const waitTime = Math.pow(2, attempt) * 1000 + Math.random() * 500;
-      await new Promise(resolve => setTimeout(resolve, waitTime));
+      await new Promise(r => setTimeout(r, waitTime));
     }
   }
 }
 
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' });
+const server = http.createServer(async (req, res) => {
+  // CORS
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (req.method === 'OPTIONS') {
+    res.writeHead(204);
+    res.end();
+    return;
   }
 
+  if (req.method !== 'POST' || req.url !== '/api/generate-report') {
+    res.writeHead(404, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ error: 'Not Found' }));
+    return;
+  }
+
+  // 读取 body
+  let body = '';
+  for await (const chunk of req) body += chunk;
+
   try {
-    const { archetype_name, buff_1_name, buff_2_name, debuff_name } = req.body;
+    const { archetype_name, buff_1_name, buff_2_name, debuff_name } = JSON.parse(body);
 
     if (!archetype_name || !buff_1_name || !buff_2_name || !debuff_name) {
-      return res.status(400).json({ error: '缺少必要战术标签参数' });
+      res.writeHead(400, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: '缺少必要战术标签参数' }));
+      return;
     }
 
-    // 生成哈希缓存键
     const rawString = `${archetype_name}_${buff_1_name}_${buff_2_name}_${debuff_name}`;
     const hashKey = crypto.createHash('md5').update(rawString).digest('hex');
     const cacheKey = `wcti_report_${hashKey}`;
 
-    // 1. 查 Redis 缓存
-    const cachedRaw = await redis.get(cacheKey);
-    if (cachedRaw) {
+    // 查本地缓存
+    const cached = CACHE.get(cacheKey);
+    if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
       console.log(`[Cache Hit] ${cacheKey}`);
-      return res.status(200).json({
-        code: 200,
-        data: JSON.parse(cachedRaw),
-        message: 'success (from cache)'
-      });
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ code: 200, data: cached.data, message: 'success (from cache)' }));
+      return;
     }
 
-    // 2. 缓存未命中，带指数退避调智谱 AI
     console.log(`[Cache Miss] ${cacheKey}`);
 
     const prompt = `你是一个供职于欧洲顶级豪门的首席数据与战术分析师。你的任务是根据系统提供给你的【球队战术标签】，扩写成一份高度专业、严肃、充满足球战术洞察的最终《战术球探报告》。
@@ -98,12 +112,17 @@ export default async function handler(req, res) {
 
 注意：绝对禁止使用中二、搞笑或网络流行梗。使用纯正的现代足球战术术语。`;
 
+    const apiKey = process.env.ZHIPU_API_KEY;
+    if (!apiKey) {
+      throw new Error('未配置 ZHIPU_API_KEY 环境变量');
+    }
+
     const aiRes = await fetchWithBackoff(
       'https://open.bigmodel.cn/api/paas/v4/chat/completions',
       {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${process.env.ZHIPU_API_KEY}`,
+          'Authorization': `Bearer ${apiKey}`,
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
@@ -115,7 +134,7 @@ export default async function handler(req, res) {
           ]
         })
       },
-      3 // 最多重试 3 次
+      3
     );
 
     if (!aiRes.ok) {
@@ -129,21 +148,21 @@ export default async function handler(req, res) {
 
     const reportData = JSON.parse(content);
 
-    // 3. 写入 Redis 缓存，30 天过期
-    await redis.set(cacheKey, JSON.stringify(reportData), 'EX', 30 * 24 * 60 * 60);
+    // 写入本地缓存
+    CACHE.set(cacheKey, { data: reportData, timestamp: Date.now() });
     console.log(`[Cache Set] ${cacheKey}`);
 
-    return res.status(200).json({
-      code: 200,
-      data: reportData,
-      message: 'success'
-    });
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ code: 200, data: reportData, message: 'success' }));
 
   } catch (err) {
     console.error('generate-report error:', err);
-    return res.status(500).json({
-      error: '服务器内部错误',
-      details: err.message
-    });
+    res.writeHead(500, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ error: '服务器内部错误', details: err.message }));
   }
-}
+});
+
+server.listen(PORT, () => {
+  console.log(`[Dev Server] Mock API running at http://localhost:${PORT}/api/generate-report`);
+  console.log(`[Dev Server] 使用前请先设置环境变量: $env:ZHIPU_API_KEY="你的密钥"`);
+});
