@@ -1,15 +1,10 @@
-// 本地开发用的 mock API 服务器
-// 启动: node api/dev-server.js
-// 这个服务模拟 Vercel Serverless Function 的行为，但用本地内存代替 KV
-
 import http from 'http';
 import crypto from 'crypto';
 
 const PORT = 3001;
-const CACHE = new Map(); // 本地内存缓存
-const CACHE_TTL = 30 * 24 * 60 * 60 * 1000; // 30 天
+const CACHE = new Map();
+const CACHE_TTL = 30 * 24 * 60 * 60 * 1000;
 
-// 指数退避请求函数
 async function fetchWithBackoff(url, options, maxRetries = 3) {
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
     try {
@@ -31,7 +26,6 @@ async function fetchWithBackoff(url, options, maxRetries = 3) {
 }
 
 const server = http.createServer(async (req, res) => {
-  // CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -48,7 +42,6 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  // 读取 body
   let body = '';
   for await (const chunk of req) body += chunk;
 
@@ -65,7 +58,6 @@ const server = http.createServer(async (req, res) => {
     const hashKey = crypto.createHash('md5').update(rawString).digest('hex');
     const cacheKey = `wcti_report_${hashKey}`;
 
-    // 查本地缓存
     const cached = CACHE.get(cacheKey);
     if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
       console.log(`[Cache Hit] ${cacheKey}`);
@@ -148,7 +140,6 @@ const server = http.createServer(async (req, res) => {
 
     const reportData = JSON.parse(content);
 
-    // 写入本地缓存
     CACHE.set(cacheKey, { data: reportData, timestamp: Date.now() });
     console.log(`[Cache Set] ${cacheKey}`);
 

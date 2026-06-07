@@ -33,7 +33,6 @@ export default function App() {
     if (useQuizStore.getState().currentView === 'home') {
       resetQuiz();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lang]);
 
   return (

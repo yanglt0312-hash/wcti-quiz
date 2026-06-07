@@ -1,16 +1,13 @@
 import { Redis } from 'ioredis';
 import crypto from 'crypto';
 
-// 用 REDIS_URL 连接（Vercel Redis 自动注入）
 const redis = new Redis(process.env.REDIS_URL);
 
-// 指数退避 + Jitter 请求函数
 async function fetchWithBackoff(url, options, maxRetries = 3) {
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
     try {
       const response = await fetch(url, options);
 
-      // 429 限流时指数退避重试
       if (response.status === 429) {
         if (attempt === maxRetries) {
           throw new Error('尝试多次依然被限流，请稍后再试');
@@ -24,7 +21,6 @@ async function fetchWithBackoff(url, options, maxRetries = 3) {
       return response;
     } catch (error) {
       if (attempt === maxRetries) throw error;
-      // 网络错误也退避
       const waitTime = Math.pow(2, attempt) * 1000 + Math.random() * 500;
       await new Promise(resolve => setTimeout(resolve, waitTime));
     }
@@ -43,12 +39,10 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: '缺少必要战术标签参数' });
     }
 
-    // 生成哈希缓存键
     const rawString = `${archetype_name}_${buff_1_name}_${buff_2_name}_${debuff_name}`;
     const hashKey = crypto.createHash('md5').update(rawString).digest('hex');
     const cacheKey = `wcti_report_${hashKey}`;
 
-    // 1. 查 Redis 缓存
     const cachedRaw = await redis.get(cacheKey);
     if (cachedRaw) {
       console.log(`[Cache Hit] ${cacheKey}`);
@@ -59,7 +53,6 @@ export default async function handler(req, res) {
       });
     }
 
-    // 2. 缓存未命中，带指数退避调智谱 AI
     console.log(`[Cache Miss] ${cacheKey}`);
 
     const prompt = `你是一个供职于欧洲顶级豪门的首席数据与战术分析师。你的任务是根据系统提供给你的【球队战术标签】，扩写成一份高度专业、严肃、充满足球战术洞察的最终《战术球探报告》。
@@ -115,7 +108,7 @@ export default async function handler(req, res) {
           ]
         })
       },
-      3 // 最多重试 3 次
+      3
     );
 
     if (!aiRes.ok) {
@@ -129,7 +122,6 @@ export default async function handler(req, res) {
 
     const reportData = JSON.parse(content);
 
-    // 3. 写入 Redis 缓存，30 天过期
     await redis.set(cacheKey, JSON.stringify(reportData), 'EX', 30 * 24 * 60 * 60);
     console.log(`[Cache Set] ${cacheKey}`);
 

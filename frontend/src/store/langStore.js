@@ -7,7 +7,6 @@ function getStoredLang() {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored === 'zh' || stored === 'en') return stored;
   } catch {
-    // ignore
   }
   return 'zh';
 }
@@ -18,7 +17,6 @@ export const useLangStore = create((set) => ({
     try {
       localStorage.setItem(STORAGE_KEY, lang);
     } catch {
-      // ignore
     }
     set({ lang });
   },
@@ -28,7 +26,6 @@ export const useLangStore = create((set) => ({
       try {
         localStorage.setItem(STORAGE_KEY, newLang);
       } catch {
-        // ignore
       }
       return { lang: newLang };
     });

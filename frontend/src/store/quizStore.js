@@ -25,7 +25,7 @@ function saveCache(state) {
     };
     localStorage.setItem(CACHE_KEY, JSON.stringify(cache));
     console.log('[WCTI] Cache saved', { view: cache.currentView, index: cache.currentQuestionIndex, total: cache.activeQuestions?.length, completed: !!cache.matchResult });
-  } catch { /* quota exceeded, ignore */ }
+  } catch { }
 }
 
 function loadCache() {
@@ -43,7 +43,7 @@ function loadCache() {
 }
 
 function clearCache() {
-  try { console.log('[WCTI] Cache cleared'); console.trace('[WCTI] Clear trace'); localStorage.removeItem(CACHE_KEY); } catch { /* ignore */ }
+  try { console.log('[WCTI] Cache cleared'); console.trace('[WCTI] Clear trace'); localStorage.removeItem(CACHE_KEY); } catch { }
 }
 
 const QUESTION_BANKS = {
@@ -97,6 +97,33 @@ const TAG_HIERARCHY = {
   anime_gacha: ['console'],
   genshin: ['anime_gacha', 'console'],
   honkai_star_rail: ['anime_gacha', 'console'],
+
+  strategy: [],
+  rts: ['strategy'],
+  starcraft: ['rts', 'strategy'],
+  age_of_empires: ['rts', 'strategy'],
+
+  turn_based: ['strategy'],
+  civilization: ['turn_based', 'strategy'],
+  xcom: ['turn_based', 'strategy'],
+
+  sports_game: [],
+  football_game: ['sports_game'],
+  fifa: ['football_game', 'sports_game'],
+  efootball: ['football_game', 'sports_game'],
+  football_manager: ['football_game', 'sports_game'],
+
+  basketball_game: ['sports_game'],
+  nba2k: ['basketball_game', 'sports_game'],
+
+  racing: [],
+  f1: ['racing'],
+  forza: ['racing'],
+  gran_turismo: ['racing'],
+
+  fighting: [],
+  street_fighter: ['fighting'],
+  tekken: ['fighting'],
 
   music: [],
   music_pop: ['music'],
@@ -383,13 +410,9 @@ export const useQuizStore = create((set, get) => ({
   answerQuestion: (dimension_or_tag, score_or_value, isLastQuestion, selectedTags = null) => {
     const state = get();
 
-    // ==========================================
-    // 阶段 A：如果是信标题（打标签阶段）
-    // ==========================================
     if (state.isCalibrationPhase) {
       const newTags = [...state.userTags];
 
-      // 多选模式：使用传入的 selectedTags 数组
       if (selectedTags && Array.isArray(selectedTags)) {
         selectedTags.forEach(tag => {
           if (tag && !newTags.includes(tag)) {
@@ -397,16 +420,12 @@ export const useQuizStore = create((set, get) => ({
           }
         });
       } else if (dimension_or_tag && !newTags.includes(dimension_or_tag)) {
-        // 单选模式兼容
         newTags.push(dimension_or_tag);
       }
 
       if (isLastQuestion) {
-        // 信标收集完毕，开始组装最终考卷
         const dynamic = (QUESTION_BANKS[state.lang] || QUESTION_BANKS.zh).dynamic;
 
-        // 核心配置：设定每个维度的抽题配额
-        // 简单模式：8维度 × 3题 = 24题；专业模式：8维度 × 6题 = 48题
         const questionsPerDim = state.quizMode === 'simple' ? 3 : 6;
         const MIN_TAG_RATIO = 0.15;
         const MAX_TAG_RATIO = 0.3;
@@ -414,7 +433,6 @@ export const useQuizStore = create((set, get) => ({
         const maxTagPerDim = Math.ceil(questionsPerDim * MAX_TAG_RATIO);
         let finalExam = [];
 
-        // 洗牌算法函数 (Fisher-Yates)
         const shuffleArray = (array) => {
           let currentIndex = array.length, randomIndex;
           while (currentIndex > 0) {
@@ -425,13 +443,9 @@ export const useQuizStore = create((set, get) => ({
           return array;
         };
 
-        // 提取所有 8 个维度的名称
         const dimensions = Object.keys(DIMENSION_MAPPING);
-
-        // 展开标签层级：cs → [cs, fps], apex → [apex, battle_royale, fps] 等
         const expandedTags = expandTags(newTags);
 
-        // 针对每个维度，进行定额抓取
         dimensions.forEach(dim => {
           const dimQuestions = dynamic.question_pool.filter(q => q.dimension === dim);
 
@@ -467,7 +481,6 @@ export const useQuizStore = create((set, get) => ({
           finalExam = finalExam.concat(selected);
         });
 
-        // 6. 终极洗牌：把 8 个维度的题彻底混合，防止用户看出规律
         shuffleArray(finalExam);
 
         set({
@@ -494,9 +507,6 @@ export const useQuizStore = create((set, get) => ({
       return;
     }
 
-    // ==========================================
-    // 阶段 B：如果是计分题（正式考试阶段）
-    // ==========================================
     const newHistory = [...state.answerHistory, {
       dimension: dimension_or_tag,
       value: score_or_value,
@@ -514,7 +524,6 @@ export const useQuizStore = create((set, get) => ({
           return res.text();
         })
         .then(csvText => {
-          const csvTeams = parseCSV(csvText);
           setTimeout(() => {
             const teamsData = state.lang === 'en' ? teamsDataEn : teamsDataZh;
             const allMatches = csvTeams.map(team => {
