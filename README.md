@@ -5,6 +5,7 @@
 纯 vibe coding 项目，从前端到后端到数据引擎到 AI 报告，全程 AI 辅助生成，人只负责提需求、纠偏和拍板。
 
 主要技术栈：Vite + React + Zustand + ECharts + Recharts，部署在 Vercel，AI 调用智谱 glm-4-flash，缓存用 Vercel Redis。
+网址:wcti.online
 
 ## 数据引擎
 
